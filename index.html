@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zafra Trading Co. — Puerto Rican Agriculture, Worldwide</title>
+<meta name="description" content="Zafra Trading Co. — International distribution of Puerto Rican specialty agriculture: coffee, cacao, honey, and vanilla. Direct trade. Farmer-first. From the harvest to the world.">
+<style>
+  :root{
+    --brown-900:#2b1810;
+    --brown-800:#3d2417;
+    --brown-700:#5a3a22;
+    --brown-600:#7a5638;
+    --brown-500:#9a7556;
+    --green-900:#1a2e1f;
+    --green-800:#243d2c;
+    --green-700:#2d5238;
+    --green-600:#3a6b4a;
+    --red-700:#7a1f1f;
+    --red-600:#a83232;
+    --red-500:#c4423a;
+    --cream:#faf7f2;
+    --cream-2:#f5f0ea;
+    --cream-3:#e8e0d5;
+    --ink:#2b1810;
+    --ink-soft:#5a4a3a;
+    --white:#ffffff;
+    --line:rgba(43,24,16,.10);
+    --shadow:0 8px 30px rgba(43,24,16,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.7;
+    font-size:18px;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--red-500);color:#fff}
+  a{color:var(--brown-700);text-decoration:none}
+  a:hover{color:var(--red-600);text-decoration:underline}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(43,24,16,.96);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid rgba(168,50,50,.28);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+  }
+  .nav-inner{
+    max-width:1200px;margin:0 auto;padding:0 22px;
+    display:flex;align-items:center;gap:18px;height:64px;
+  }
+  .nav-brand{
+    color:var(--cream);font-weight:700;letter-spacing:.04em;
+    font-size:15px;white-space:nowrap;display:flex;align-items:center;gap:9px;
+  }
+  .nav-mark{
+    width:26px;height:26px;flex:none;position:relative;
+  }
+  .nav-mark::before,.nav-mark::after{
+    content:"";position:absolute;inset:0;
+  }
+  .nav-mark::before{
+    background:
+      conic-gradient(from 45deg,var(--red-500) 0 25%,transparent 0 50%,var(--red-500) 0 75%,transparent 0);
+    transform:rotate(45deg) scale(.7);
+  }
+  .nav-mark::after{
+    border:2px solid var(--red-500);border-radius:50%;
+    transform:scale(.42);
+  }
+  .nav-links{
+    display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 14px),transparent 100%);
+  }
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{
+    color:rgba(250,247,242,.82);font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;letter-spacing:.03em;text-transform:uppercase;
+    padding:8px 11px;border-radius:6px;white-space:nowrap;transition:.18s;
+    text-decoration:none;
+  }
+  .nav-links a:hover{background:rgba(168,50,50,.16);color:var(--cream);text-decoration:none}
+  .nav-toggle{
+    flex:none;cursor:pointer;
+    background:transparent;border:none;
+    padding:4px;transition:opacity .18s;
+    line-height:0;
+  }
+  .nav-toggle:hover{opacity:.7}
+  .nav-toggle:active{opacity:.5}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;color:rgba(250,247,242,.98);
+    padding:120px 24px 130px;text-align:center;overflow:hidden;
+    background-color:var(--brown-900);
+    background-image:linear-gradient(135deg,#2b1810 0%,#3d2417 40%,#5a3a22 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse at 20% 80%,rgba(168,50,50,.12) 0%,transparent 50%),
+      radial-gradient(ellipse at 80% 20%,rgba(45,82,56,.10) 0%,transparent 50%);
+  }
+  .hero-inner{position:relative;z-index:2;max-width:880px;margin:0 auto}
+  .hero-rule{
+    width:64px;height:2px;background:var(--red-500);margin:0 auto 28px;
+  }
+  .hero-title{
+    font-size:clamp(36px,7vw,68px);font-weight:700;letter-spacing:.02em;
+    line-height:1.08;text-shadow:0 2px 30px rgba(0,0,0,.4);margin-bottom:18px;
+  }
+  .hero-sub{
+    font-family:'Helvetica Neue',Arial,sans-serif;font-size:clamp(13px,2.4vw,17px);
+    letter-spacing:.14em;text-transform:uppercase;color:#e08070;
+    margin-bottom:30px;
+  }
+  .hero-tagline{
+    display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:clamp(15px,2.6vw,19px);letter-spacing:.04em;
+    color:rgba(250,247,242,.95);border:1px solid rgba(196,66,58,.4);
+    padding:10px 22px;border-radius:999px;margin-bottom:30px;
+    background:rgba(255,253,247,.04);
+  }
+  .hero-meta{
+    font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;
+    letter-spacing:.06em;text-transform:uppercase;color:rgba(250,247,242,.7);
+  }
+
+  /* ---------- MAIN ---------- */
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  main{padding:0 0 30px}
+  section.body-section{padding:62px 0 10px}
+  .section-title{
+    scroll-margin-top:84px;
+    font-size:clamp(26px,4.6vw,38px);font-weight:700;line-height:1.18;
+    color:var(--brown-800);margin-bottom:20px;padding-bottom:14px;
+    border-bottom:2px solid var(--cream-3);position:relative;
+  }
+  .section-title::before{
+    content:"";position:absolute;left:0;bottom:-2px;width:78px;height:3px;
+    background:var(--red-600);
+  }
+  .subsection-title{
+    scroll-margin-top:84px;
+    font-size:clamp(20px,3.2vw,25px);font-weight:700;color:var(--green-700);
+    margin:34px 0 12px;
+  }
+  .subsection-title::after{
+    content:" ❖";color:var(--red-500);font-size:.8em;
+  }
+  .block-label{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:15px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--brown-600);margin:26px 0 8px;
+  }
+  p.body{margin:0 0 16px}
+  ul.block-list,ol.block-list{margin:6px 0 22px;padding-left:0;list-style:none}
+  ul.block-list li,ol.block-list li{
+    position:relative;padding:7px 0 7px 30px;margin:0;
+    border-bottom:1px solid var(--line);
+  }
+  ul.block-list li:last-child,ol.block-list li:last-child{border-bottom:none}
+  ul.block-list li::before{
+    content:"●";position:absolute;left:4px;top:7px;
+    color:var(--red-500);font-size:9px;
+  }
+
+  /* product cards */
+  .product-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:16px;margin:24px 0;
+  }
+  .product-card{
+    background:var(--white);border:1px solid var(--cream-3);
+    border-top:3px solid var(--red-500);border-radius:10px;
+    padding:20px 18px;box-shadow:var(--shadow);
+  }
+  .product-card h4{
+    font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;
+    font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--brown-700);margin-bottom:8px;
+  }
+  .product-card p{font-size:15px;color:var(--ink-soft);margin:0}
+
+  /* stat band */
+  .stat-band{
+    background:linear-gradient(135deg,var(--brown-700),var(--brown-800));
+    color:var(--cream);border-radius:12px;padding:22px 24px;margin:22px 0;
+    font-size:16.5px;box-shadow:var(--shadow);
+  }
+  .stat-band strong{color:#e08070}
+
+  /* flow */
+  .flow{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;
+    margin:18px 0 24px;
+  }
+  .flow-step{
+    flex:1;min-width:160px;background:var(--white);border:1px solid var(--cream-3);
+    border-top:3px solid var(--red-500);border-radius:10px;padding:16px;
+    font-size:15.5px;text-align:center;box-shadow:var(--shadow);
+  }
+  .flow-step strong{display:block;color:var(--brown-700);font-size:12px;
+    font-family:'Helvetica Neue',Arial,sans-serif;letter-spacing:.08em;
+    text-transform:uppercase;margin-bottom:6px;}
+  .flow-arrow{display:flex;align-items:center;color:var(--red-600);font-size:24px;font-weight:700}
+
+  /* ---------- CTA ---------- */
+  .cta-band{
+    background:linear-gradient(135deg,var(--brown-800),var(--brown-900));
+    color:var(--cream);border-radius:14px;padding:40px 32px;margin:40px 0;
+    text-align:center;box-shadow:var(--shadow);
+  }
+  .cta-band h3{
+    font-size:clamp(22px,3.5vw,30px);font-weight:700;margin-bottom:14px;color:var(--cream);
+  }
+  .cta-band p{font-size:17px;color:rgba(250,247,242,.85);margin-bottom:24px}
+  .cta-btn{
+    display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--cream);background:var(--red-600);
+    padding:14px 32px;border-radius:8px;text-decoration:none;transition:.2s;
+    border:none;cursor:pointer;
+  }
+  .cta-btn:hover{background:var(--red-700);color:#fff;text-decoration:none}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--brown-900);color:rgba(250,247,242,.7);
+    padding:48px 24px 30px;text-align:center;
+  }
+  .footer-inner{max-width:860px;margin:0 auto}
+  .footer-mark{
+    width:40px;height:40px;margin:0 auto 18px;position:relative;
+  }
+  .footer-mark::before,.footer-mark::after{
+    content:"";position:absolute;inset:0;
+  }
+  .footer-mark::before{
+    background:
+      conic-gradient(from 45deg,var(--red-500) 0 25%,transparent 0 50%,var(--red-500) 0 75%,transparent 0);
+    transform:rotate(45deg) scale(.7);
+  }
+  .footer-mark::after{
+    border:2px solid var(--red-500);border-radius:50%;
+    transform:scale(.42);
+  }
+  .footer-name{
+    color:var(--cream);font-weight:700;font-size:17px;letter-spacing:.04em;
+    margin-bottom:8px;
+  }
+  .footer-tag{
+    font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;
+    letter-spacing:.08em;text-transform:uppercase;color:rgba(250,247,242,.5);
+    margin-bottom:20px;
+  }
+  .footer-contact{
+    font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;
+    color:rgba(250,247,242,.65);margin-bottom:6px;
+  }
+  .footer-contact a{color:rgba(250,247,242,.8)}
+  .footer-contact a:hover{color:var(--red-500);text-decoration:none}
+  .footer-legal{
+    margin-top:24px;padding-top:18px;border-top:1px solid rgba(250,247,242,.1);
+    font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;
+    letter-spacing:.04em;color:rgba(250,247,242,.35);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:700px){
+    .nav-links{display:none}
+    .nav-toggle{display:block}
+    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;
+      background:rgba(43,24,16,.98);padding:12px;gap:2px}
+    .nav-links.open a{padding:12px 16px}
+    .flow{flex-direction:column}
+    .flow-arrow{display:none}
+  }
+  @media(min-width:701px){.nav-toggle{display:none}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-mark" aria-hidden="true"></span>
+    <span class="nav-brand">ZAFRA TRADING CO.</span>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#how">How It Works</a>
+      <a href="#partners">Partners</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#faf7f2" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-rule"></div>
+    <h1 class="hero-title">Zafra Trading Co.</h1>
+    <p class="hero-sub">Puerto Rican Agriculture, Worldwide</p>
+    <div class="hero-tagline">De la cosecha al mundo — From the harvest to the world</div>
+    <p class="hero-meta">San Juan, Puerto Rico</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+  <div class="wrap">
+
+  <!-- ABOUT -->
+  <section class="body-section" id="about">
+    <h2 class="section-title">What Is Zafra?</h2>
+    <p class="body">
+      <strong>Zafra</strong> is the Spanish word for harvest season — the time when coffee cherries, cacao pods, and vanilla beans are picked and brought down from the mountains. It's a word that carries the weight of an entire agricultural year: the labor, the waiting, and finally, the gathering.
+    </p>
+    <p class="body">
+      Zafra Trading Co. is the international distribution arm for Puerto Rican specialty agriculture. We source directly from farmer-owned cooperatives in Puerto Rico's central highlands — Yauco, Jayuya, Adjuntas, Maricao — and bring their harvest to markets that value what the island produces: coffee, cacao, honey, and vanilla.
+    </p>
+    <p class="body">
+      We are not a middleman. We are the bridge. The co-op owns its processing. The farmers set their price. Zafra carries it to the world — and the world pays what quality deserves.
+    </p>
+    <div class="stat-band">
+      <strong>Direct trade.</strong> Farmers receive above-market pricing — not commodity floor rates. Price transparency is the foundation. Every buyer knows what the farmer was paid.
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="body-section" id="products">
+    <h2 class="section-title">What We Carry</h2>
+    <p class="body">
+      Puerto Rico grows some of the world's most distinctive agricultural products — island-grown, mountain-shaded, hand-harvested. Limited production, not commodity volume. These are products with a story, and a price that reflects it.
+    </p>
+    <div class="product-grid">
+      <div class="product-card">
+        <h4>Coffee</h4>
+        <p>100% Puerto Rican Arabica. Bourbon, Typica, Caturra, and USDA-TARS rust-resistant hybrids. Washed process. Regions: Yauco, Jayuya, Adjuntas, Maricao. SCA 82-88. Roasted to spec or green.</p>
+      </div>
+      <div class="product-card">
+        <h4>Cacao</h4>
+        <p>Heritage Puerto Rican cacao, fine-flavor Trinitario varieties. Fermented and sun-dried to spec. Single-origin beans for chocolate makers and craft processors.</p>
+      </div>
+      <div class="product-card">
+        <h4>Honey</h4>
+        <p>Mountain wildflower and coffee-blossom honey from PR's Cordillera Central. Raw, unfiltered, single-apiary. Pollinator health is part of the mission — not a byproduct.</p>
+      </div>
+      <div class="product-card">
+        <h4>Vanilla</h4>
+        <p>Puerto Rican vanilla — cured and graded. One of the rarest vanillas in the world. From the Cooperativa de Vainilla de Puerto Rico and partner farms.</p>
+      </div>
+    </div>
+    <p class="body" style="font-style:italic;color:var(--ink-soft);font-size:15px;margin-top:18px;">
+      Additional products available through partner relationships: rum, brown sugar, molasses, and sugar derivatives via the Yabucoa Rum Company.
+    </p>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="body-section" id="how">
+    <h2 class="section-title">How It Works</h2>
+    <p class="body">
+      The model is simple and transparent. Three independent entities, each doing one thing well:
+    </p>
+    <div class="flow">
+      <div class="flow-step">
+        <strong>1. Farmers</strong>
+        Grow, harvest, and deliver cherry/pods/beans to the co-op at above-market prices.
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <strong>2. Cooperative</strong>
+        Processes, grades, and packages. Co-op owns the equipment. Farmers own the co-op.
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <strong>3. Zafra</strong>
+        Buys from the co-op. Ships to international buyers. Carries the story.
+      </div>
+    </div>
+    <p class="body">
+      The farmer is not a supplier. The farmer is a partner. The cooperative is not a vendor. It's a member-owned enterprise. Zafra is not a middleman — it's the distribution channel that gets PR agriculture to the people who want it and pays the people who grow it.
+    </p>
+    <div class="block-label">Price Transparency</div>
+    <p class="body">
+      Every shipment carries a provenance card: region, farm or co-op, harvest date, processing method, and the price paid to the farmer. Buyers know the story. Farmers know their product is respected. That's the moat.
+    </p>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="body-section" id="partners">
+    <h2 class="section-title">The Ecosystem</h2>
+    <p class="body">
+      Zafra Trading Co. is the distribution layer of a three-entity agricultural platform built in Puerto Rico:
+    </p>
+    <ul class="block-list">
+      <li><strong>Fundación Areito de Puerto Rico</strong> — Non-profit umbrella. Programs: Instituto de Café (coffee education and quality), Polinizadores (pollinator science and beekeeping), Raíces Vivas (cacao genetics and fermentation), Propagación (tissue culture and nursery). Funds the infrastructure. Does not sell product.</li>
+      <li><strong>Areito Cooperative</strong> — Farmer-owned. Owns processing equipment (grant-funded through the Foundation). Processes coffee, cacao, honey. Retains on-island distribution. Sells to Zafra for international export.</li>
+      <li><strong>Zafra Trading Co.</strong> — International distribution. Buys from the co-op. Ships to US and international markets. B2B wholesale and consumer-facing retail.</li>
+    </ul>
+    <p class="body" style="font-style:italic;color:var(--ink-soft);font-size:15px;margin-top:14px;">
+      These are independent entities with different owners. The cooperative is farmer-owned. The foundation is an independent non-profit. Zafra is the commercial arm.
+    </p>
+  </section>
+
+  <!-- WHY PR -->
+  <section class="body-section" id="why">
+    <h2 class="section-title">Why Puerto Rico</h2>
+    <p class="body">
+      Puerto Rico was once one of the world's great coffee origins. In the 1860s through 1890s, coffee was the island's #1 export. Then came industrialization, then Hurricane Maria (2017), which devastated 80% of the island's coffee trees.
+    </p>
+    <p class="body">
+      Today, PR produces roughly 36,000 quintales of coffee a year but consumes 200,000. The gap is filled by imports. Domestic production is limited — and that limitation is also the value. PR coffee is among the rarest in the world. Island-grown, mountain-shaded, hand-picked.
+    </p>
+    <p class="body">
+      The same story holds across the portfolio: PR cacao is heritage Trinitario, not commodity bulk. PR honey comes from mountain wildflowers in one of the most biodiverse islands in the Caribbean. PR vanilla is being revived by a cooperative that believes in it.
+    </p>
+    <p class="body">
+      Zafra exists because these products deserve a channel that pays what they're worth — not what the commodity floor dictates.
+    </p>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section class="body-section" id="contact">
+    <h2 class="section-title">Let's Talk</h2>
+    <div class="cta-band">
+      <h3>Are you a buyer?</h3>
+      <p>If you source specialty coffee, cacao, honey, or vanilla — and you care about where it comes from and what the farmer was paid — let's talk.</p>
+      <p style="margin-bottom:28px;">We work with wholesale buyers, roasters, chocolate makers, retailers, and distributors across the US and internationally.</p>
+      <a class="cta-btn" href="mailto:hello@zafratrading.com">Get in Touch</a>
+    </div>
+    <div style="margin-top:20px;">
+      <div class="block-label">Contact</div>
+      <p class="body">
+        <strong>Email:</strong> <a href="mailto:hello@zafratrading.com">hello@zafratrading.com</a><br>
+        <strong>Location:</strong> San Juan, Puerto Rico<br>
+        <strong>Web:</strong> <a href="https://zafratrading.com">zafratrading.com</a>
+      </p>
+    </div>
+  </section>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-mark" aria-hidden="true"></div>
+    <div class="footer-name">Zafra Trading Co.</div>
+    <div class="footer-tag">De la cosecha al mundo</div>
+    <div class="footer-contact">
+      San Juan, Puerto Rico · <a href="mailto:hello@zafratrading.com">hello@zafratrading.com</a>
+    </div>
+    <div class="footer-legal">
+      © 2026 Zafra Trading Co. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Close mobile nav on link click
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));
+  });
+</script>
+</body>
+</html>
