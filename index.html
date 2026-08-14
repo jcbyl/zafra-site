@@ -99,13 +99,13 @@
     position:relative;color:rgba(250,247,242,.98);
     padding:120px 24px 130px;text-align:center;overflow:hidden;
     background-color:var(--brown-900);
-    background-image:linear-gradient(135deg,#2b1810 0%,#3d2417 40%,#5a3a22 100%);
+    background-image:url('images/hero-mountains.jpg');
+    background-size:cover;background-position:center 35%;
   }
   .hero::before{
     content:"";position:absolute;inset:0;pointer-events:none;
     background:
-      radial-gradient(ellipse at 20% 80%,rgba(168,50,50,.12) 0%,transparent 50%),
-      radial-gradient(ellipse at 80% 20%,rgba(45,82,56,.10) 0%,transparent 50%);
+      linear-gradient(180deg,rgba(43,24,16,.55) 0%,rgba(43,24,16,.75) 60%,rgba(43,24,16,.92) 100%);
   }
   .hero-inner{position:relative;z-index:2;max-width:880px;margin:0 auto}
   .hero-rule{
@@ -179,14 +179,29 @@
   .product-card{
     background:var(--white);border:1px solid var(--cream-3);
     border-top:3px solid var(--red-500);border-radius:10px;
-    padding:20px 18px;box-shadow:var(--shadow);
+    padding:0 0 18px;box-shadow:var(--shadow);overflow:hidden;
   }
+  .product-card-img{
+    width:100%;height:180px;object-fit:cover;display:block;
+  }
+  .product-card-body{padding:18px 18px 0}
   .product-card h4{
     font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;
     font-weight:700;letter-spacing:.06em;text-transform:uppercase;
     color:var(--brown-700);margin-bottom:8px;
   }
   .product-card p{font-size:15px;color:var(--ink-soft);margin:0}
+  /* section photo banner */
+  .photo-banner{
+    width:100%;max-width:100%;height:280px;margin:0;
+    background-size:cover;background-position:center;
+    position:relative;border-radius:0;
+    border-top:3px solid var(--red-500);border-bottom:3px solid var(--red-500);
+  }
+  .photo-banner::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(43,24,16,.2) 0%,transparent 30%,transparent 70%,rgba(43,24,16,.3) 100%);
+  }
 
   /* stat band */
   .stat-band{
@@ -345,20 +360,32 @@
     </p>
     <div class="product-grid">
       <div class="product-card">
-        <h4>Coffee</h4>
-        <p>100% Puerto Rican Arabica. Bourbon, Typica, Caturra, and USDA-TARS rust-resistant hybrids. Washed process. Regions: Yauco, Jayuya, Adjuntas, Maricao. SCA 82-88. Roasted to spec or green.</p>
+        <img class="product-card-img" src="images/coffee-cherries.jpg" alt="Ripe coffee cherries on the branch">
+        <div class="product-card-body">
+          <h4>Coffee</h4>
+          <p>100% Puerto Rican Arabica. Bourbon, Typica, Caturra, and USDA-TARS rust-resistant hybrids. Washed process. Regions: Yauco, Jayuya, Adjuntas, Maricao. SCA 82-88. Roasted to spec or green.</p>
+        </div>
       </div>
       <div class="product-card">
-        <h4>Cacao</h4>
-        <p>Heritage Puerto Rican cacao, fine-flavor Trinitario varieties. Fermented and sun-dried to spec. Single-origin beans for chocolate makers and craft processors.</p>
+        <img class="product-card-img" src="images/cacao-pods.jpg" alt="Cacao pods split open showing beans">
+        <div class="product-card-body">
+          <h4>Cacao</h4>
+          <p>Heritage Puerto Rican cacao, fine-flavor Trinitario varieties. Fermented and sun-dried to spec. Single-origin beans for chocolate makers and craft processors.</p>
+        </div>
       </div>
       <div class="product-card">
-        <h4>Honey</h4>
-        <p>Mountain wildflower and coffee-blossom honey from PR's Cordillera Central. Raw, unfiltered, single-apiary. Pollinator health is part of the mission — not a byproduct.</p>
+        <img class="product-card-img" src="images/honey-jar.jpg" alt="Golden honey being drizzled into a jar">
+        <div class="product-card-body">
+          <h4>Honey</h4>
+          <p>Mountain wildflower and coffee-blossom honey from PR's Cordillera Central. Raw, unfiltered, single-apiary. Pollinator health is part of the mission — not a byproduct.</p>
+        </div>
       </div>
       <div class="product-card">
-        <h4>Vanilla</h4>
-        <p>Puerto Rican vanilla — cured and graded. One of the rarest vanillas in the world. From the Cooperativa de Vainilla de Puerto Rico and partner farms.</p>
+        <img class="product-card-img" src="images/vanilla-orchid.jpg" alt="Vanilla orchid flowers and cured pods">
+        <div class="product-card-body">
+          <h4>Vanilla</h4>
+          <p>Puerto Rican vanilla — cured and graded. One of the rarest vanillas in the world. From the Cooperativa de Vainilla de Puerto Rico and partner farms.</p>
+        </div>
       </div>
     </div>
     <p class="body" style="font-style:italic;color:var(--ink-soft);font-size:15px;margin-top:18px;">
@@ -398,6 +425,7 @@
   </section>
 
   <!-- PARTNERS -->
+  <div class="photo-banner" style="background-image:url('images/vanilla-orchid.jpg')"></div>
   <section class="body-section" id="partners">
     <h2 class="section-title">The Ecosystem</h2>
     <p class="body">
@@ -431,6 +459,7 @@
   </section>
 
   <!-- CONTACT / CTA -->
+  <div class="photo-banner" style="background-image:url('images/hero-mountains.jpg')"></div>
   <section class="body-section" id="contact">
     <h2 class="section-title">Let's Talk</h2>
     <div class="cta-band">
