@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zafra Trading Co. — The Shop</title>
+<meta name="description" content="The bounty of Puerto Rico, direct to your door. Coffee, chocolate, honey, vanilla, cigars, hot sauce, artisan crafts. Curated by Zafra Trading Co.">
+<link rel="icon" type="image/jpeg" href="images/zafra-logo-final.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-900:#0f2818;--green-800:#1a3a24;--green-700:#245234;--green-600:#2d6b47;
+  --gold-600:#a8853a;--gold-500:#c4a04a;--gold-400:#dab85e;
+  --cream:#faf8f3;--cream-2:#f5f1e8;--cream-3:#e8e2d4;
+  --ink:#1a2a1e;--ink-soft:#4a5a4e;--ink-mute:#5a6a5e;
+  --white:#ffffff;
+  --line:rgba(15,40,24,.06);
+  --shadow-sm:0 2px 8px rgba(15,40,24,.04);
+  --shadow:0 8px 24px rgba(15,40,24,.06);
+  --shadow-lg:0 20px 50px rgba(15,40,24,.10);
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --serif:'Cormorant Garamond',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:none}
+.brand-name{font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.brand-name small{display:block;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-600)}
+.nav-links{display:flex;gap:24px;font-size:13px;font-weight:500;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--green-700)}
+.cart-btn{position:relative;display:flex;align-items:center;gap:8px;background:var(--green-800);color:var(--cream);border:none;font-family:var(--sans);font-size:13px;font-weight:600;padding:10px 18px;border-radius:999px;cursor:pointer;transition:background .2s}
+.cart-btn:hover{background:var(--green-700)}
+.cart-count{background:var(--gold-500);color:var(--green-900);font-size:11px;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;padding:0 5px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:20px;height:2px;background:var(--ink);margin:5px 0}
+
+/* HERO */
+.hero{padding:120px 32px 80px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-600);margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,5.5vw,64px);font-weight:600;line-height:1.05;color:var(--green-900);margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--green-700)}
+.hero p{font-size:17px;color:var(--ink-soft);max-width:480px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;font-size:14px;font-weight:600;padding:14px 28px;border-radius:999px;cursor:pointer;border:none;font-family:var(--sans);transition:all .2s}
+.btn-primary{background:var(--green-800);color:var(--cream)}
+.btn-primary:hover{background:var(--green-700);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--green-700);border:1px solid rgba(15,40,24,.18)}
+.btn-ghost:hover{border-color:var(--green-700)}
+.hero-note{margin-top:22px;font-size:13px;color:var(--ink-mute)}
+.hero-note strong{color:var(--green-700)}
+.hero-images{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hero-images img{border-radius:14px;aspect-ratio:1;object-fit:cover;box-shadow:var(--shadow)}
+.hero-images img:first-child{transform:rotate(-2deg)}
+.hero-images img:nth-child(2){transform:rotate(1.5deg) translateY(10px)}
+.hero-images img:nth-child(3){transform:rotate(1deg) translateY(-6px)}
+.hero-images img:nth-child(4){transform:rotate(-1.5deg) translateY(4px)}
+
+/* SECTION */
+.section{padding:90px 32px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.section-head .eyebrow{margin-bottom:12px}
+.section-head h2{font-family:var(--serif);font-size:clamp(32px,4vw,44px);font-weight:600;color:var(--green-900);line-height:1.15;margin-bottom:14px}
+.section-head p{color:var(--ink-soft);font-size:16px}
+
+/* FILTER TABS */
+.filter-bar{display:flex;gap:8px;justify-content:center;margin-bottom:40px;flex-wrap:wrap}
+.filter-tab{background:transparent;border:1px solid rgba(15,40,24,.14);border-radius:999px;padding:8px 20px;font-size:13px;font-weight:600;color:var(--ink-soft);cursor:pointer;font-family:var(--sans);transition:all .2s}
+.filter-tab:hover{border-color:var(--green-700);color:var(--green-700)}
+.filter-tab.active{background:var(--green-800);color:var(--cream);border-color:var(--green-800)}
+
+/* PRODUCT GRID */
+.products{background:var(--cream-2)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card.hidden{display:none}
+.card img{aspect-ratio:1;object-fit:cover;width:100%;background:var(--cream-2)}
+.card-body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:999px;margin-bottom:2px;width:fit-content}
+.badge-our{background:var(--green-800);color:var(--cream)}
+.badge-partner{background:var(--gold-500);color:var(--green-900)}
+.brand-tag{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600)}
+.origin{font-size:11px;color:var(--ink-mute);margin-top:-2px}
+.card h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--green-900)}
+.card .desc{font-size:13px;color:var(--ink-soft);flex:1;line-height:1.5}
+.card-link{font-size:11px;color:var(--green-700);text-decoration:underline;margin-top:2px}
+
+/* VARIANT SELECTOR */
+.variants{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.var-btn{background:var(--cream-2);border:1px solid var(--cream-3);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:500;color:var(--ink-soft);cursor:pointer;font-family:var(--sans);transition:all .15s}
+.var-btn:hover{border-color:var(--green-700);color:var(--green-700)}
+.var-btn.active{background:var(--green-800);color:var(--cream);border-color:var(--green-800)}
+
+.card-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:8px;gap:8px}
+.price{font-size:18px;font-weight:700;color:var(--green-700)}
+.add-btn{background:var(--green-800);color:var(--cream);border:none;border-radius:999px;padding:10px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:background .2s;white-space:nowrap}
+.add-btn:hover{background:var(--green-700)}
+.add-btn.added{background:var(--gold-500);color:var(--green-900)}
+
+/* MAIL BANNER */
+.mail-banner{background:var(--green-900);color:var(--cream);text-align:center;padding:40px 32px}
+.mail-banner h3{font-family:var(--serif);font-size:28px;font-weight:600;margin-bottom:8px}
+.mail-banner p{font-size:14px;color:rgba(250,248,243,.7);max-width:600px;margin:0 auto}
+
+/* PROVENANCE */
+.prov{background:var(--green-900);color:var(--cream)}
+.prov .section-head h2{color:var(--cream)}
+.prov .section-head p{color:rgba(250,248,243,.65)}
+.prov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1000px;margin:0 auto}
+.prov-card{background:rgba(250,248,243,.04);border:1px solid rgba(250,248,243,.08);border-radius:16px;padding:30px 26px}
+.prov-num{font-family:var(--serif);font-size:38px;font-weight:500;color:var(--gold-400);line-height:1;margin-bottom:14px}
+.prov-card h3{font-family:var(--serif);font-size:22px;font-weight:600;margin-bottom:10px}
+.prov-card p{font-size:13.5px;color:rgba(250,248,243,.65);line-height:1.6}
+.prov-card p strong{color:var(--gold-400)}
+
+/* CONTACT */
+.contact{background:var(--cream)}
+.contact-box{max-width:680px;margin:0 auto;text-align:center;background:var(--white);border-radius:22px;box-shadow:var(--shadow);padding:56px 44px;border:1px solid var(--line)}
+.contact-box h3{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--green-900);margin-bottom:12px}
+.contact-box p{color:var(--ink-soft);font-size:15px;margin-bottom:26px}
+.contact-box a.mail{display:inline-block;font-family:var(--serif);font-size:22px;color:var(--green-700);border-bottom:1px solid var(--gold-500);padding-bottom:2px;margin-bottom:8px}
+
+/* FOOTER */
+footer{background:var(--green-900);color:var(--cream);padding:56px 32px 40px}
+.foot-inner{max-width:1200px;margin:0 auto;text-align:center}
+.foot-name{font-family:var(--serif);font-size:26px;font-weight:600;margin-bottom:4px}
+.foot-tag{font-family:var(--serif);font-style:italic;color:var(--gold-400);margin-bottom:16px}
+.foot-contact{font-size:13px;color:rgba(250,248,243,.7);margin-bottom:6px}
+.foot-legal{margin-top:24px;padding-top:18px;border-top:1px solid rgba(250,248,243,.08);font-size:12px;color:rgba(250,248,243,.3)}
+
+/* ORDER DRAWER */
+.overlay{position:fixed;inset:0;background:rgba(15,40,24,.45);z-index:200;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,100vw);background:var(--cream);z-index:201;transform:translateX(100%);transition:transform .35s cubic-bezier(.32,.72,.28,1);display:flex;flex-direction:column;box-shadow:var(--shadow-lg)}
+.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:22px 26px;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--green-900)}
+.drawer-close{background:none;border:none;font-size:26px;color:var(--ink-mute);cursor:pointer;line-height:1}
+.drawer-items{flex:1;overflow-y:auto;padding:18px 26px}
+.d-item{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.d-item img{width:54px;height:54px;border-radius:10px;object-fit:cover;flex:none}
+.d-info{flex:1}
+.d-info h4{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--green-900)}
+.d-info small{font-size:12px;color:var(--ink-mute)}
+.d-price{font-size:13px;font-weight:700;color:var(--green-700);margin-top:2px}
+.d-qty{display:flex;align-items:center;gap:6px}
+.d-qty button{width:24px;height:24px;border-radius:50%;border:1px solid rgba(15,40,24,.15);background:none;cursor:pointer;font-size:14px;color:var(--green-700);line-height:1}
+.d-qty span{font-size:13.5px;font-weight:600;min-width:18px;text-align:center}
+.d-empty{text-align:center;padding:60px 20px;color:var(--ink-mute);font-size:14px}
+.d-empty .big{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--ink-soft);margin-bottom:8px}
+.drawer-form{padding:18px 26px 26px;border-top:1px solid var(--line);background:var(--cream-2)}
+.drawer-form label{display:block;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:12px 0 5px}
+.drawer-form input,.drawer-form textarea{width:100%;font-family:var(--sans);font-size:14px;padding:10px 14px;border:1px solid rgba(15,40,24,.14);border-radius:10px;background:var(--white);color:var(--ink)}
+.drawer-form textarea{min-height:64px;resize:vertical}
+.send-btn{width:100%;margin-top:16px;background:var(--green-800);color:var(--cream);border:none;border-radius:999px;padding:14px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+.send-btn:hover{background:var(--green-700)}
+.drawer-note{font-size:11.5px;color:var(--ink-mute);text-align:center;margin-top:10px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:1000px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .prov-grid{grid-template-columns:1fr}
+}
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;gap:44px;padding-top:100px}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:18px 32px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  .brand-name small{display:none}
+}
+@media(max-width:560px){
+  .product-grid{grid-template-columns:1fr}
+  .section{padding:64px 20px}
+  .hero{padding-left:20px;padding-right:20px}
+  .hero-images{gap:10px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img src="images/zafra-logo-final.jpg" alt="Zafra Trading Co.">
+      <span class="brand-name">Zafra Trading Co.<small>The Shop</small></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#products">Shop</a>
+      <a href="#gift-boxes">Gift Boxes</a>
+      <a href="#provenance">Our Story</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="cart-btn" onclick="toggleDrawer(true)">Order <span class="cart-count" id="cartCount">0</span></button>
+      <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div>
+    <div class="eyebrow">The Bounty of Puerto Rico</div>
+    <h1>From the Isla de Encanto<br><em>to the rest of the world.</em></h1>
+    <p>Island-grown coffee, chocolate, honey, vanilla, cigars, hot sauce, and handcrafted artisan goods — curated from the best producers in Puerto Rico. Pick what you love, we box it and mail it to your door.</p>
+    <div class="hero-ctas">
+      <a href="#products" class="btn btn-primary">Browse the shop</a>
+      <a href="#gift-boxes" class="btn btn-ghost">Gift boxes</a>
+    </div>
+    <div class="hero-note">Our harvest: <strong>coffee, cacao, honey, vanilla</strong>. Plus the island's best chocolate, cigars, crafts — all curated, all shipped from San Juan.</div>
+  </div>
+  <div class="hero-images">
+    <img src="images/product-coffee-bag.jpg" alt="Puerto Rican coffee">
+    <img src="images/products/jeanmarie-75-dark-bar.jpg" alt="PR chocolate">
+    <img src="images/product-honey-jar.jpg" alt="Mountain wildflower honey">
+    <img src="images/products/don-collins-5pack.jpg" alt="Don Collins cigars">
+  </div>
+</header>
+
+<!-- MAIL HOME BANNER -->
+<div class="mail-banner">
+  <h3>We mail it all home for you.</h3>
+  <p>No carrying bags on the plane. Pick your products in-store or online, we pack them in a Zafra green-and-gold gift box, and ship it to your home address anywhere in the US.</p>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section products" id="products">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Shop</div>
+      <h2>The best of Puerto Rico, all in one place.</h2>
+      <p>Our own coffee, cacao, honey, and vanilla — plus chocolate, cigars, hot sauce, body goods, and artisan crafts from the island's finest producers.</p>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-tab active" onclick="filterProducts('all')">All</button>
+      <button class="filter-tab" onclick="filterProducts('our-harvest')">Our Harvest</button>
+      <button class="filter-tab" onclick="filterProducts('chocolate')">Chocolate</button>
+      <button class="filter-tab" onclick="filterProducts('honey')">Honey</button>
+      <button class="filter-tab" onclick="filterProducts('vanilla')">Vanilla</button>
+      <button class="filter-tab" onclick="filterProducts('cigars')">Cigars</button>
+      <button class="filter-tab" onclick="filterProducts('hot-sauce')">Hot Sauce</button>
+      <button class="filter-tab" onclick="filterProducts('body-home')">Body & Home</button>
+      <button class="filter-tab" onclick="filterProducts('artisan')">Artisan</button>
+    </div>
+    <div class="product-grid" id="productGrid">
+
+      <!-- ============ OUR HARVEST ============ -->
+      <div class="card reveal" data-cat="our-harvest">
+        <img src="images/product-coffee-bag.jpg" alt="Zafra Coffee">
+        <div class="card-body">
+          <span class="badge badge-our">Our Harvest</span>
+          <div class="brand-tag">Zafra Coffee</div>
+          <div class="origin">Yauco · Jayuya · Adjuntas · Maricao</div>
+          <h3>Puerto Rican Coffee</h3>
+          <p class="desc">100% PR Arabica — Bourbon, Typica, Caturra, USDA-TARS hybrids. Washed process. SCA 82-88. Shade-grown, hand-picked.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'cof','med')">Medium · $22</button>
+            <button class="var-btn" onclick="pickVar(this,'cof','md')">Med-Dark · $22</button>
+            <button class="var-btn" onclick="pickVar(this,'cof','yau')">Yauco Single · $26</button>
+            <button class="var-btn" onclick="pickVar(this,'cof','po')">Pour-Over Kit · $28</button>
+          </div>
+          <div class="card-bottom">
+            <span class="price" id="price-cof">$22</span>
+            <button class="add-btn" id="add-cof" onclick="addToOrder('cof')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-cof" value="med">
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="our-harvest">
+        <img src="images/product-honey-jar.jpg" alt="Zafra Honey">
+        <div class="card-body">
+          <span class="badge badge-our">Our Harvest</span>
+          <div class="brand-tag">Zafra Honey</div>
+          <div class="origin">Cordillera Central</div>
+          <h3>Mountain Wildflower Honey</h3>
+          <p class="desc">Raw, unfiltered. Mite-resistant island bees. Organic potential — island isolation means no pesticide exposure.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'hon','8')">8oz · $18</button>
+            <button class="var-btn" onclick="pickVar(this,'hon','16')">16oz · $28</button>
+            <button class="var-btn" onclick="pickVar(this,'hon','cb')">Coffee-Blossom · $22</button>
+          </div>
+          <div class="card-bottom">
+            <span class="price" id="price-hon">$18</span>
+            <button class="add-btn" id="add-hon" onclick="addToOrder('hon')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-hon" value="8">
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="our-harvest">
+        <img src="images/product-vanilla-jar.jpg" alt="Zafra Vanilla">
+        <div class="card-body">
+          <span class="badge badge-our">Our Harvest</span>
+          <div class="brand-tag">Zafra Vanilla</div>
+          <div class="origin">Castañer · Cooperativa de Vainilla</div>
+          <h3>Puerto Rican Vanilla</h3>
+          <p class="desc">USDA-TARS varieties since 1909. Cured and graded by the 2023 co-op. One of the rarest vanillas in the world.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'van','3')">3 Beans · $18</button>
+            <button class="var-btn" onclick="pickVar(this,'van','10')">10 Beans · $48</button>
+            <button class="var-btn" onclick="pickVar(this,'van','ext')">Extract 2oz · $24</button>
+          </div>
+          <div class="card-bottom">
+            <span class="price" id="price-van">$18</span>
+            <button class="add-btn" id="add-van" onclick="addToOrder('van')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-van" value="3">
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="our-harvest">
+        <img src="images/cacao-pods.jpg" alt="Zafra Cacao">
+        <div class="card-body">
+          <span class="badge badge-our">Our Harvest</span>
+          <div class="brand-tag">Zafra Cacao</div>
+          <div class="origin">Heritage Trinitario · Single-Origin</div>
+          <h3>Puerto Rican Cacao</h3>
+          <p class="desc">Criollo-Forastero hybrid. Fermented, sun-dried. For chocolate makers, bakers, and craft confectioners.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'cac','beans')">Beans 8oz · $16</button>
+            <button class="var-btn" onclick="pickVar(this,'cac','nibs')">Nibs 8oz · $14</button>
+            <button class="var-btn" onclick="pickVar(this,'cac','bar')">70% Bar · $8</button>
+          </div>
+          <div class="card-bottom">
+            <span class="price" id="price-cac">$16</span>
+            <button class="add-btn" id="add-cac" onclick="addToOrder('cac')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-cac" value="beans">
+        </div>
+      </div>
+
+      <!-- ============ CHOCOLATE ============ -->
+      <div class="card reveal" data-cat="chocolate">
+        <img src="images/products/jeanmarie-75-dark-bar.jpg" alt="Jeanmarie Chocolat">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">Jeanmarie Chocolat</div>
+          <div class="origin">Aguada, PR · Tree-to-bar</div>
+          <h3>Tree-to-Bar Chocolate</h3>
+          <p class="desc">PR's only true tree-to-bar chocolate maker. Juan Echevarría grows his own cacao at Hacienda Jeanmarie. Award-winning — used by Fruition, Castronovo.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'jm','75')">75% Dark · $10</button>
+            <button class="var-btn" onclick="pickVar(this,'jm','65')">65% Coconut Milk · $10</button>
+            <button class="var-btn" onclick="pickVar(this,'jm','pow')">Cacao Powder · $16</button>
+            <button class="var-btn" onclick="pickVar(this,'jm','nib')">Nibs 12oz · $20</button>
+            <button class="var-btn" onclick="pickVar(this,'jm','box')">Gift Box · $75</button>
+          </div>
+          <a class="card-link" href="https://jmchocolat.com/shop" target="_blank">jmchocolat.com →</a>
+          <div class="card-bottom">
+            <span class="price" id="price-jm">$10</span>
+            <button class="add-btn" id="add-jm" onclick="addToOrder('jm')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-jm" value="75">
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="chocolate">
+        <img src="images/products/forteza-80-pr-origin.jpg" alt="Forteza Chocolate">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">Forteza Caribbean Chocolate</div>
+          <div class="origin">Hato Rey, PR · by Chocolate Cortés (since 1929)</div>
+          <h3>Forteza Chocolate Bars</h3>
+          <p class="desc">Local family, cacao industry development mission. Single-origin PR and blended bars with tropical inclusions.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'ft','80')">80% PR Origin · $11</button>
+            <button class="var-btn" onclick="pickVar(this,'ft','salt')">70% Sea Salt · $5</button>
+            <button class="var-btn" onclick="pickVar(this,'ft','spicy')">70% Spicy Caramel · $5</button>
+            <button class="var-btn" onclick="pickVar(this,'ft','coco')">60% Coconut · $5</button>
+          </div>
+          <a class="card-link" href="https://chocolatecortes.com/en/product-category/forteza-chocolates/" target="_blank">chocolatecortes.com →</a>
+          <div class="card-bottom">
+            <span class="price" id="price-ft">$11</span>
+            <button class="add-btn" id="add-ft" onclick="addToOrder('ft')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-ft" value="80">
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="chocolate">
+        <img src="images/products/montadero-33-milk.jpg" alt="Montadero Chocolate">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">Montadero Chocolate</div>
+          <div class="origin">Caguas, PR · Bean-to-bar</div>
+          <h3>Montadero Craft Chocolate</h3>
+          <p class="desc">Small-batch bean-to bar. Works directly with PR cocoa farms. Mountain topography molded into every bar.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'mt','33')">33% Milk · $8</button>
+            <button class="var-btn" onclick="pickVar(this,'mt','55')">55% Dark Milk Truffle Salt · $8</button>
+            <button class="var-btn" onclick="pickVar(this,'mt','77')">77% Dark w/ Almonds · $8</button>
+          </div>
+          <a class="card-link" href="https://montadero.com/collections/all" target="_blank">montadero.com →</a>
+          <div class="card-bottom">
+            <span class="price" id="price-mt">$8</span>
+            <button class="add-btn" id="add-mt" onclick="addToOrder('mt')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-mt" value="33">
+        </div>
+      </div>
+
+      <!-- ============ HONEY ============ -->
+      <div class="card reveal" data-cat="honey">
+        <img src="images/products/buenobee-honey-jar.jpg" alt="BuenoBee Honey">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">BuenoBee</div>
+          <div class="origin">Mayagüez, PR · Solar-powered apiary</div>
+          <h3>Raw PR Honey & Honey Soap</h3>
+          <p class="desc">"Good honey from good bees." Family-owned, raw, organic, solar-powered. Untouched, unfiltered, unforgettable.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'bb','hon')">Raw Honey 8oz · $12</button>
+            <button class="var-btn" onclick="pickVar(this,'bb','soap')">Honey Soap · $8</button>
+          </div>
+          <a class="card-link" href="https://buenobee.com/shop/" target="_blank">buenobee.com →</a>
+          <div class="card-bottom">
+            <span class="price" id="price-bb">$12</span>
+            <button class="add-btn" id="add-bb" onclick="addToOrder('bb')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-bb" value="hon">
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="honey">
+        <img src="images/products/karma-honey-jar.jpg" alt="Karma Honey">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">Karma Honey Project</div>
+          <div class="origin">San Juan, PR · 501(c)(3) nonprofit</div>
+          <h3>Karma Raw Honey</h3>
+          <p class="desc">From PR's gentle Africanized bees — mite-resistant, no chemicals. Every purchase supports bee population recovery and beekeeper education.</p>
+          <div class="card-bottom">
+            <span class="price">$15 · 8oz</span>
+            <button class="add-btn" onclick="addToOrderRaw('Karma Raw Honey 8oz',15,'images/products/karma-honey-jar.jpg')">Add to order</button>
+          </div>
+          <a class="card-link" href="https://karmahoneyproject.com" target="_blank">karmahoneyproject.com →</a>
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="honey">
+        <img src="images/products/monteazul-honey.jpg" alt="MonteAzul Honey">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">MonteAzul PR</div>
+          <div class="origin">San Lorenzo, PR</div>
+          <h3>MonteAzul Honey & Hot Sauce</h3>
+          <p class="desc">Raw, unprocessed honey with honeycomb. All proceeds support PR youth agriculture education.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'ma','hon')">Raw Honey w/ Honeycomb · $9</button>
+            <button class="var-btn" onclick="pickVar(this,'ma','sauce')">Artisan Hot Sauce · $10</button>
+          </div>
+          <a class="card-link" href="https://monteazulpr.myshopify.com" target="_blank">monteazulpr.com →</a>
+          <div class="card-bottom">
+            <span class="price" id="price-ma">$9</span>
+            <button class="add-btn" id="add-ma" onclick="addToOrder('ma')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-ma" value="hon">
+        </div>
+      </div>
+
+      <!-- ============ CIGARS ============ -->
+      <div class="card reveal" data-cat="cigars">
+        <img src="images/products/don-collins-5pack.jpg" alt="Don Collins Cigars">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">Don Collins Cigars</div>
+          <div class="origin">Old San Juan · Oldest cigar factory in the Caribbean (1506)</div>
+          <h3>PR-Grown Cigars</h3>
+          <p class="desc">Hand-rolled from pesticide-free PR-grown tobacco. The oldest surviving cigar factory in the Caribbean. Ships to all 50 states.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'dc','5')">5-Cigar Sampler · $45</button>
+            <button class="var-btn" onclick="pickVar(this,'dc','9')">9-Cigar Full Line · $75</button>
+            <button class="var-btn" onclick="pickVar(this,'dc','box')">Custom Cedar Box · $120</button>
+          </div>
+          <a class="card-link" href="https://doncollinscigars.smartonlineorder.com" target="_blank">don-collins.com →</a>
+          <div class="card-bottom">
+            <span class="price" id="price-dc">$45</span>
+            <button class="add-btn" id="add-dc" onclick="addToOrder('dc')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-dc" value="5">
+        </div>
+      </div>
+
+      <!-- ============ HOT SAUCE ============ -->
+      <div class="card reveal" data-cat="hot-sauce">
+        <img src="images/products/caribbean-pique.jpg" alt="Caribbean Trading Pique">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">Caribbean Trading Co.</div>
+          <div class="origin">PR · Artisan small-batch</div>
+          <h3>Pique Criollo</h3>
+          <p class="desc">Traditional PR hot sauce in 7 tropical flavors: tamarind, avocado, coconut, green herbs, passion fruit, mango lime, pineapple. The longer it sits, the hotter it gets.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'ct','tradicional')">Tradicional · $7</button>
+            <button class="var-btn" onclick="pickVar(this,'ct','tamarind')">Tamarind · $7</button>
+            <button class="var-btn" onclick="pickVar(this,'ct','passion')">Passion Fruit · $7</button>
+            <button class="var-btn" onclick="pickVar(this,'ct','mango')">Mango Lime · $7</button>
+            <button class="var-btn" onclick="pickVar(this,'ct','pineapple')">Pineapple · $7</button>
+          </div>
+          <a class="card-link" href="https://caribbeantrading.com/tropical-caribbean-puerto-rico-wholesale-products/" target="_blank">caribbeantrading.com →</a>
+          <div class="card-bottom">
+            <span class="price" id="price-ct">$7</span>
+            <button class="add-btn" id="add-ct" onclick="addToOrder('ct')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-ct" value="tradicional">
+        </div>
+      </div>
+
+      <!-- ============ BODY & HOME ============ -->
+      <div class="card reveal" data-cat="body-home">
+        <img src="images/products/cs-coconut-soap.jpg" alt="Caribbean Soaps">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Partner</span>
+          <div class="brand-tag">Caribbean Soaps</div>
+          <div class="origin">San Juan, PR · Since 2001</div>
+          <h3>Handmade Soaps & Candles</h3>
+          <p class="desc">Family-run, chemical engineer-made. Cold-process, all-vegetable oils. Made with local ingredients: sea salt, honey, aloe.</p>
+          <div class="variants">
+            <button class="var-btn active" onclick="pickVar(this,'cs','soap')">Coconut Soap · $6</button>
+            <button class="var-btn" onclick="pickVar(this,'cs','kit')">Escape Kit · $12</button>
+            <button class="var-btn" onclick="pickVar(this,'cs','candle')">Coconut Candle · $8</button>
+          </div>
+          <a class="card-link" href="https://caribbeansoaps.com" target="_blank">caribbeansoaps.com →</a>
+          <div class="card-bottom">
+            <span class="price" id="price-cs">$6</span>
+            <button class="add-btn" id="add-cs" onclick="addToOrder('cs')">Add to order</button>
+          </div>
+          <input type="hidden" id="var-cs" value="soap">
+        </div>
+      </div>
+
+      <!-- ============ ARTISAN ============ -->
+      <div class="card reveal" data-cat="artisan">
+        <img src="images/products/vejigante-mask.jpg" alt="Vejigante Mask">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Artisan</span>
+          <div class="brand-tag">PR Artisans</div>
+          <div class="origin">Loíza & Ponce, PR</div>
+          <h3>Vejigante Masks</h3>
+          <p class="desc">Traditional PR carnival masks. Loíza style: coconut shell, wooden horns, hand-painted. Ponce style: papier-mâché, vibrant colors. Each one unique.</p>
+          <div class="card-bottom">
+            <span class="price">$65-150</span>
+            <button class="add-btn" onclick="addToOrderRaw('Vejigante Mask (hand-carved)',100,'images/products/vejigante-mask.jpg')">Add to order</button>
+          </div>
+          <a class="card-link" href="https://www.discoverpuertorico.com/artisans-puerto-rico" target="_blank">discoverpuertorico.com →</a>
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="artisan">
+        <img src="images/products/santos-wood.jpg" alt="Santos de Palo">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Artisan</span>
+          <div class="brand-tag">PR Santeros</div>
+          <div class="origin">PR · 400+ year tradition</div>
+          <h3>Santos de Palo</h3>
+          <p class="desc">Hand-carved cedar saints — a uniquely PR folk art spanning 400+ years. Taíno, Spanish, and African heritage fused in wood.</p>
+          <div class="card-bottom">
+            <span class="price">$395+</span>
+            <button class="add-btn" onclick="addToOrderRaw('Santo de Palo (wood carving)',395,'images/products/santos-wood.jpg')">Add to order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="artisan">
+        <img src="images/products/mundillo-lace.jpg" alt="Mundillo Lace">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Artisan</span>
+          <div class="brand-tag">Museo del Mundillo</div>
+          <div class="origin">Moca, PR</div>
+          <h3>Mundillo Bobbin Lace</h3>
+          <p class="desc">Traditional PR handmade bobbin lace — a dying art. Hand-woven using wooden bobbins. Lace trim, ornaments, and gifts.</p>
+          <div class="card-bottom">
+            <span class="price">$25-75</span>
+            <button class="add-btn" onclick="addToOrderRaw('Mundillo Lace (handmade)',40,'images/products/mundillo-lace.jpg')">Add to order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="artisan">
+        <img src="images/products/sea-glass-jewelry.jpg" alt="Sea Glass Jewelry">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Artisan</span>
+          <div class="brand-tag">PR Jewelry Artisans</div>
+          <div class="origin">PR beaches</div>
+          <h3>Sea Glass Jewelry</h3>
+          <p class="desc">Handmade necklaces, earrings, and bracelets from ocean-tumbled sea glass found on PR beaches. Each piece unique.</p>
+          <div class="card-bottom">
+            <span class="price">$20-60</span>
+            <button class="add-btn" onclick="addToOrderRaw('Sea Glass Jewelry',35,'images/products/sea-glass-jewelry.jpg')">Add to order</button>
+          </div>
+          <a class="card-link" href="https://seaglassjewelrybyjane.com/shop/puerto-rico" target="_blank">seaglassjewelrybyjane.com →</a>
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="artisan">
+        <img src="images/products/leather-goods.jpg" alt="Leather Goods">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Artisan</span>
+          <div class="brand-tag">Oduardo Leather</div>
+          <div class="origin">Puerto Rico</div>
+          <h3>Handcrafted Leather Goods</h3>
+          <p class="desc">High-end, made-to-order leather goods: wallets, bags, belts, passport covers. One-of-a-kind pieces, hand-stitched in PR.</p>
+          <div class="card-bottom">
+            <span class="price">$50-300</span>
+            <button class="add-btn" onclick="addToOrderRaw('Handcrafted Leather Goods',150,'images/products/leather-goods.jpg')">Add to order</button>
+          </div>
+          <a class="card-link" href="https://oduardo.co" target="_blank">oduardo.co →</a>
+        </div>
+      </div>
+
+      <div class="card reveal" data-cat="artisan">
+        <img src="images/products/higuera-art.jpg" alt="Higüera Art">
+        <div class="card-body">
+          <span class="badge badge-partner">PR Artisan</span>
+          <div class="brand-tag">PR Artisans</div>
+          <div class="origin">PR · Taíno tradition</div>
+          <h3>Higüera Gourd Art</h3>
+          <p class="desc">Dried calabash gourds, hand-carved and painted with Taíno motifs. Decorative pieces, bowls, and masks. An ancient indigenous PR craft.</p>
+          <div class="card-bottom">
+            <span class="price">$15-65</span>
+            <button class="add-btn" onclick="addToOrderRaw('Higüera Gourd Art',35,'images/products/higuera-art.jpg')">Add to order</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GIFT BOXES -->
+<section class="section" id="gift-boxes" style="background:var(--cream)">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow">Mail It Home</div>
+      <h2>Curated gift boxes. We ship to your door.</h2>
+      <p>Can't carry it all on the plane? Pick a gift box, we pack it in Zafra green-and-gold, and mail it to your home. Anywhere in the US.</p>
+    </div>
+    <div class="product-grid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="card reveal" data-cat="gift">
+        <img src="images/product-coffee-bag.jpg" alt="PR Terroir Box">
+        <div class="card-body">
+          <span class="badge badge-our">Our Harvest</span>
+          <h3>PR Terroir Box</h3>
+          <p class="desc">12oz coffee + 8oz honey + 3 vanilla beans + 8oz cacao. All four harvests.</p>
+          <div class="card-bottom"><span class="price">$65</span><button class="add-btn" onclick="addToOrderRaw('PR Terroir Box',65,'images/product-coffee-bag.jpg')">Add</button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="gift">
+        <img src="images/products/jeanmarie-combo-box.jpg" alt="Chocolate Box">
+        <div class="card-body">
+          <span class="badge badge-partner">Curated</span>
+          <h3>Chocolate Lover's Box</h3>
+          <p class="desc">Jeanmarie + Forteza + Montadero + our 70% bar. Four PR chocolates.</p>
+          <div class="card-bottom"><span class="price">$45</span><button class="add-btn" onclick="addToOrderRaw('Chocolate Lover\'s Box',45,'images/products/jeanmarie-combo-box.jpg')">Add</button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="gift">
+        <img src="images/products/don-collins-cedar-box.jpg" alt="Cigar & Coffee Box">
+        <div class="card-body">
+          <span class="badge badge-partner">Curated</span>
+          <h3>Cigar & Coffee Box</h3>
+          <p class="desc">Don Collins 5-pack + 12oz Zafra coffee + coconut candle.</p>
+          <div class="card-bottom"><span class="price">$85</span><button class="add-btn" onclick="addToOrderRaw('Cigar & Coffee Box',85,'images/products/don-collins-cedar-box.jpg')">Add</button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="gift">
+        <img src="images/product-honey-jar.jpg" alt="Sweet Harvest Set">
+        <div class="card-body">
+          <span class="badge badge-our">Our Harvest</span>
+          <h3>Sweet Harvest Set</h3>
+          <p class="desc">8oz honey + 3 vanilla beans + vanilla sugar.</p>
+          <div class="card-bottom"><span class="price">$38</span><button class="add-btn" onclick="addToOrderRaw('Sweet Harvest Set',38,'images/product-honey-jar.jpg')">Add</button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="gift">
+        <img src="images/products/cs-escape-kit.jpg" alt="Island Spa Box">
+        <div class="card-body">
+          <span class="badge badge-partner">Curated</span>
+          <h3>Island Spa Box</h3>
+          <p class="desc">Coconut soap + honey soap + candle + 4oz honey.</p>
+          <div class="card-bottom"><span class="price">$35</span><button class="add-btn" onclick="addToOrderRaw('Island Spa Box',35,'images/products/cs-escape-kit.jpg')">Add</button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="gift">
+        <img src="images/product-pourover.jpg" alt="Coffee Lover's Set">
+        <div class="card-body">
+          <span class="badge badge-our">Our Harvest</span>
+          <h3>Coffee Lover's Set</h3>
+          <p class="desc">12oz coffee + 10ct pour-over kit.</p>
+          <div class="card-bottom"><span class="price">$42</span><button class="add-btn" onclick="addToOrderRaw('Coffee Lover\'s Set',42,'images/product-pourover.jpg')">Add</button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="gift">
+        <img src="images/products/caribbean-pique.jpg" alt="Island Bounty Box">
+        <div class="card-body">
+          <span class="badge badge-partner">Curated</span>
+          <h3>Island Bounty Box</h3>
+          <p class="desc">Coffee + honey + chocolate + soap + pique + candle. The everything box.</p>
+          <div class="card-bottom"><span class="price">$95</span><button class="add-btn" onclick="addToOrderRaw('Island Bounty Box',95,'images/products/caribbean-pique.jpg')">Add</button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="gift">
+        <img src="images/coffee-cherries.jpg" alt="Mini Discovery Set">
+        <div class="card-body">
+          <span class="badge badge-our">Our Harvest</span>
+          <h3>Mini Discovery Set</h3>
+          <p class="desc">4oz coffee + 4oz honey + 2 vanilla + 4oz cacao. The perfect intro.</p>
+          <div class="card-bottom"><span class="price">$35</span><button class="add-btn" onclick="addToOrderRaw('Mini Discovery Set',35,'images/coffee-cherries.jpg')">Add</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVENANCE -->
+<section class="section prov" id="provenance">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="color:var(--gold-400)">Our Story</div>
+      <h2>How it works</h2>
+      <p>We source directly from farmer-owned cooperatives in PR's central highlands. The farmer gets paid first. Then we curate the best of the island.</p>
+    </div>
+    <div class="prov-grid">
+      <div class="prov-card reveal">
+        <div class="prov-num">1</div>
+        <h3>Our Harvest</h3>
+        <p>Coffee, cacao, honey, vanilla — grown by PR farmers, processed by farmer-owned co-ops, bought at <strong>$25/almud</strong> (government floor: $18).</p>
+      </div>
+      <div class="prov-card reveal">
+        <div class="prov-num">2</div>
+        <h3>Island Partners</h3>
+        <p>We curate the best PR-made products — chocolate makers, cigar rollers, soap artisans, hot sauce crafters, wood carvers. Every product has a maker and a story.</p>
+      </div>
+      <div class="prov-card reveal">
+        <div class="prov-num">3</div>
+        <h3>Mail It Home</h3>
+        <p>Pick what you love. We pack it in a Zafra green-and-gold gift box and ship it to your door. Every order includes a provenance card.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-box reveal">
+      <div class="eyebrow">Visit Us</div>
+      <h3>Start a conversation.</h3>
+      <p>Hotel pop-up, wholesale inquiry, or just want to say hello — build your order above or write to us directly.</p>
+      <a class="mail" href="/cdn-cgi/l/email-protection#254d4049494a655f44435744515744414c4b420b464a48"><span class="__cf_email__" data-cfemail="4f272a2323200f352e293d2e3b3d2e2b262128612c2022">[email&#160;protected]</span></a>
+      <div style="font-size:13px;color:var(--ink-mute)">San Juan, Puerto Rico · <a href="https://zafratrading.com" style="color:var(--green-700)">zafratrading.com</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-name">Zafra Trading Co.</div>
+    <div class="foot-tag">De la cosecha al mundo</div>
+    <div class="foot-contact">San Juan, Puerto Rico · <a href="/cdn-cgi/l/email-protection#325a575e5e5d724853544053464053565b5c551c515d5f"><span class="__cf_email__" data-cfemail="58303d3434371822393e2a392c2a393c31363f763b3735">[email&#160;protected]</span></a></div>
+    <div class="foot-contact"><a href="https://zafratrading.com">zafratrading.com</a> · <a href="https://shopzafra.com">shopzafra.com</a></div>
+    <div class="foot-legal">© 2026 Zafra Trading Co. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ORDER DRAWER -->
+<div class="overlay" id="overlay" onclick="toggleDrawer(false)"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your order</h3>
+    <button class="drawer-close" onclick="toggleDrawer(false)">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-form">
+    <label for="fName">Name</label>
+    <input id="fName" type="text" placeholder="Your name">
+    <label for="fEmail">Email</label>
+    <input id="fEmail" type="email" placeholder="you@email.com">
+    <label for="fShip">Ship to (address)</label>
+    <input id="fShip" type="text" placeholder="Where do we mail your box?">
+    <label for="fNote">Note (optional)</label>
+    <textarea id="fNote" placeholder="Gift wrapping, delivery date…"></textarea>
+    <button class="send-btn" onclick="sendOrder()">Request quote & shipping</button>
+    <div class="drawer-note">Opens your email app with the order pre-filled. We reply within 1 business day.</div>
+  </div>
+</aside>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+let cart = [];
+try{cart = JSON.parse(localStorage.getItem('zafra_cart2')||'[]')}catch(e){cart=[]}
+
+const VARIANT_DATA = {
+  cof:{med:{name:'Medium Roast 12oz',price:22},md:{name:'Medium-Dark 12oz',price:22},yau:{name:'Yauco Single-Origin 12oz',price:26},po:{name:'Pour-Over Kit 10ct',price:28}},
+  hon:{'8':{name:'Wildflower Honey 8oz',price:18},'16':{name:'Wildflower Honey 16oz',price:28},cb:{name:'Coffee-Blossom Honey 8oz',price:22}},
+  van:{'3':{name:'Vanilla Beans (3)',price:18},'10':{name:'Vanilla Beans (10)',price:48},ext:{name:'Vanilla Extract 2oz',price:24}},
+  cac:{beans:{name:'Cacao Beans 8oz',price:16},nibs:{name:'Cacao Nibs 8oz',price:14},bar:{name:'70% Chocolate Bar',price:8}},
+  jm:{'75':{name:'Jeanmarie 75% Dark Bar',price:10},'65':{name:'Jeanmarie 65% Coconut Milk',price:10},pow:{name:'Cacao Powder',price:16},nib:{name:'Cacao Nibs 12oz',price:20},box:{name:'Combo Gift Box',price:75}},
+  ft:{'80':{name:'Forteza 80% PR Origin',price:11},salt:{name:'Forteza 70% Sea Salt',price:5},spicy:{name:'Forteza 70% Spicy Caramel',price:5},coco:{name:'Forteza 60% Coconut',price:5}},
+  mt:{'33':{name:'Montadero 33% Milk',price:8},'55':{name:'Montadero 55% Dark Milk',price:8},'77':{name:'Montadero 77% Dark Almonds',price:8}},
+  bb:{hon:{name:'BuenoBee Raw Honey 8oz',price:12},soap:{name:'BuenoBee Honey Soap',price:8}},
+  ma:{hon:{name:'MonteAzul Honey w/ Comb',price:9},sauce:{name:'MonteAzul Hot Sauce',price:10}},
+  dc:{'5':{name:'Don Collins 5-Cigar Sampler',price:45},'9':{name:'Don Collins 9-Cigar Pack',price:75},box:{name:'Don Collins Cedar Box',price:120}},
+  ct:{tradicional:{name:'Pique Tradicional',price:7},tamarind:{name:'Pique Tamarind',price:7},passion:{name:'Pique Passion Fruit',price:7},mango:{name:'Pique Mango Lime',price:7},pineapple:{name:'Pique Pineapple',price:7}},
+  cs:{soap:{name:'Caribbean Soaps Coconut Soap',price:6},kit:{name:'Caribbean Soaps Escape Kit',price:12},candle:{name:'Caribbean Soaps Coconut Candle',price:8}}
+};
+const CARD_IMGS = {
+  cof:'images/product-coffee-bag.jpg',hon:'images/product-honey-jar.jpg',van:'images/product-vanilla-jar.jpg',cac:'images/cacao-pods.jpg',
+  jm:'images/products/jeanmarie-75-dark-bar.jpg',ft:'images/products/forteza-80-pr-origin.jpg',mt:'images/products/montadero-33-milk.jpg',
+  bb:'images/products/buenobee-honey-jar.jpg',ma:'images/products/monteazul-honey.jpg',dc:'images/products/don-collins-5pack.jpg',
+  ct:'images/products/caribbean-pique.jpg',cs:'images/products/cs-coconut-soap.jpg'
+};
+
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.05,rootMargin:'0px 0px -80px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+function filterProducts(cat){
+  document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelector(`.filter-tab[onclick*="${cat}"]`).classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>{
+    if(cat==='all'||c.dataset.cat===cat){c.classList.remove('hidden')}else{c.classList.add('hidden')}
+  });
+}
+function pickVar(btn,prefix,varId){
+  btn.parentElement.querySelectorAll('.var-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('var-'+prefix).value=varId;
+  const data=VARIANT_DATA[prefix][varId];
+  document.getElementById('price-'+prefix).textContent='$'+data.price;
+}
+function addToOrder(prefix){
+  const varId=document.getElementById('var-'+prefix).value;
+  const data=VARIANT_DATA[prefix][varId];
+  cart.push({name:data.name,price:data.price,img:CARD_IMGS[prefix],qty:1});
+  persist();renderDrawer();
+  const b=document.getElementById('add-'+prefix);
+  b.classList.add('added');b.textContent='Added ✓';
+  setTimeout(()=>{b.classList.remove('added');b.textContent='Add to order'},1200);
+  toggleDrawer(true);
+}
+function addToOrderRaw(name,price,img){
+  cart.push({name,price,img,qty:1});
+  persist();renderDrawer();toggleDrawer(true);
+}
+function changeCart(i,d){
+  cart[i].qty+=d;
+  if(cart[i].qty<=0)cart.splice(i,1);
+  persist();renderDrawer();
+}
+function persist(){localStorage.setItem('zafra_cart2',JSON.stringify(cart));updateCount()}
+function updateCount(){document.getElementById('cartCount').textContent=cart.reduce((a,b)=>a+b.qty,0)}
+function renderDrawer(){
+  const box=document.getElementById('drawerItems');
+  if(!cart.length){box.innerHTML='<div class="d-empty"><div class="big">Your order is empty</div>Add products from the shop above.</div>';return}
+  box.innerHTML=cart.map((item,i)=>`
+    <div class="d-item">
+      <img src="${item.img}" alt="">
+      <div class="d-info"><h4>${item.name}</h4><div class="d-price">$${item.price} each</div></div>
+      <div class="d-qty"><button onclick="changeCart(${i},-1)">−</button><span>${item.qty}</span><button onclick="changeCart(${i},1)">+</button></div>
+    </div>`).join('');
+}
+function toggleDrawer(open){
+  document.getElementById('drawer').classList.toggle('open',open);
+  document.getElementById('overlay').classList.toggle('open',open);
+}
+function sendOrder(){
+  if(!cart.length){toggleDrawer(true);return}
+  const name=document.getElementById('fName').value.trim();
+  const email=document.getElementById('fEmail').value.trim();
+  const ship=document.getElementById('fShip').value.trim();
+  const note=document.getElementById('fNote').value.trim();
+  const lines=cart.map(i=>`- ${i.name} × ${i.qty} — $${i.price} each ($${i.price*i.qty} total)`).join('\n');
+  const total=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  const subject='Order request — shopzafra.com';
+  let body=`Hello Zafra Trading Co.,\n\nI'd like to order:\n\n${lines}\n\nEstimated total: $${total}\n\n`;
+  if(name)body+=`Name: ${name}\n`;
+  if(email)body+=`Email: ${email}\n`;
+  if(ship)body+=`Ship to: ${ship}\n`;
+  if(note)body+=`Note: ${note}\n`;
+  body+='\nSent from shopzafra.com';
+  window.location.href='mailto:hello@zafratrading.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+}
+renderDrawer();updateCount();
+</script>
+</body>
+</html>
