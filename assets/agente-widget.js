@@ -8,7 +8,8 @@
 (function () {
   var CFG = {
     endpoint: 'https://zafra-chat.jcbindustries.com/v1/chat/completions',
-    model: 'zafra-chat',
+    model: 'zafra',
+    apiKey: 'zafra_1JixE5-0c7rSeNxJG5t8s3FwQ8mH6YpK2vL4nA7bR9cD',
     avatar: 'images/widgets/agente-robot-avatar.png',
     name: 'Zafra',
     tagline: 'Ask me about our coffee',
@@ -123,7 +124,7 @@
     var t = typing();
     fetch(CFG.endpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + CFG.apiKey },
       body: JSON.stringify({
         model: CFG.model,
         messages: [{ role: 'system', content: CFG.system || '' }].concat(state.history),
