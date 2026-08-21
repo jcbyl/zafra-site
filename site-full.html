@@ -330,10 +330,10 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
   <div class="cta">
     <h2>Are you a buyer?</h2>
     <p>If you source specialty coffee, cacao, honey, or vanilla — and you care about what the farmer was paid — let's talk.</p>
-    <a class="cta-btn" href="/cdn-cgi/l/email-protection#68000d0404072812090e1a091c1a090c01060f460b0705">Get in Touch</a>
+    <button class="cta-btn" id="openAgenteWidget" style="cursor:pointer;border:none;font:inherit">Chat With Us</button>
   </div>
   <p style="text-align:center;font-size:13px;color:var(--ink-mute);margin-top:24px;">
-    <a href="/cdn-cgi/l/email-protection#8ae2efe6e6e5caf0ebecf8ebfef8ebeee3e4eda4e9e5e7"><span class="__cf_email__" data-cfemail="3058555c5c5f704a5156425144425154595e571e535f5d">[email&#160;protected]</span></a> · San Juan, Puerto Rico · zafratrading.com
+    San Juan, Puerto Rico · zafratrading.com
   </p>
 </section>
 
@@ -342,14 +342,24 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
   <img class="footer-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co.">
   <div class="footer-brand">Zafra Trading Co.</div>
   <div class="footer-tag">De la cosecha al mundo</div>
-  <div class="footer-contact">San Juan, Puerto Rico · <a href="/cdn-cgi/l/email-protection#7a121f1616153a001b1c081b0e081b1e13141d54191517"><span class="__cf_email__" data-cfemail="ff979a939390bf859e998d9e8b8d9e9b969198d19c9092">[email&#160;protected]</span></a></div>
+  <div class="footer-contact">San Juan, Puerto Rico · zafratrading.com</div>
   <div class="footer-legal">© 2026 Zafra Trading Co. All rights reserved.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+<script src="assets/agente-widget.js" defer></script>
+<script>
+window.addEventListener('load',function(){
+  var cta=document.getElementById('openAgenteWidget');
+  if(cta){cta.addEventListener('click',function(){
+    var b=document.querySelector('.agente-btn');
+    if(b && !document.querySelector('.agente-panel.open')) b.click();
+  });}
+});
 </script>
 </body>
 </html>
