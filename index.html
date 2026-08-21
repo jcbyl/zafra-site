@@ -5,166 +5,147 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zafra Trading Co. — Puerto Rican Agriculture, Worldwide</title>
 <meta name="description" content="Zafra Trading Co. — International distribution of Puerto Rican specialty agriculture: coffee, cacao, honey, and vanilla. Direct trade. Farmer-first. From the harvest to the world.">
+<link rel="icon" type="image/jpeg" href="images/zafra-logo-final.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --green-900:#0f2818;
-    --green-800:#1a3a24;
-    --green-700:#245234;
-    --green-600:#2d6b47;
-    --gold-600:#a8853a;
-    --gold-500:#c4a04a;
-    --gold-400:#dab85e;
-    --cream:#faf8f3;
-    --cream-2:#f5f1e8;
-    --cream-3:#e8e2d4;
-    --ink:#1a2a1e;
-    --ink-soft:#4a5a4e;
-    --ink-mute:#5a6a5e;
-    --white:#ffffff;
-    --line:rgba(15,40,24,.06);
-    --shadow-sm:0 2px 8px rgba(15,40,24,.04);
-    --shadow:0 8px 24px rgba(15,40,24,.06);
-    --shadow-lg:0 20px 50px rgba(15,40,24,.10);
-    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    --serif:'Cormorant Garamond',Georgia,serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:400}
-  ::selection{background:var(--gold-400);color:var(--green-900)}
-  a{color:var(--green-700);text-decoration:none}
-  a:hover{color:var(--gold-600)}
+:root{
+  --green-900:#0f2818;--green-800:#1a3a24;--green-700:#245234;--green-600:#2d6b47;
+  --gold-600:#a8853a;--gold-500:#c4a04a;--gold-400:#dab85e;
+  --cream:#faf8f3;--cream-2:#f5f1e8;--cream-3:#e8e2d4;
+  --ink:#1a2a1e;--ink-soft:#4a5a4e;--ink-mute:#5a6a5e;
+  --white:#ffffff;
+  --line:rgba(15,40,24,.06);
+  --shadow-sm:0 2px 8px rgba(15,40,24,.04);
+  --shadow:0 8px 24px rgba(15,40,24,.06);
+  --shadow-lg:0 20px 50px rgba(15,40,24,.10);
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --serif:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:400}
+::selection{background:var(--gold-400);color:var(--green-900)}
+a{color:var(--green-700);text-decoration:none}
+a:hover{color:var(--gold-600)}
 
-  /* NAV */
-  .nav{position:sticky;top:0;z-index:100;background:rgba(250,248,243,.92);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
-  .nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:12px;height:64px}
-  .nav-logo{height:38px;width:auto;border-radius:4px;flex:none}
-  .nav-brand{font-weight:600;letter-spacing:.08em;font-size:13px;color:var(--green-800);text-transform:uppercase}
-  .nav-brand span{color:var(--ink-mute);font-weight:400;font-size:11px;margin-left:8px}
-  .nav-links{display:flex;gap:4px;flex:1;justify-content:flex-end}
-  .nav-links a{font-size:13px;font-weight:500;color:var(--ink-soft);padding:8px 12px;transition:color .2s}
-  .nav-links a:hover{color:var(--green-700)}
-  .nav-toggle{display:none;background:none;border:none;cursor:pointer}
-  .nav-toggle svg{stroke:var(--ink);width:22px;height:22px}
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,243,.92);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:12px;height:64px}
+.nav-logo{height:38px;width:38px;border-radius:50%;object-fit:cover;flex:none}
+.nav-brand{font-weight:600;letter-spacing:.08em;font-size:13px;color:var(--green-800);text-transform:uppercase}
+.nav-brand span{color:var(--ink-mute);font-weight:400;font-size:11px;margin-left:8px}
+.nav-links{display:flex;gap:4px;flex:1;justify-content:flex-end}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink-soft);padding:8px 12px;transition:color .2s}
+.nav-links a:hover{color:var(--green-700)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer}
+.nav-toggle svg{stroke:var(--ink);width:22px;height:22px}
 
-  /* HERO — cream, clean, product-first */
-  .hero{background:var(--cream);padding:80px 32px 60px;text-align:center;position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center top,rgba(196,160,74,.04) 0%,transparent 60%)}
-  .hero-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto}
-  .hero-seal{width:120px;height:auto;border-radius:8px;box-shadow:var(--shadow-lg);margin:0 auto 28px;display:block}
-  .hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-600);margin-bottom:16px}
-  .hero-title{font-family:var(--serif);font-size:clamp(36px,6vw,64px);font-weight:500;line-height:1.1;color:var(--green-800);margin-bottom:14px;letter-spacing:-.01em}
-  .hero-sub{font-size:16px;color:var(--ink-soft);max-width:480px;margin:0 auto;line-height:1.5}
-  .hero-products{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:1100px;margin:48px auto 0}
-  .hero-product{border-radius:12px;overflow:hidden;background:var(--white);box-shadow:var(--shadow);transition:transform .3s}
-  .hero-product:hover{transform:translateY(-8px)}
-  .hero-product img{width:100%;height:auto;display:block}
-  .hero-product-label{padding:12px 8px;text-align:center;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--green-700);text-transform:uppercase}
+/* HERO — full-bleed */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/hero-mountains.jpg') center/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,40,24,.55) 0%,rgba(15,40,24,.65) 50%,rgba(15,40,24,.75) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:120px 32px 80px}
+.hero-seal{width:100px;height:100px;border-radius:50%;object-fit:cover;border:2px solid rgba(196,160,74,.4);box-shadow:0 0 0 6px rgba(15,40,24,.3),var(--shadow-lg);margin:0 auto 32px;display:block}
+.hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:20px}
+.hero-title{font-family:var(--serif);font-size:clamp(28px,4.5vw,48px);font-weight:500;line-height:1.15;color:var(--cream);margin-bottom:20px;letter-spacing:-.01em}
+.hero-title em{font-style:italic;color:var(--gold-400)}
+.hero-sub{font-size:17px;color:rgba(250,248,243,.8);max-width:520px;margin:0 auto;line-height:1.6}
 
-  /* SECTIONS */
-  .section{padding:100px 32px;max-width:1100px;margin:0 auto}
-  .section-dark{background:var(--green-900);padding:100px 32px}
-  .section-dark-inner{max-width:1100px;margin:0 auto}
-  .divider{width:40px;height:2px;background:var(--gold-500);margin-bottom:20px}
-  .section-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,44px);font-weight:500;color:var(--green-800);margin-bottom:14px;letter-spacing:-.01em}
-  .section-dark .section-title{color:var(--cream)}
-  .section-dark .divider{background:var(--gold-400)}
-  .section-intro{font-size:16px;color:var(--ink-soft);max-width:560px;margin-bottom:48px;line-height:1.6}
-  .section-dark .section-intro{color:rgba(250,248,243,.65)}
+/* SECTIONS */
+.section{padding:100px 32px;max-width:1100px;margin:0 auto}
+.section-dark{background:var(--green-900);padding:100px 32px}
+.section-dark-inner{max-width:1100px;margin:0 auto}
+.divider{width:40px;height:2px;background:var(--gold-500);margin-bottom:20px}
+.section-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,44px);font-weight:500;color:var(--green-800);margin-bottom:14px;letter-spacing:-.01em}
+.section-dark .section-title{color:var(--cream)}
+.section-dark .divider{background:var(--gold-400)}
+.section-intro{font-size:16px;color:var(--ink-soft);max-width:560px;margin-bottom:48px;line-height:1.6}
+.section-dark .section-intro{color:rgba(250,248,243,.65)}
 
-  /* PRODUCT GRID */
-  .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-  .product-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
-  .product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-  .product-card img{width:100%;height:380px;object-fit:cover;display:block;background:var(--white)}
-  .product-card-body{padding:22px 20px}
-  .product-card h3{font-size:15px;font-weight:600;color:var(--green-800);margin-bottom:6px}
-  .product-card p{font-size:13px;color:var(--ink-mute);line-height:1.5}
+/* PRODUCT GRID */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.product-card{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.product-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.product-card-body{padding:22px 20px}
+.product-card h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--green-800);margin-bottom:6px}
+.product-card .origin{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600);margin-bottom:8px}
+.product-card p{font-size:13px;color:var(--ink-mute);line-height:1.5}
 
-  /* HARVEST STORIES */
-  .harvest{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden;margin-bottom:32px;box-shadow:var(--shadow);background:var(--white)}
-  .harvest.reverse .harvest-img{order:2}
-  .harvest.reverse .harvest-text{order:1}
-  .harvest-img{min-height:440px;background-size:cover;background-position:center}
-  .harvest-text{padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
-  .harvest-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);margin-bottom:10px}
-  .harvest-text h3{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--green-800);margin-bottom:16px}
-  .harvest-text p{font-size:15px;color:var(--ink-soft);line-height:1.65;margin-bottom:12px}
-  .harvest-text p strong{color:var(--green-800);font-weight:600}
-  .harvest-stat{margin-top:14px;padding:14px 16px;background:var(--cream-2);border-radius:8px;border-left:2px solid var(--gold-500);font-size:14px;color:var(--ink-soft)}
-  .harvest-stat strong{color:var(--green-700)}
+/* HARVEST STORIES */
+.harvest{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden;margin-bottom:32px;box-shadow:var(--shadow);background:var(--white)}
+.harvest.reverse .harvest-img{order:2}
+.harvest.reverse .harvest-text{order:1}
+.harvest-img{min-height:440px;background-size:cover;background-position:center}
+.harvest-text{padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
+.harvest-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);margin-bottom:10px}
+.harvest-text h3{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--green-800);margin-bottom:16px}
+.harvest-text p{font-size:15px;color:var(--ink-soft);line-height:1.65;margin-bottom:12px}
+.harvest-text p strong{color:var(--green-800);font-weight:600}
+.harvest-stat{margin-top:14px;padding:14px 16px;background:var(--cream-2);border-radius:8px;border-left:2px solid var(--gold-500);font-size:14px;color:var(--ink-soft)}
+.harvest-stat strong{color:var(--green-700)}
 
-  /* SHOWCASE — cream */
-  .showcase-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-  .showcase-item{text-align:center}
-  .showcase-item img{width:100%;max-width:200px;border-radius:10px;box-shadow:var(--shadow);display:block;margin:0 auto;transition:transform .3s}
-  .showcase-item:hover img{transform:translateY(-6px)}
-  .showcase-item p{margin-top:14px;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--green-700);text-transform:uppercase}
+/* FLOW */
+.flow{display:flex;gap:20px;justify-content:center;align-items:stretch;margin:40px 0}
+.flow-step{flex:1;max-width:280px;background:rgba(250,248,243,.04);border:1px solid rgba(250,248,243,.08);border-radius:12px;padding:28px 24px;text-align:center}
+.flow-num{display:inline-block;width:36px;height:36px;border-radius:50%;background:var(--gold-500);color:var(--green-900);font-size:16px;font-weight:700;line-height:36px;margin-bottom:14px}
+.flow-step strong{display:block;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--cream);margin-bottom:8px}
+.flow-step p{font-size:14px;color:rgba(250,248,243,.65);line-height:1.5}
+.flow-arrow{display:flex;align-items:center;color:var(--gold-500);font-size:20px}
 
-  /* FLOW */
-  .flow{display:flex;gap:20px;justify-content:center;align-items:stretch;margin:40px 0}
-  .flow-step{flex:1;max-width:280px;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px 24px;text-align:center;box-shadow:var(--shadow-sm)}
-  .flow-num{display:inline-block;width:28px;height:28px;border-radius:50%;background:var(--green-700);color:var(--cream);font-size:13px;font-weight:600;line-height:28px;margin-bottom:12px}
-  .flow-step strong{display:block;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--green-800);margin-bottom:8px}
-  .flow-step p{font-size:14px;color:var(--ink-mute);line-height:1.5}
-  .flow-arrow{display:flex;align-items:center;color:var(--gold-500);font-size:20px}
+/* ECOSYSTEM */
+.eco-list{list-style:none;padding:0}
+.eco-list li{padding:20px 0;border-bottom:1px solid rgba(250,248,243,.08);font-size:15px;color:rgba(250,248,243,.7);line-height:1.6}
+.eco-list li:last-child{border-bottom:none}
+.eco-list li strong{color:var(--cream);font-weight:600}
 
-  /* ECOSYSTEM */
-  .eco-list{list-style:none;padding:0}
-  .eco-list li{padding:20px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-soft);line-height:1.6}
-  .eco-list li:last-child{border-bottom:none}
-  .eco-list li strong{color:var(--green-800);font-weight:600}
+/* HIGHLIGHT */
+.highlight{background:rgba(250,248,243,.04);border:1px solid rgba(250,248,243,.08);border-radius:16px;padding:32px;margin:30px 0}
+.highlight p{font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--cream)}
+.highlight strong{color:var(--gold-400)}
 
-  /* HIGHLIGHT */
-  .highlight{background:var(--cream-2);border:1px solid var(--line);border-radius:16px;padding:32px;margin:30px 0}
-  .highlight p{font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--ink)}
-  .highlight strong{color:var(--green-700)}
+/* CTA */
+.cta{background:var(--green-800);border-radius:16px;padding:56px 40px;text-align:center;color:var(--cream);margin:0 32px}
+.cta h2{font-family:var(--serif);font-size:32px;font-weight:500;margin-bottom:14px}
+.cta p{font-size:16px;color:rgba(250,248,243,.75);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-block;background:var(--gold-500);color:var(--green-900);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 32px;border-radius:8px;transition:background .2s}
+.cta-btn:hover{background:var(--gold-400);color:var(--green-900)}
 
-  /* CTA */
-  .cta{background:var(--green-800);border-radius:16px;padding:56px 40px;text-align:center;color:var(--cream);margin:0 32px}
-  .cta h2{font-family:var(--serif);font-size:32px;font-weight:500;margin-bottom:14px}
-  .cta p{font-size:16px;color:rgba(250,248,243,.75);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto}
-  .cta-btn{display:inline-block;background:var(--gold-500);color:var(--green-900);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 32px;border-radius:8px;transition:background .2s}
-  .cta-btn:hover{background:var(--gold-400);color:var(--green-900)}
+/* FOOTER */
+footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 32px;text-align:center}
+.footer-seal{height:52px;width:52px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;opacity:.9}
+.footer-brand{font-weight:600;font-size:14px;color:var(--cream);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.footer-tag{font-family:var(--serif);font-style:italic;color:var(--gold-400);margin-bottom:18px}
+.footer-contact{font-size:13px;margin-bottom:6px}
+.footer-contact a{color:rgba(250,248,243,.7)}
+.footer-legal{margin-top:24px;padding-top:18px;border-top:1px solid rgba(250,248,243,.08);font-size:12px;color:rgba(250,248,243,.3)}
 
-  /* FOOTER */
-  footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 32px;text-align:center}
-  .footer-seal{height:52px;width:auto;border-radius:4px;margin:0 auto 16px;display:block;opacity:.9}
-  .footer-brand{font-weight:600;font-size:14px;color:var(--cream);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-  .footer-tag{font-family:var(--serif);font-style:italic;color:var(--gold-400);margin-bottom:18px}
-  .footer-contact{font-size:13px;margin-bottom:6px}
-  .footer-contact a{color:rgba(250,248,243,.7)}
-  .footer-legal{margin-top:24px;padding-top:18px;border-top:1px solid rgba(250,248,243,.08);font-size:12px;color:rgba(250,248,243,.3)}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
 
-  /* REVEAL */
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.visible{opacity:1;transform:translateY(0)}
-
-  /* RESPONSIVE */
-  @media(max-width:900px){
-    .hero-products,.showcase-grid{grid-template-columns:repeat(2,1fr)}
-    .product-grid{grid-template-columns:repeat(2,1fr)}
-    .harvest{grid-template-columns:1fr}
-    .harvest.reverse .harvest-img{order:1}
-    .harvest.reverse .harvest-text{order:2}
-    .harvest-img{min-height:260px}
-    .harvest-text{padding:32px 24px}
-    .flow{flex-direction:column}
-    .flow-arrow{display:none}
-  }
-  @media(max-width:640px){
-    .nav-links{display:none}
-    .nav-toggle{display:block}
-    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--cream);padding:16px;gap:4px;border-bottom:1px solid var(--line)}
-    .nav-links.open a{padding:12px 16px}
-    .hero-products,.showcase-grid,.product-grid{grid-template-columns:1fr}
-    .section{padding:60px 20px}
-    .section-dark{padding:60px 20px}
-    .cta{margin:0 20px;padding:40px 24px}
-  }
+/* RESPONSIVE */
+@media(max-width:900px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .harvest{grid-template-columns:1fr}
+  .harvest.reverse .harvest-img{order:1}
+  .harvest.reverse .harvest-text{order:2}
+  .harvest-img{min-height:260px}
+  .harvest-text{padding:32px 24px}
+  .flow{flex-direction:column}
+  .flow-arrow{display:none}
+}
+@media(max-width:640px){
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--cream);padding:16px;gap:4px;border-bottom:1px solid var(--line);flex-direction:column}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block}
+  .product-grid{grid-template-columns:1fr}
+  .section{padding:60px 20px}
+  .section-dark{padding:60px 20px}
+  .cta{margin:0 20px;padding:40px 24px}
+}
 </style>
 </head>
 <body>
@@ -187,46 +168,52 @@
   </div>
 </nav>
 
-<!-- HERO — seal, title, tagline only -->
-<section class="hero">
+<!-- HERO — full-bleed mountain background -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
     <img class="hero-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co.">
     <p class="hero-eyebrow">Puerto Rican Agriculture, Worldwide</p>
-    <h1 class="hero-title">From the harvest<br>to the world.</h1>
+    <h1 class="hero-title">From the heart of the<br>island of enchantment,<br><em>direct to the world.</em></h1>
     <p class="hero-sub">Direct trade coffee, cacao, honey, and vanilla from the mountains of Puerto Rico. Farmer-owned. Price-transparent. Internationally distributed.</p>
   </div>
 </section>
 
-<!-- PRODUCTS — cream -->
+<!-- PRODUCTS -->
 <section class="section" id="products">
   <div class="divider"></div>
   <h2 class="section-title">What We Carry</h2>
   <p class="section-intro">Four products, island-grown, mountain-shaded, hand-harvested. Limited production, not commodity volume. Each with its own story.</p>
   <div class="product-grid">
-    <div class="product-card">
+    <div class="product-card reveal">
       <img src="images/product-coffee-bag.jpg" alt="Coffee">
       <div class="product-card-body">
+        <div class="origin">Yauco · Jayuya · Adjuntas · Maricao</div>
         <h3>Coffee</h3>
-        <p>100% Puerto Rican Arabica. Bourbon, Typica, Caturra, USDA-TARS hybrids. Washed process. Yauco, Jayuya, Adjuntas, Maricao. SCA 82-88.</p>
+        <p>100% Puerto Rican Arabica. Bourbon, Typica, Caturra, USDA-TARS hybrids. Washed process. SCA 82-88.</p>
       </div>
     </div>
-    <div class="product-card">
+    <div class="product-card reveal">
       <img src="images/product-cacao-bag.jpg" alt="Cacao">
       <div class="product-card-body">
+        <div class="origin">Heritage Trinitario</div>
         <h3>Cacao</h3>
         <p>Heritage Trinitario — Criollo-Forastero hybrid. Fermented, sun-dried. Single-origin beans for chocolate makers.</p>
       </div>
     </div>
-    <div class="product-card">
+    <div class="product-card reveal">
       <img src="images/product-honey-jar.jpg" alt="Honey">
       <div class="product-card-body">
+        <div class="origin">Cordillera Central</div>
         <h3>Honey</h3>
         <p>Mountain wildflower and coffee-blossom. Raw, unfiltered. Mite-resistant bees. Island isolation means organic potential.</p>
       </div>
     </div>
-    <div class="product-card">
+    <div class="product-card reveal">
       <img src="images/product-vanilla-jar.jpg" alt="Vanilla">
       <div class="product-card-body">
+        <div class="origin">Castañer · USDA-TARS · Since 1909</div>
         <h3>Vanilla</h3>
         <p>One of the rarest vanillas in the world. USDA-TARS varieties since 1909. Cured and graded to export spec.</p>
       </div>
@@ -234,7 +221,7 @@
   </div>
 </section>
 
-<!-- HARVEST STORIES — cream -->
+<!-- HARVEST STORIES -->
 <section class="section" id="harvests">
   <div class="divider"></div>
   <h2 class="section-title">The Four Harvests</h2>
@@ -286,47 +273,51 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS — cream -->
-<section class="section" id="how">
-  <div class="divider"></div>
+<!-- HOW IT WORKS — dark section -->
+<section class="section-dark" id="how">
+  <div class="section-dark-inner">
+    <div class="divider"></div>
     <h2 class="section-title">How It Works</h2>
     <p class="section-intro">Three independent entities, each doing one thing well.</p>
     <div class="flow">
-      <div class="flow-step">
+      <div class="flow-step reveal">
         <div class="flow-num">1</div>
         <strong>Farmers</strong>
         <p>Grow, harvest, and deliver to the co-op at above-market prices.</p>
       </div>
       <div class="flow-arrow">→</div>
-      <div class="flow-step">
+      <div class="flow-step reveal">
         <div class="flow-num">2</div>
         <strong>Cooperative</strong>
         <p>Processes, grades, packages. Co-op owns the equipment. Farmers own the co-op.</p>
       </div>
       <div class="flow-arrow">→</div>
-      <div class="flow-step">
+      <div class="flow-step reveal">
         <div class="flow-num">3</div>
         <strong>Zafra</strong>
         <p>Buys from the co-op. Ships to international buyers. Carries the story.</p>
       </div>
     </div>
-    <div class="highlight">
+    <div class="highlight reveal">
       <p><strong>Price transparency.</strong> Every shipment carries a provenance card: region, farm, harvest date, processing method, and the price paid to the farmer. That's the moat.</p>
     </div>
+  </div>
 </section>
 
-<!-- ECOSYSTEM — cream -->
-<section class="section" id="ecosystem">
-  <div class="divider"></div>
-  <h2 class="section-title">The Ecosystem</h2>
-  <ul class="eco-list">
-    <li><strong>Fundación Areito de Puerto Rico</strong> — Non-profit umbrella. Programs: Instituto de Café, Polinizadores, Raíces Vivas, Propagación. Funds infrastructure. Does not sell product.</li>
-    <li><strong>Areito Cooperative</strong> — Farmer-owned. Owns processing equipment. Processes coffee, cacao, honey. Retains on-island distribution. Sells to Zafra for export.</li>
-    <li><strong>Zafra Trading Co.</strong> — International distribution. Buys from the co-op. Ships to US and international markets. B2B wholesale and consumer retail.</li>
-  </ul>
+<!-- ECOSYSTEM — dark continues -->
+<section class="section-dark" id="ecosystem">
+  <div class="section-dark-inner">
+    <div class="divider"></div>
+    <h2 class="section-title">The Ecosystem</h2>
+    <ul class="eco-list">
+      <li><strong>Fundación Areito de Puerto Rico</strong> — Non-profit umbrella. Programs: Instituto de Café, Polinizadores, Raíces Vivas, Propagación. Funds infrastructure. Does not sell product.</li>
+      <li><strong>Areito Cooperative</strong> — Farmer-owned. Owns processing equipment. Processes coffee, cacao, honey. Retains on-island distribution. Sells to Zafra for export.</li>
+      <li><strong>Zafra Trading Co.</strong> — International distribution. Buys from the co-op. Ships to US and international markets. B2B wholesale and consumer retail.</li>
+    </ul>
+  </div>
 </section>
 
-<!-- WHY PR — cream -->
+<!-- WHY PR -->
 <section class="section" id="why">
   <div class="divider"></div>
   <h2 class="section-title">Why Puerto Rico</h2>
@@ -334,15 +325,15 @@
   <p style="font-size:15px;color:var(--ink-soft);line-height:1.65;max-width:640px;">The same story holds across the portfolio: heritage Trinitario cacao, mountain wildflower honey from mite-resistant bees, vanilla being revived by a new cooperative. Zafra exists because these products deserve a channel that pays what they're worth.</p>
 </section>
 
-<!-- CONTACT — cream with dark CTA -->
+<!-- CONTACT -->
 <section class="section" id="contact">
   <div class="cta">
     <h2>Are you a buyer?</h2>
     <p>If you source specialty coffee, cacao, honey, or vanilla — and you care about what the farmer was paid — let's talk.</p>
-    <a class="cta-btn" href="/cdn-cgi/l/email-protection#177f727b7b78576d76716576636576737e79703974787a">Get in Touch</a>
+    <a class="cta-btn" href="/cdn-cgi/l/email-protection#68000d0404072812090e1a091c1a090c01060f460b0705">Get in Touch</a>
   </div>
   <p style="text-align:center;font-size:13px;color:var(--ink-mute);margin-top:24px;">
-    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="751d1019191a350f14130714010714111c1b125b161a18">[email&#160;protected]</a> · San Juan, Puerto Rico · zafratrading.com
+    <a href="/cdn-cgi/l/email-protection#8ae2efe6e6e5caf0ebecf8ebfef8ebeee3e4eda4e9e5e7"><span class="__cf_email__" data-cfemail="3058555c5c5f704a5156425144425154595e571e535f5d">[email&#160;protected]</span></a> · San Juan, Puerto Rico · zafratrading.com
   </p>
 </section>
 
@@ -351,14 +342,14 @@
   <img class="footer-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co.">
   <div class="footer-brand">Zafra Trading Co.</div>
   <div class="footer-tag">De la cosecha al mundo</div>
-  <div class="footer-contact">San Juan, Puerto Rico · <a href="/cdn-cgi/l/email-protection#0a626f6666654a706b6c786b7e786b6e63646d24696567"><span class="__cf_email__" data-cfemail="1e767b7272715e647f786c7f6a6c7f7a777079307d7173">[email&#160;protected]</span></a></div>
+  <div class="footer-contact">San Juan, Puerto Rico · <a href="/cdn-cgi/l/email-protection#7a121f1616153a001b1c081b0e081b1e13141d54191517"><span class="__cf_email__" data-cfemail="ff979a939390bf859e998d9e8b8d9e9b969198d19c9092">[email&#160;protected]</span></a></div>
   <div class="footer-legal">© 2026 Zafra Trading Co. All rights reserved.</div>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
-  const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
