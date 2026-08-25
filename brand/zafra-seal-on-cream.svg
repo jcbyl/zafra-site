@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Zafra Trading Co. seal">
+<defs>
+  <path id="zt-top" d="M 58.00 240.00 A 182 182 0 0 1 422.00 240.00"/>
+  <path id="zt-bot" d="M 60.00 240.00 A 180 180 0 0 0 420.00 240.00"/>
+  <clipPath id="zt-med"><circle cx="240" cy="240" r="142"/></clipPath>
+</defs>
+<rect width="480" height="480" fill="#faf8f3"/>
+<circle cx="240" cy="240" r="234" fill="#0f2818" stroke="#c4a04a" stroke-width="4"/>
+<circle cx="240" cy="240" r="226" fill="none" stroke="#a8853a" stroke-width="1.6"/>
+<circle cx="240" cy="240" r="216" fill="#1a3a24"/>
+<circle cx="240" cy="240" r="150" fill="#1a3a24" stroke="#c4a04a" stroke-width="2.6"/>
+<circle cx="240" cy="240" r="142" fill="#0f2818"/>
+
+<!-- band lettering -->
+<text font-family="Cormorant Garamond, Georgia, serif" font-size="33" font-weight="600" letter-spacing="7.5" fill="#faf8f3">
+  <textPath href="#zt-top" startOffset="50%" text-anchor="middle">ZAFRA TRADING CO.</textPath>
+</text>
+<text font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="500" letter-spacing="6.5" fill="#dab85e">
+  <textPath href="#zt-bot" startOffset="50%" text-anchor="middle">SAN JUAN · PUERTO RICO</textPath>
+</text>
+<path d="M 47 233 l 7 7 l -7 7 l -7 -7 z" fill="#c4a04a"/><path d="M 433 233 l 7 7 l -7 7 l -7 -7 z" fill="#c4a04a"/>
+
+<!-- medallion -->
+<g clip-path="url(#zt-med)">
+  <rect x="98" y="98" width="284" height="284" fill="#0f2818"/>
+  <g stroke="#dab85e" stroke-width="4.5" stroke-linecap="round">
+<line x1="278.0" y1="178.0" x2="304.0" y2="178.0"/>
+<line x1="272.9" y1="159.0" x2="295.4" y2="146.0"/>
+<line x1="259.0" y1="145.1" x2="272.0" y2="122.6"/>
+<line x1="240.0" y1="140.0" x2="240.0" y2="114.0"/>
+<line x1="221.0" y1="145.1" x2="208.0" y2="122.6"/>
+<line x1="207.1" y1="159.0" x2="184.6" y2="146.0"/>
+<line x1="202.0" y1="178.0" x2="176.0" y2="178.0"/>
+<line x1="207.1" y1="197.0" x2="184.6" y2="210.0"/>
+<line x1="221.0" y1="210.9" x2="208.0" y2="233.4"/>
+<line x1="240.0" y1="216.0" x2="240.0" y2="242.0"/>
+<line x1="259.0" y1="210.9" x2="272.0" y2="233.4"/>
+<line x1="272.9" y1="197.0" x2="295.4" y2="210.0"/>
+</g>
+<circle cx="240" cy="178" r="31" fill="#dab85e" stroke="#c4a04a" stroke-width="2.5"/>
+<path d="M 98 288 L 98,238 140,194 178,226 222,182 268,230 312,196 382,222 382,382 L 382 288 Z" fill="#245234"/>
+<path d="M 98 306 L 98,264 146,232 196,266 246,226 294,262 382,234 382,382 L 382 306 Z" fill="#1a3a24"/>
+<path d="M 98 332 L 98,292 160,268 232,296 382,270 382,382 L 382 332 Z" fill="#12241a"/>
+<g transform="translate(240 300) scale(1.7 1.7)" stroke="#dab85e" fill="none" stroke-linecap="round">
+<path d="M -58 26 C -28 18 4 8 34 -8 C 44 -13 52 -19 58 -26" stroke-width="2.6"/>
+<path d="M -34 20 q 11 -13 24 -11 q -9 14 -24 11 z" fill="#dab85e" stroke="none"/>
+<path d="M -12 12 q -11 -12 -24 -8 q 10 13 24 8 z" fill="#dab85e" stroke="none" opacity=".82"/>
+<path d="M 14 2 q 11 -13 24 -11 q -9 14 -24 11 z" fill="#dab85e" stroke="none"/>
+<path d="M 34 -8 q -11 -12 -23 -7 q 9 13 23 7 z" fill="#dab85e" stroke="none" opacity=".82"/>
+<line x1="-8" y1="9" x2="-11" y2="1" stroke-width="1.8"/>
+<circle cx="-12.5" cy="-3" r="6" fill="#c4423a" stroke="none"/>
+<line x1="-4" y1="8" x2="0" y2="0" stroke-width="1.8"/>
+<circle cx="1.5" cy="-4" r="6" fill="#a83232" stroke="none"/>
+<line x1="22" y1="-4" x2="19" y2="-12" stroke-width="1.8"/>
+<circle cx="17.5" cy="-16" r="6" fill="#c4423a" stroke="none"/>
+<line x1="26" y1="-5" x2="30" y2="-13" stroke-width="1.8"/>
+<circle cx="31.5" cy="-17" r="6" fill="#a83232" stroke="none"/>
+</g>
+</g>
+<circle cx="240" cy="240" r="142" fill="none" stroke="#c4a04a" stroke-width="2.2"/>
+</svg>

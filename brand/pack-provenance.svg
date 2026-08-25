@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Zafra provenance card">
+<rect x="10" y="10" width="620" height="380" rx="8" fill="#faf8f3" stroke="#a8853a" stroke-width="1.6"/>
+<rect x="18" y="18" width="604" height="364" rx="5" fill="none" stroke="#a8853a" stroke-width="0.8" opacity=".7"/>
+<g transform="translate(84 84) scale(0.4489795918367347)">
+<circle r="98" fill="#1a3a24" stroke="#a8853a" stroke-width="5"/>
+<g stroke="#dab85e" stroke-width="3.6" stroke-linecap="round">
+<line x1="26.0" y1="-26.0" x2="42.0" y2="-26.0"/>
+<line x1="22.5" y1="-39.0" x2="36.4" y2="-47.0"/>
+<line x1="13.0" y1="-48.5" x2="21.0" y2="-62.4"/>
+<line x1="0.0" y1="-52.0" x2="0.0" y2="-68.0"/>
+<line x1="-13.0" y1="-48.5" x2="-21.0" y2="-62.4"/>
+<line x1="-22.5" y1="-39.0" x2="-36.4" y2="-47.0"/>
+<line x1="-26.0" y1="-26.0" x2="-42.0" y2="-26.0"/>
+<line x1="-22.5" y1="-13.0" x2="-36.4" y2="-5.0"/>
+<line x1="-13.0" y1="-3.5" x2="-21.0" y2="10.4"/>
+<line x1="-0.0" y1="0.0" x2="-0.0" y2="16.0"/>
+<line x1="13.0" y1="-3.5" x2="21.0" y2="10.4"/>
+<line x1="22.5" y1="-13.0" x2="36.4" y2="-5.0"/>
+</g>
+<circle cx="0" cy="-26" r="21" fill="#dab85e" stroke="#c4a04a" stroke-width="2.5"/>
+<path d="M -98 62 L -98,8 -58,-16 -24,8 12,-20 48,6 78,-12 98,0 98,62 L 98 62 Z" fill="#245234"/>
+<path d="M -98 72 L -98,34 -46,14 6,38 56,16 98,32 98,72 L 98 72 Z" fill="#12241a"/>
+<g transform="translate(0 44) scale(1.5)" fill="none" stroke="#dab85e" stroke-width="2.4" stroke-linecap="round">
+<line x1="0" y1="-14" x2="0" y2="-4"/><line x1="0" y1="-14" x2="-6" y2="-8"/>
+<circle cx="-6" cy="-2" r="6.4" fill="#c4423a" stroke="none"/><circle cx="6" cy="0" r="6.4" fill="#a83232" stroke="none"/>
+<path d="M 0 4 q 9 -8 18 -6 q -7 9 -18 6 z" fill="#dab85e" stroke="none"/>
+</g>
+</g>
+<text x="152" y="72" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="600" fill="#1a3a24" letter-spacing="1.5">PROVENANCE</text>
+<text x="152" y="98" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#a8853a" letter-spacing="3.5">HARVEST RECORD · ZAFRA TRADING CO.</text>
+<line x1="44" y1="130" x2="596" y2="130" stroke="#a8853a" stroke-width="1"/>
+<g font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#245234">
+<text x="44" y="160" font-weight="600">REGION</text><text x="200" y="160" fill="#0f2818">Yauco · Cordillera Central</text>
+<text x="44" y="188" font-weight="600">FARM / CO-OP</text><text x="200" y="188" fill="#0f2818">Areito Cooperative</text>
+<text x="44" y="216" font-weight="600">HARVEST</text><text x="200" y="216" fill="#0f2818">Zafra 2026 · January – March</text>
+<text x="44" y="244" font-weight="600">ALTITUDE</text><text x="200" y="244" fill="#0f2818">3,900 ft · shade grown</text>
+<text x="44" y="272" font-weight="600">VARIETAL</text><text x="200" y="272" fill="#0f2818">Bourbon · Limaní</text>
+<text x="44" y="300" font-weight="600">FARMER PRICE</text><text x="200" y="300" fill="#0f2818">Paid direct · above fair-trade floor</text>
+</g>
+<line x1="44" y1="322" x2="596" y2="322" stroke="#a8853a" stroke-width="1"/>
+<text x="44" y="350" font-family="Cormorant Garamond, Georgia, serif" font-size="15" font-style="italic" fill="#245234">Every harvest has a home. Every farmer has a name.</text>
+<text x="596" y="350" text-anchor="end" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#a8853a" letter-spacing="2.5">SAN JUAN · PR</text>
+</svg>

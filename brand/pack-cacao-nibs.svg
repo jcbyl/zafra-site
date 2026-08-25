@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 640" role="img" aria-label="Zafra CACAO pouch">
+<defs>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity=".22"/>
+    <stop offset=".18" stop-color="#000" stop-opacity="0"/>
+    <stop offset=".82" stop-color="#000" stop-opacity="0"/>
+    <stop offset="1" stop-color="#000" stop-opacity=".28"/>
+  </linearGradient>
+</defs>
+<!-- body -->
+<rect x="40" y="52" width="340" height="548" rx="18" fill="#1a3a24"/>
+<!-- top crimp -->
+<rect x="34" y="36" width="352" height="34" rx="8" fill="#0f2818"/>
+<line x1="44" y1="53" x2="376" y2="53" stroke="#a8853a" stroke-width="1" opacity=".7"/>
+<line x1="44" y1="60" x2="376" y2="60" stroke="#a8853a" stroke-width="0.6" opacity=".4"/>
+<!-- bottom gusset -->
+<rect x="52" y="586" width="316" height="14" rx="7" fill="#0f2818" opacity=".8"/>
+<rect x="40" y="52" width="340" height="548" rx="18" fill="url(#sheen)"/>
+<circle cx="96" cy="96" r="7" fill="#0f2818" stroke="#a8853a" stroke-width="1.4"/><g>
+<rect x="88" y="118" width="244" height="330" fill="#c4a04a"/>
+<rect x="93" y="123" width="234" height="320" fill="none" stroke="#0f2818" stroke-width="1.6"/>
+<rect x="97" y="127" width="226" height="312" fill="none" stroke="#0f2818" stroke-width="0.8" opacity=".6"/>
+</g>
+<g transform="translate(210.0 210) scale(0.6326530612244898)">
+<circle r="98" fill="#0f2818" stroke="#a8853a" stroke-width="5"/>
+<circle r="88" fill="#1a3a24"/>
+<g stroke="#dab85e" stroke-width="3.6" stroke-linecap="round">
+<line x1="26.0" y1="-26.0" x2="42.0" y2="-26.0"/>
+<line x1="22.5" y1="-39.0" x2="36.4" y2="-47.0"/>
+<line x1="13.0" y1="-48.5" x2="21.0" y2="-62.4"/>
+<line x1="0.0" y1="-52.0" x2="0.0" y2="-68.0"/>
+<line x1="-13.0" y1="-48.5" x2="-21.0" y2="-62.4"/>
+<line x1="-22.5" y1="-39.0" x2="-36.4" y2="-47.0"/>
+<line x1="-26.0" y1="-26.0" x2="-42.0" y2="-26.0"/>
+<line x1="-22.5" y1="-13.0" x2="-36.4" y2="-5.0"/>
+<line x1="-13.0" y1="-3.5" x2="-21.0" y2="10.4"/>
+<line x1="-0.0" y1="0.0" x2="-0.0" y2="16.0"/>
+<line x1="13.0" y1="-3.5" x2="21.0" y2="10.4"/>
+<line x1="22.5" y1="-13.0" x2="36.4" y2="-5.0"/>
+</g>
+<circle cx="0" cy="-26" r="21" fill="#dab85e" stroke="#c4a04a" stroke-width="2.5"/>
+<path d="M -98 62 L -98,8 -58,-16 -24,8 12,-20 48,6 78,-12 98,0 98,62 L 98 62 Z" fill="#245234"/>
+<path d="M -98 72 L -98,34 -46,14 6,38 56,16 98,32 98,72 L 98 72 Z" fill="#12241a"/>
+<g transform="translate(0 44) scale(1.5)" fill="none" stroke="#dab85e" stroke-width="2.4" stroke-linecap="round">
+<line x1="0" y1="-14" x2="0" y2="-4"/><line x1="0" y1="-14" x2="-6" y2="-8"/>
+<circle cx="-6" cy="-2" r="6.4" fill="#c4423a" stroke="none"/><circle cx="6" cy="0" r="6.4" fill="#a83232" stroke="none"/>
+<path d="M 0 4 q 9 -8 18 -6 q -7 9 -18 6 z" fill="#dab85e" stroke="none"/>
+</g>
+</g>
+<text x="210.0" y="324" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="600" fill="#0f2818" letter-spacing="1.5">CACAO</text>
+<text x="210.0" y="358" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#a8853a" letter-spacing="4">FERMENTED NIBS</text>
+<text x="210.0" y="390" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-style="italic" font-weight="500" fill="#245234">Single Origin · 8 oz</text>
+<g transform="translate(210 448) scale(1.3)" fill="none" stroke="#dab85e" stroke-width="2.2" stroke-linecap="round">
+<line x1="0" y1="-18" x2="0" y2="-11"/>
+<path d="M 0 -11 C -9 -8 -10 4 -6 12 C -3 17 3 17 6 12 C 10 4 9 -8 0 -11 Z"/>
+<path d="M 0 -8 L 0 13" stroke-width="1.6"/>
+</g>
+<line x1="122" y1="402" x2="298" y2="402" stroke="#a8853a" stroke-width="1.2"/>
+<text x="210.0" y="428" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0f2818" letter-spacing="3.5">SAN JUAN · PUERTO RICO</text>
+</svg>

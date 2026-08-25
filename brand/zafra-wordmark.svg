@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-label="Zafra Trading Co. wordmark">
+<rect width="900" height="330" fill="#faf8f3"/>
+<text x="450" y="172" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="150" font-weight="600" letter-spacing="26" fill="#1a3a24">ZAFRA</text>
+<g stroke="#c4a04a" stroke-width="2.2">
+  <line x1="150" y1="216" x2="407" y2="216"/><line x1="493" y1="216" x2="750" y2="216"/>
+</g>
+<path d="M 450 208 l 8 8 l -8 8 l -8 -8 z" fill="#c4a04a"/>
+<text x="450" y="258" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="600" letter-spacing="18" fill="#a8853a">TRADING CO.</text>
+<text x="450" y="296" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="500" letter-spacing="7" fill="#5a6a5e">SAN JUAN · PUERTO RICO</text>
+</svg>

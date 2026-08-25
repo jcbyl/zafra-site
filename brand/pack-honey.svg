@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 640" role="img" aria-label="Zafra honey jar">
+<!-- jar glass: hexagonal silhouette -->
+<polygon points="114.0,150 162.0,112 258.0,112 306.0,150 306.0,540 258.0,578 162.0,578 114.0,540" fill="#e9e4d2" opacity=".55"/>
+<!-- honey fill -->
+<polygon points="122.0,168 166.0,134 254.0,134 298.0,168 298.0,534 254.0,570 166.0,570 122.0,534" fill="#c98a2e"/>
+<polygon points="122.0,168 166.0,134 254.0,134 298.0,168 298.0,300 122.0,300" fill="#a86e1f" opacity=".45"/>
+<!-- glass highlights -->
+<line x1="146.0" y1="160" x2="146.0" y2="540" stroke="#fff" stroke-width="7" opacity=".35" stroke-linecap="round"/>
+<line x1="268.0" y1="170" x2="268.0" y2="530" stroke="#fff" stroke-width="4" opacity=".2" stroke-linecap="round"/>
+<!-- gold lid -->
+<rect x="154.0" y="76" width="112" height="44" rx="10" fill="#c4a04a"/>
+<rect x="154.0" y="76" width="112" height="10" fill="#dab85e" opacity=".8"/>
+<rect x="160.0" y="118" width="100" height="7" fill="#a8853a"/>
+<ellipse cx="210.0" cy="118" rx="50" ry="7" fill="#a8853a"/>
+<!-- green label -->
+<g>
+<rect x="126.0" y="268" width="168" height="210" fill="#c4a04a"/>
+<rect x="131.0" y="273" width="158" height="200" fill="none" stroke="#0f2818" stroke-width="1.6"/>
+<rect x="135.0" y="277" width="150" height="192" fill="none" stroke="#0f2818" stroke-width="0.8" opacity=".6"/>
+</g>
+<g transform="translate(210.0 332) scale(0.46938775510204084)">
+<circle r="98" fill="#0f2818" stroke="#a8853a" stroke-width="5"/>
+<circle r="88" fill="#1a3a24"/>
+<g stroke="#dab85e" stroke-width="3.6" stroke-linecap="round">
+<line x1="26.0" y1="-26.0" x2="42.0" y2="-26.0"/>
+<line x1="22.5" y1="-39.0" x2="36.4" y2="-47.0"/>
+<line x1="13.0" y1="-48.5" x2="21.0" y2="-62.4"/>
+<line x1="0.0" y1="-52.0" x2="0.0" y2="-68.0"/>
+<line x1="-13.0" y1="-48.5" x2="-21.0" y2="-62.4"/>
+<line x1="-22.5" y1="-39.0" x2="-36.4" y2="-47.0"/>
+<line x1="-26.0" y1="-26.0" x2="-42.0" y2="-26.0"/>
+<line x1="-22.5" y1="-13.0" x2="-36.4" y2="-5.0"/>
+<line x1="-13.0" y1="-3.5" x2="-21.0" y2="10.4"/>
+<line x1="-0.0" y1="0.0" x2="-0.0" y2="16.0"/>
+<line x1="13.0" y1="-3.5" x2="21.0" y2="10.4"/>
+<line x1="22.5" y1="-13.0" x2="36.4" y2="-5.0"/>
+</g>
+<circle cx="0" cy="-26" r="21" fill="#dab85e" stroke="#c4a04a" stroke-width="2.5"/>
+<path d="M -98 62 L -98,8 -58,-16 -24,8 12,-20 48,6 78,-12 98,0 98,62 L 98 62 Z" fill="#245234"/>
+<path d="M -98 72 L -98,34 -46,14 6,38 56,16 98,32 98,72 L 98 72 Z" fill="#12241a"/>
+<g transform="translate(0 44) scale(1.5)" fill="none" stroke="#dab85e" stroke-width="2.4" stroke-linecap="round">
+<line x1="0" y1="-14" x2="0" y2="-4"/><line x1="0" y1="-14" x2="-6" y2="-8"/>
+<circle cx="-6" cy="-2" r="6.4" fill="#c4423a" stroke="none"/><circle cx="6" cy="0" r="6.4" fill="#a83232" stroke="none"/>
+<path d="M 0 4 q 9 -8 18 -6 q -7 9 -18 6 z" fill="#dab85e" stroke="none"/>
+</g>
+</g>
+<text x="210.0" y="416" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="27" font-weight="600" fill="#0f2818" letter-spacing="1.5">MIEL</text>
+<text x="210.0" y="440" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#a8853a" letter-spacing="3.5">MOUNTAIN WILDFLOWER</text>
+<g transform="translate(210.0 462) scale(0.62)" fill="none" stroke="#dab85e" stroke-width="2.2">
+<polygon points="6.1,-3.5 6.1,3.5 0.0,7.0 -6.1,3.5 -6.1,-3.5 -0.0,-7.0" transform="translate(-7.5 4)"/>
+<polygon points="6.1,-3.5 6.1,3.5 0.0,7.0 -6.1,3.5 -6.1,-3.5 -0.0,-7.0" transform="translate(7.5 4)"/>
+<polygon points="6.1,-3.5 6.1,3.5 0.0,7.0 -6.1,3.5 -6.1,-3.5 -0.0,-7.0" transform="translate(0 -8)"/>
+</g>
+<line x1="158.0" y1="500" x2="262.0" y2="500" stroke="#a8853a" stroke-width="1.1"/>
+<text x="210.0" y="518" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0f2818" letter-spacing="2.6">SAN JUAN · PUERTO RICO</text>
+</svg>
