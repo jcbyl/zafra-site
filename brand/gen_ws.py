@@ -15,10 +15,10 @@ def ws_masthead_pure(S=1400):
     cx = W/2
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">
 <rect width="{W}" height="{H}" fill="{CREAM}"/>
-<text x="{cx}" y="{H*0.42}" text-anchor="middle" font-family="{SERIF}" font-size="196" font-weight="500" fill="{GREEN}" letter-spacing="6">Zafra</text>
+<text x="{cx+3}" y="{H*0.42}" text-anchor="middle" font-family="{SERIF}" font-size="196" font-weight="500" fill="{GREEN}" letter-spacing="6">Zafra</text>
 <line x1="{cx-280}" y1="{H*0.50}" x2="{cx+280}" y2="{H*0.50}" stroke="{GOLD}" stroke-width="1.4"/>
-<text x="{cx}" y="{H*0.60}" text-anchor="middle" font-family="{SANS}" font-size="34" font-weight="500" fill="{GOLD}" letter-spacing="18">TRADING CO.</text>
-<text x="{cx}" y="{H*0.72}" text-anchor="middle" font-family="{SANS}" font-size="22" font-weight="400" fill="{GREEN}" letter-spacing="9" opacity=".75">SAN JUAN · PUERTO RICO</text>
+<text x="{cx+9}" y="{H*0.60}" text-anchor="middle" font-family="{SANS}" font-size="34" font-weight="500" fill="{GOLD}" letter-spacing="18">TRADING CO.</text>
+<text x="{cx+4.5}" y="{H*0.72}" text-anchor="middle" font-family="{SANS}" font-size="22" font-weight="400" fill="{GREEN}" letter-spacing="9" opacity=".75">SAN JUAN · PUERTO RICO</text>
 </svg>'''
 
 def ws_masthead_stamp(S=1400):
@@ -31,10 +31,10 @@ def ws_masthead_stamp(S=1400):
 <circle cx="{cx}" cy="{H*0.26}" r="{r}" fill="none" stroke="{GOLD}" stroke-width="2.4"/>
 <circle cx="{cx}" cy="{H*0.26}" r="{r-9}" fill="none" stroke="{GOLD}" stroke-width="0.9"/>
 {glyph_coffee(cx, H*0.26, 1.05)}
-<text x="{cx}" y="{H*0.56}" text-anchor="middle" font-family="{SERIF}" font-size="172" font-weight="500" fill="{GREEN}" letter-spacing="6">Zafra</text>
-<text x="{cx}" y="{H*0.655}" text-anchor="middle" font-family="{SANS}" font-size="30" font-weight="500" fill="{GOLD}" letter-spacing="16">TRADING CO.</text>
+<text x="{cx+3}" y="{H*0.56}" text-anchor="middle" font-family="{SERIF}" font-size="172" font-weight="500" fill="{GREEN}" letter-spacing="6">Zafra</text>
+<text x="{cx+8}" y="{H*0.655}" text-anchor="middle" font-family="{SANS}" font-size="30" font-weight="500" fill="{GOLD}" letter-spacing="16">TRADING CO.</text>
 <line x1="{cx-240}" y1="{H*0.705}" x2="{cx+240}" y2="{H*0.705}" stroke="{GOLD}" stroke-width="1.2"/>
-<text x="{cx}" y="{H*0.775}" text-anchor="middle" font-family="{SANS}" font-size="20" font-weight="400" fill="{GREEN}" letter-spacing="8" opacity=".75">SAN JUAN · PUERTO RICO</text>
+<text x="{cx+4}" y="{H*0.775}" text-anchor="middle" font-family="{SANS}" font-size="20" font-weight="400" fill="{GREEN}" letter-spacing="8" opacity=".75">SAN JUAN · PUERTO RICO</text>
 </svg>'''
 
 def ws_masthead_frame(S=1400):
@@ -46,12 +46,12 @@ def ws_masthead_frame(S=1400):
 <rect width="{W}" height="{H}" fill="{CREAM}"/>
 <rect x="{m}" y="{m}" width="{W-2*m}" height="{H-2*m}" fill="none" stroke="{GOLD}" stroke-width="1.8"/>
 <rect x="{m+9}" y="{m+9}" width="{W-2*m-18}" height="{H-2*m-18}" fill="none" stroke="{GOLD}" stroke-width="0.7"/>
-<text x="{cx}" y="{H*0.40}" text-anchor="middle" font-family="{SERIF}" font-size="188" font-weight="500" fill="{GREEN}" letter-spacing="6">Zafra</text>
+<text x="{cx+3}" y="{H*0.40}" text-anchor="middle" font-family="{SERIF}" font-size="188" font-weight="500" fill="{GREEN}" letter-spacing="6">Zafra</text>
 <line x1="{cx-260}" y1="{H*0.475}" x2="{cx-40}" y2="{H*0.475}" stroke="{GOLD}" stroke-width="1.2"/>
 <line x1="{cx+40}" y1="{H*0.475}" x2="{cx+260}" y2="{H*0.475}" stroke="{GOLD}" stroke-width="1.2"/>
 <text x="{cx}" y="{H*0.485}" text-anchor="middle" font-family="{SERIF}" font-size="30" font-style="italic" font-weight="500" fill="{GOLD}">est.</text>
-<text x="{cx}" y="{H*0.60}" text-anchor="middle" font-family="{SANS}" font-size="32" font-weight="500" fill="{GREEN}" letter-spacing="17">TRADING CO.</text>
-<text x="{cx}" y="{H*0.70}" text-anchor="middle" font-family="{SANS}" font-size="21" font-weight="400" fill="{GOLD}" letter-spacing="8">SAN JUAN · PUERTO RICO</text>
+<text x="{cx+8.5}" y="{H*0.60}" text-anchor="middle" font-family="{SANS}" font-size="32" font-weight="500" fill="{GREEN}" letter-spacing="17">TRADING CO.</text>
+<text x="{cx+4}" y="{H*0.70}" text-anchor="middle" font-family="{SANS}" font-size="21" font-weight="400" fill="{GOLD}" letter-spacing="8">SAN JUAN · PUERTO RICO</text>
 </svg>'''
 
 def ws_masthead_wide(S=1400):
@@ -61,10 +61,10 @@ def ws_masthead_wide(S=1400):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">
 <rect width="{W}" height="{H}" fill="{CREAM}"/>
 <line x1="{W*0.16}" y1="{H*0.30}" x2="{W*0.84}" y2="{H*0.30}" stroke="{GOLD}" stroke-width="1.4"/>
-<text x="{cx}" y="{H*0.52}" text-anchor="middle" font-family="{SERIF}" font-size="124" font-weight="600" fill="{GREEN}" letter-spacing="42">ZAFRA</text>
+<text x="{cx+21}" y="{H*0.52}" text-anchor="middle" font-family="{SERIF}" font-size="124" font-weight="600" fill="{GREEN}" letter-spacing="42">ZAFRA</text>
 <line x1="{W*0.16}" y1="{H*0.64}" x2="{W*0.84}" y2="{H*0.64}" stroke="{GOLD}" stroke-width="1.4"/>
 <text x="{cx}" y="{H*0.79}" text-anchor="middle" font-family="{SERIF}" font-size="42" font-style="italic" font-weight="500" fill="{GOLD}">Trading Co.</text>
-<text x="{cx}" y="{H*0.90}" text-anchor="middle" font-family="{SANS}" font-size="19" font-weight="400" fill="{GREEN}" letter-spacing="7" opacity=".7">SAN JUAN · PUERTO RICO</text>
+<text x="{cx+3.5}" y="{H*0.90}" text-anchor="middle" font-family="{SANS}" font-size="19" font-weight="400" fill="{GREEN}" letter-spacing="7" opacity=".7">SAN JUAN · PUERTO RICO</text>
 </svg>'''
 
 def product_stamp(name_es, glyph_fn, S=700, glyph_scale=1.35):
@@ -76,7 +76,7 @@ def product_stamp(name_es, glyph_fn, S=700, glyph_scale=1.35):
 <circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{GOLD_L}" stroke-width="3"/>
 <circle cx="{cx}" cy="{cy}" r="{r-8}" fill="none" stroke="{GOLD_L}" stroke-width="1" opacity=".8"/>
 {glyph_fn(cx, cy, glyph_scale)}
-<text x="{cx}" y="{cy + r + 74}" text-anchor="middle" font-family="{SERIF}" font-size="52" font-weight="600" fill="{GREEN}" letter-spacing="10">{name_es}</text>
+<text x="{cx+5}" y="{cy + r + 74}" text-anchor="middle" font-family="{SERIF}" font-size="52" font-weight="600" fill="{GREEN}" letter-spacing="10">{name_es}</text>
 </svg>'''
 
 import subprocess

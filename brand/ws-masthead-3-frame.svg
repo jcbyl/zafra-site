@@ -2,10 +2,10 @@
 <rect width="1400" height="924" fill="#faf8f3"/>
 <rect x="74" y="74" width="1252" height="776" fill="none" stroke="#a8853a" stroke-width="1.8"/>
 <rect x="83" y="83" width="1234" height="758" fill="none" stroke="#a8853a" stroke-width="0.7"/>
-<text x="700.0" y="369.6" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="188" font-weight="500" fill="#1a3a24" letter-spacing="6">Zafra</text>
+<text x="703.0" y="369.6" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="188" font-weight="500" fill="#1a3a24" letter-spacing="6">Zafra</text>
 <line x1="440.0" y1="438.9" x2="660.0" y2="438.9" stroke="#a8853a" stroke-width="1.2"/>
 <line x1="740.0" y1="438.9" x2="960.0" y2="438.9" stroke="#a8853a" stroke-width="1.2"/>
 <text x="700.0" y="448.14" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-style="italic" font-weight="500" fill="#a8853a">est.</text>
-<text x="700.0" y="554.4" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="500" fill="#1a3a24" letter-spacing="17">TRADING CO.</text>
-<text x="700.0" y="646.8" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="400" fill="#a8853a" letter-spacing="8">SAN JUAN · PUERTO RICO</text>
+<text x="708.5" y="554.4" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="500" fill="#1a3a24" letter-spacing="17">TRADING CO.</text>
+<text x="704.0" y="646.8" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="21" font-weight="400" fill="#a8853a" letter-spacing="8">SAN JUAN · PUERTO RICO</text>
 </svg>

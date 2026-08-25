@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 784">
 <rect width="1400" height="784" fill="#faf8f3"/>
 <line x1="224.0" y1="235.2" x2="1176.0" y2="235.2" stroke="#a8853a" stroke-width="1.4"/>
-<text x="700.0" y="407.68" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="124" font-weight="600" fill="#1a3a24" letter-spacing="42">ZAFRA</text>
+<text x="721.0" y="407.68" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="124" font-weight="600" fill="#1a3a24" letter-spacing="42">ZAFRA</text>
 <line x1="224.0" y1="501.76" x2="1176.0" y2="501.76" stroke="#a8853a" stroke-width="1.4"/>
 <text x="700.0" y="619.36" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="42" font-style="italic" font-weight="500" fill="#a8853a">Trading Co.</text>
-<text x="700.0" y="705.6" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="400" fill="#1a3a24" letter-spacing="7" opacity=".7">SAN JUAN · PUERTO RICO</text>
+<text x="703.5" y="705.6" text-anchor="middle" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="400" fill="#1a3a24" letter-spacing="7" opacity=".7">SAN JUAN · PUERTO RICO</text>
 </svg>
