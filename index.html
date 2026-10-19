@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zafra Trading Co. — Puerto Rican Agriculture, Worldwide</title>
-<meta name="description" content="Zafra Trading Co. — International distribution of Puerto Rican specialty agriculture: coffee, cacao, honey, and vanilla. Direct trade. Farmer-first. From the harvest to the world.">
+<meta name="description" content="Zafra Trading Co. — direct trade coffee, cacao, honey and vanilla from the mountains of Puerto Rico. Fair pay, full traceability, from the harvest to the world.">
 <link rel="icon" type="image/jpeg" href="images/zafra-logo-final.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,8 +50,12 @@ a:hover{color:var(--gold-600)}
 .hero-seal{width:116px;height:116px;border-radius:50%;object-fit:cover;border:2px solid rgba(196,160,74,.4);box-shadow:0 0 0 6px rgba(15,40,24,.3),var(--shadow-lg);margin:0 auto 32px;display:block}
 .hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:20px}
 .hero-title{font-family:var(--serif);font-size:clamp(38px,6.4vw,78px);font-weight:500;line-height:1.08;color:var(--cream);margin-bottom:26px;letter-spacing:-.01em}
-.hero-title em{font-style:italic;color:var(--gold-400);font-size:1.3em;display:block;line-height:1.04;margin:8px 0 10px}
-.hero-sub{font-size:18px;color:rgba(250,248,243,.85);max-width:580px;margin:0 auto;line-height:1.6}
+.hero-sub{font-size:18px;color:rgba(250,248,243,.85);max-width:640px;margin:0 auto 34px;line-height:1.6}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-btn{display:inline-block;background:var(--gold-500);color:var(--green-900);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 30px;border-radius:8px;transition:background .2s,color .2s}
+.hero-btn:hover{background:var(--gold-400);color:var(--green-900)}
+.hero-btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(250,248,243,.5)}
+.hero-btn.ghost:hover{background:rgba(250,248,243,.1);color:var(--cream)}
 
 /* SECTIONS */
 .section{padding:100px 32px;max-width:1100px;margin:0 auto}
@@ -63,6 +67,14 @@ a:hover{color:var(--gold-600)}
 .section-dark .divider{background:var(--gold-400)}
 .section-intro{font-size:16px;color:var(--ink-soft);max-width:560px;margin-bottom:48px;line-height:1.6}
 .section-dark .section-intro{color:rgba(250,248,243,.65)}
+.section-body{font-size:17px;color:var(--ink-soft);line-height:1.7;max-width:680px}
+.section-body + .section-body{margin-top:16px}
+.section-body strong{color:var(--green-800);font-weight:600}
+
+/* BADGE — stage markers */
+.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-600);background:rgba(196,160,74,.12);border:1px solid rgba(196,160,74,.35);border-radius:999px;padding:3px 10px;margin-left:10px;vertical-align:middle;font-family:var(--sans)}
+.section-dark .badge{color:var(--gold-400);background:rgba(250,248,243,.06);border-color:rgba(250,248,243,.25)}
+.sub-note{font-size:13px;color:rgba(250,248,243,.55);margin-top:10px;line-height:1.55}
 
 /* PRODUCT GRID */
 .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
@@ -154,13 +166,13 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
 <nav class="nav">
   <div class="nav-inner">
     <img class="nav-logo" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co. seal">
-    <div class="nav-brand">Zafra Trading Co.<span>San Juan, PR</span></div>
+    <div class="nav-brand">Zafra Trading Co.<span>&middot; San Juan, PR</span></div>
     <div class="nav-links" id="navLinks">
       <a href="#products">Products</a>
-      <a href="#harvests">Stories</a>
+      <a href="#harvests">Harvests</a>
       <a href="#how">How It Works</a>
-      <a href="#ecosystem">Ecosystem</a>
-      <a href="#contact">Contact</a>
+      <a href="#built">Built to Last</a>
+      <a href="#buyer">Contact</a>
     </div>
     <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -175,23 +187,35 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
   <div class="hero-inner">
     <img class="hero-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co.">
     <p class="hero-eyebrow">Puerto Rican Agriculture, Worldwide</p>
-    <h1 class="hero-title">From the heart of<br><em>&#8216;La Isla del Encanto&#8217;</em><br>direct to the world.</h1>
-    <p class="hero-sub">Direct trade coffee, cacao, honey, and vanilla from the mountains of Puerto Rico. Farmer-owned. Price-transparent. Internationally distributed.</p>
+    <h1 class="hero-title">From the mountains of<br>Puerto Rico, to the world.</h1>
+    <p class="hero-sub">Coffee, cacao, honey and vanilla, grown by the farmers who are rebuilding the island's agriculture. Direct trade. Fair pay. Every harvest traceable to the hands that grew it.</p>
+    <div class="hero-btns">
+      <a class="hero-btn" href="#harvests">See the harvests</a>
+      <a class="hero-btn ghost" href="#buyer">Become a buyer</a>
+    </div>
   </div>
+</section>
+
+<!-- THE STORY — new section -->
+<section class="section" id="story">
+  <div class="divider"></div>
+  <h2 class="section-title">The Story</h2>
+  <p class="section-body">Puerto Rico once fed the world's coffee cups. After generations of decline and then Hurricane Maria, the island grows only a fraction of the coffee it drinks. The farmers who stayed have the land, the heirloom trees and the knowledge. What they lack is a way to the market.</p>
+  <p class="section-body"><strong>Zafra is that way.</strong> We buy direct, pay fairly, and carry the harvest to buyers who value where it comes from.</p>
 </section>
 
 <!-- PRODUCTS -->
 <section class="section" id="products">
   <div class="divider"></div>
   <h2 class="section-title">What We Carry</h2>
-  <p class="section-intro">Four products, island-grown, mountain-shaded, hand-harvested. Limited production, not commodity volume. Each with its own story.</p>
+  <p class="section-intro">Four harvests, island-grown, mountain-shaded, hand-picked. Limited production, not commodity volume.</p>
   <div class="product-grid">
     <div class="product-card reveal">
       <img src="images/product-coffee-bag.jpg" alt="Coffee">
       <div class="product-card-body">
-        <div class="origin">Yauco · Jayuya · Adjuntas · Maricao</div>
+        <div class="origin">Yauco &middot; Jayuya &middot; Adjuntas &middot; Maricao</div>
         <h3>Coffee</h3>
-        <p>100% Puerto Rican Arabica. Bourbon, Typica, Caturra, USDA-TARS hybrids. Washed process. SCA 82-88.</p>
+        <p>Heirloom Puerto Rican Arabica. Washed process, small lots, grown at altitude.</p>
       </div>
     </div>
     <div class="product-card reveal">
@@ -199,7 +223,7 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
       <div class="product-card-body">
         <div class="origin">Heritage Trinitario</div>
         <h3>Cacao</h3>
-        <p>Heritage Trinitario — Criollo-Forastero hybrid. Fermented, sun-dried. Single-origin beans for chocolate makers.</p>
+        <p>Heritage Trinitario, descended from Spanish colonial plantings. Fermented, sun-dried, single-origin.</p>
       </div>
     </div>
     <div class="product-card reveal">
@@ -207,68 +231,63 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
       <div class="product-card-body">
         <div class="origin">Cordillera Central</div>
         <h3>Honey</h3>
-        <p>Mountain wildflower and coffee-blossom. Raw, unfiltered. Mite-resistant bees. Island isolation means organic potential.</p>
+        <p>Raw, unfiltered wildflower and coffee-blossom. Mountain-grown and untreated.</p>
       </div>
     </div>
     <div class="product-card reveal">
       <img src="images/product-vanilla-jar.jpg" alt="Vanilla">
       <div class="product-card-body">
-        <div class="origin">Castañer · USDA-TARS · Since 1909</div>
+        <div class="origin">Casta&ntilde;er &middot; USDA-TARS &middot; Since 1909</div>
         <h3>Vanilla</h3>
-        <p>One of the rarest vanillas in the world. USDA-TARS varieties since 1909. Cured and graded to export spec.</p>
+        <p>USDA-TARS varieties from Casta&ntilde;er — a crop the island has grown since 1909 and is reviving today.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HARVEST STORIES -->
+<!-- THE FOUR HARVESTS -->
 <section class="section" id="harvests">
   <div class="divider"></div>
   <h2 class="section-title">The Four Harvests</h2>
-  <p class="section-intro">Each product has its own history, biology, and reason for being rare.</p>
+  <p class="section-intro">Each harvest has its own history and its own reason for being rare.</p>
 
   <div class="harvest reveal">
     <div class="harvest-img" style="background-image:url('images/coffee-cherries.jpg')"></div>
     <div class="harvest-text">
-      <div class="harvest-label">Coffee · Yauco · Jayuya · Adjuntas · Maricao</div>
+      <div class="harvest-label">Coffee &middot; Yauco &middot; Jayuya &middot; Adjuntas &middot; Maricao</div>
       <h3>Coffee</h3>
-      <p>Coffee was Puerto Rico's #1 export from the 1860s through the 1890s. The island's central highlands produce some of the rarest Arabica in the world — grown at 400-1,000m, hand-picked, washed processed.</p>
-      <p>Hurricane Maria (2017) devastated 80% of the island's coffee trees. PR produces roughly <strong>36,000 quintales</strong> but consumes <strong>200,000</strong>. That scarcity is the value.</p>
-      <div class="harvest-stat"><strong>$25/almud</strong> (28 lbs cherry) — what our cooperatives pay farmers. Government floor: $18. Market rate: $20.</div>
+      <p>Heirloom Arabica from the mountains of Yauco, Jayuya, Adjuntas and Maricao. Washed process, small lots, grown at altitude.</p>
+      <div class="harvest-stat"><strong>Our commitment:</strong> pay above the government floor — and show you the price paid, on every lot.</div>
     </div>
   </div>
 
   <div class="harvest reverse reveal">
     <div class="harvest-img" style="background-image:url('images/cacao-pods.jpg')"></div>
     <div class="harvest-text">
-      <div class="harvest-label">Cacao · Heritage Trinitario</div>
+      <div class="harvest-label">Cacao &middot; Heritage Trinitario</div>
       <h3>Cacao</h3>
-      <p>Puerto Rican cacao is heritage <strong>Trinitario</strong> — the same Caribbean variety prized from Trinidad, Venezuela, and Madagascar. A natural hybrid of Criollo and Forastero.</p>
-      <p>PR's trees are descendants of Spanish colonial introductions, isolated for generations. Fine-flavor, single-origin, fermented to spec.</p>
-      <div class="harvest-stat">The <strong>Raíces Vivas</strong> program at Fundación Areito works on cacao genetics, fermentation, and quality training.</div>
+      <p>Heritage Trinitario descended from Spanish colonial plantings — the fine-flavor type, from trees isolated on the island for generations.</p>
+      <div class="harvest-stat">Fermented, sun-dried, and sold as <strong>single-origin beans</strong> for chocolate makers.</div>
     </div>
   </div>
 
   <div class="harvest reveal">
     <div class="harvest-img" style="background-image:url('images/honey-jar.jpg')"></div>
     <div class="harvest-text">
-      <div class="harvest-label">Honey · Cordillera Central · Africanized Bees</div>
-      <h3>The Bee Story</h3>
-      <p>In 1994, Africanized honey bees arrived in Puerto Rico. On the mainland, they're feared — aggressive, hard to manage. But on the island, something unexpected happened.</p>
-      <p>The population developed <strong>natural resistance to Varroa mites</strong>, the parasite devastating colonies worldwide. No miticide treatments. No chemical exposure. The bees are also notably gentle — defensiveness bred out over generations of island isolation.</p>
-      <p>Island isolation means <strong>PR honey can be certified organic.</strong> Bees on the mainland can't be, because they forage across property lines where pesticides are used. In Puerto Rico, there's nowhere for bees to reach contaminated fields.</p>
-      <div class="harvest-stat">The <strong>Polinizadores</strong> program at Fundación Areito runs queen bee breeding and pollinator health alongside production.</div>
+      <div class="harvest-label">Honey &middot; Cordillera Central</div>
+      <h3>Honey</h3>
+      <p>Raw, unfiltered wildflower and coffee-blossom honey from the Cordillera Central. Mountain-grown and untreated.</p>
+      <div class="harvest-stat"><strong>Organic certification</strong> is something we are pursuing — not yet held.</div>
     </div>
   </div>
 
   <div class="harvest reverse reveal">
     <div class="harvest-img" style="background-image:url('images/vanilla-orchid.jpg')"></div>
     <div class="harvest-text">
-      <div class="harvest-label">Vanilla · Castañer · USDA-TARS · Since 1909</div>
+      <div class="harvest-label">Vanilla &middot; Casta&ntilde;er &middot; USDA-TARS &middot; Since 1909</div>
       <h3>Vanilla</h3>
-      <p>The USDA's Federal Experiment Station (now TARS) in Mayagüez introduced commercial vanilla varieties in 1909. By the 1930s, it was a major research center for propagation, pollination, and curing.</p>
-      <p>A 1946 cooperative unified curing and grading. Then Operation Bootstrap pulled the island toward industry and vanilla faded.</p>
-      <p>Now it's coming back. The <strong>Cooperativa de Vainilla de Puerto Rico</strong>, founded in 2023 with 35 members, is reviving the tradition. Zafra is their channel to the international market — where vanilla is the second most expensive spice in the world, and PR-grown is nearly unheard of.</p>
+      <p>USDA-TARS varieties from Casta&ntilde;er, a crop the island has grown since 1909. Zafra plans to buy directly from the <strong>Cooperativa de Vainilla de Puerto Rico</strong>, a farmer cooperative founded in 2023, and carry its vanilla to market.</p>
+      <div class="harvest-stat"><strong>Working toward a supply partnership.</strong> No contract executed yet — the plan, stated plainly.</div>
     </div>
   </div>
 </section>
@@ -278,62 +297,68 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
   <div class="section-dark-inner">
     <div class="divider"></div>
     <h2 class="section-title">How It Works</h2>
-    <p class="section-intro">Three independent entities, each doing one thing well.</p>
+    <p class="section-intro">Zafra distributes. We do not farm, and we do not process.</p>
     <div class="flow">
       <div class="flow-step reveal">
         <div class="flow-num">1</div>
         <strong>Farmers</strong>
-        <p>Grow, harvest, and deliver to the co-op at above-market prices.</p>
+        <p>Grow and harvest.</p>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-arrow">&rarr;</div>
       <div class="flow-step reveal">
         <div class="flow-num">2</div>
-        <strong>Cooperative</strong>
-        <p>Processes, grades, packages. Co-op owns the equipment. Farmers own the co-op.</p>
+        <strong>Cooperative <span class="badge">In formation</span></strong>
+        <p>A farmer-owned cooperative will process, grade and package.</p>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-arrow">&rarr;</div>
       <div class="flow-step reveal">
         <div class="flow-num">3</div>
         <strong>Zafra</strong>
-        <p>Buys from the co-op. Ships to international buyers. Carries the story.</p>
+        <p>Sells to wholesale and specialty buyers in Puerto Rico, the US and beyond.</p>
       </div>
     </div>
     <div class="highlight reveal">
-      <p><strong>Price transparency.</strong> Every shipment carries a provenance card: region, farm, harvest date, processing method, and the price paid to the farmer. That's the moat.</p>
+      <p>Our plan is to source vanilla from the <strong>Cooperativa de Vainilla de Puerto Rico</strong>, and to build a coffee, cacao and honey cooperative, <strong>Areito</strong>, on the same model.</p>
+    </div>
+    <div class="highlight reveal">
+      <p><strong>Traceability.</strong> Every shipment is designed to carry a provenance card: region, farm, harvest date, processing method and the price paid to the farmer.</p>
     </div>
   </div>
 </section>
 
-<!-- ECOSYSTEM — dark continues -->
-<section class="section-dark" id="ecosystem">
+<!-- BUILT TO LAST — replaces "The Ecosystem" -->
+<section class="section-dark" id="built">
   <div class="section-dark-inner">
     <div class="divider"></div>
-    <h2 class="section-title">The Ecosystem</h2>
+    <h2 class="section-title">Built to Last</h2>
+    <p class="section-intro">We are building three organizations that work as one.</p>
     <ul class="eco-list">
-      <li><strong>Fundación Areito de Puerto Rico</strong> — Non-profit umbrella. Programs: Instituto de Café, Polinizadores, Raíces Vivas, Propagación. Funds infrastructure. Does not sell product.</li>
-      <li><strong>Areito Cooperative</strong> — Farmer-owned. Owns processing equipment. Processes coffee, cacao, honey. Retains on-island distribution. Sells to Zafra for export.</li>
-      <li><strong>Zafra Trading Co.</strong> — International distribution. Buys from the co-op. Ships to US and international markets. B2B wholesale and consumer retail.</li>
+      <li><strong>Fundaci&oacute;n Areito de Puerto Rico</strong> <span class="badge">In formation</span><br>A planned non-profit for the long game: coffee, cacao genetics, tissue-culture propagation and pollinators.</li>
+      <li><strong>Areito Cooperative</strong> <span class="badge">In formation</span><br>A planned farmer-owned processor, so the value created on the island stays on the island.</li>
+      <li><strong>Zafra Trading Co.</strong> <span class="badge">Open for business</span><br>The channel to market.
+        <div class="sub-note">Zafra is working toward a supply partnership with the Cooperativa de Vainilla de Puerto Rico — our model for the co-op we are building for coffee, cacao and honey.</div>
+      </li>
     </ul>
   </div>
 </section>
 
-<!-- WHY PR -->
-<section class="section" id="why">
+<!-- WHO WE SELL TO -->
+<section class="section" id="buyers">
   <div class="divider"></div>
-  <h2 class="section-title">Why Puerto Rico</h2>
-  <p class="section-intro">PR coffee was the island's #1 export in the 1860s-1890s. Hurricane Maria devastated 80% of trees in 2017. Limited production is the value.</p>
-  <p style="font-size:15px;color:var(--ink-soft);line-height:1.65;max-width:640px;">The same story holds across the portfolio: heritage Trinitario cacao, mountain wildflower honey from mite-resistant bees, vanilla being revived by a new cooperative. Zafra exists because these products deserve a channel that pays what they're worth.</p>
+  <h2 class="section-title">Who We Sell To</h2>
+  <p class="section-body">We are starting with specialty roasters, chocolate makers, hospitality and gifting buyers who care how their products are made. Our first partners will help shape what we carry.</p>
 </section>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
+<!-- ARE YOU A BUYER? -->
+<section class="section" id="buyer">
   <div class="cta">
     <h2>Are you a buyer?</h2>
-    <p>If you source specialty coffee, cacao, honey, or vanilla — and you care about what the farmer was paid — let's talk.</p>
-    <button class="cta-btn" id="openAgenteWidget" style="cursor:pointer;border:none;font:inherit">Chat With Us</button>
+    <p>Tell us what you are looking for. We will tell you honestly what we can supply and when.</p>
+    <!-- PENDING-JC: real contact email + phone go here and in footer once confirmed. Placeholder mailto below. -->
+    <a class="cta-btn" href="mailto:hello@zafratrading.com">Contact us</a>
   </div>
   <p style="text-align:center;font-size:13px;color:var(--ink-mute);margin-top:24px;">
-    San Juan, Puerto Rico · zafratrading.com
+    San Juan, Puerto Rico &middot; zafratrading.com
   </p>
 </section>
 
@@ -342,8 +367,8 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
   <img class="footer-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co.">
   <div class="footer-brand">Zafra Trading Co.</div>
   <div class="footer-tag">De la cosecha al mundo</div>
-  <div class="footer-contact">San Juan, Puerto Rico · zafratrading.com</div>
-  <div class="footer-legal">© 2026 Zafra Trading Co. All rights reserved.</div>
+  <div class="footer-contact">San Juan, Puerto Rico &middot; zafratrading.com</div>
+  <div class="footer-legal">&copy; 2026 Zafra Trading Co. All rights reserved.</div>
 </footer>
 
 <script>
@@ -352,14 +377,5 @@ const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)en.
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 <script src="assets/agente-widget.js" defer></script>
-<script>
-window.addEventListener('load',function(){
-  var cta=document.getElementById('openAgenteWidget');
-  if(cta){cta.addEventListener('click',function(){
-    var b=document.querySelector('.agente-btn');
-    if(b && !document.querySelector('.agente-panel.open')) b.click();
-  });}
-});
-</script>
 </body>
 </html>
