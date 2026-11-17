@@ -15,7 +15,7 @@
     tagline: 'Ask me about our coffee',
     greeting: "¡Hola! I'm the Zafra assistant — ask me anything about Puerto Rican coffee: our mountain regions, the farmers we buy from, how it's roasted and shipped fresh to your door. ☕",
     offline: "The kettle's still heating — live chat starts soon. Meanwhile, scroll on to see what we carry from the island.",
-    coral: '#E84118',
+    coral: '#c4a04a',
     coralHover: '#C7361A',
     green: '#0E2A1E',
     cream: '#FAF8F3',
