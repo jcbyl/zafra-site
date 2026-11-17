@@ -61,6 +61,14 @@ a:hover{color:var(--gold-600)}
 .lex-word{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--green-800)}
 .lex-pos{display:block;font-size:13px;font-style:italic;color:var(--ink-mute);margin-top:2px}
 .lex-def{display:block;margin-top:12px;font-size:15px;line-height:1.7;color:var(--ink-soft)}
+/* RISE FALL REBUILD TIMELINE */
+.timeline{max-width:720px;margin:8px 0 0}
+.tl-item{display:flex;gap:34px;padding:26px 0;border-top:1px solid var(--line)}
+.tl-item:last-child{border-bottom:1px solid var(--line)}
+.tl-year{font-family:var(--serif);font-size:21px;font-weight:500;color:var(--gold-500);min-width:132px;line-height:1.3;flex-shrink:0}
+.tl-text{font-size:15px;line-height:1.7;color:var(--ink-soft)}
+.tl-text strong{color:var(--green-800)}
+@media (max-width:640px){.tl-item{flex-direction:column;gap:6px}.tl-year{min-width:0}}
 /* MANIFEST LIST */
 .manifest{border-top:1px solid var(--line)}
 .manifest-row{display:grid;grid-template-columns:88px 200px 1fr auto;gap:26px;align-items:center;padding:28px 8px;border-bottom:1px solid var(--line);transition:background .25s,padding .25s}
@@ -316,6 +324,19 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
 </section>
 
 <!-- THE CORDILLERA — new section -->
+<section class="section" id="history">
+  <div class="divider"></div>
+  <h2 class="section-title">Rise, Fall, Rebuild</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-year">1736</div><div class="tl-text">Coffee reaches Puerto Rico from the French Antilles. Within a century, the high valleys of the Cordillera Central are striped with cafetales.</div></div>
+    <div class="tl-item"><div class="tl-year">1860s–1890s</div><div class="tl-text"><strong>The golden age.</strong> Coffee is the island&rsquo;s leading export. The finest lots sail to the courts of Europe — and, the story goes, to the Pope&rsquo;s own table.</div></div>
+    <div class="tl-item"><div class="tl-year">1899–1900s</div><div class="tl-text"><strong>The long decline.</strong> Hurricane San Ciriaco flattens the island; sugar and industry eclipse coffee; the cafetales retreat to the highest ridges. A century of storms and neglect follows.</div></div>
+    <div class="tl-item"><div class="tl-year">2017</div><div class="tl-text">Hurricane Mar&iacute;a breaks what is left — the great majority of the island&rsquo;s coffee trees damaged or destroyed.</div></div>
+    <div class="tl-item"><div class="tl-year">Today</div><div class="tl-text">Puerto Rico grows a fraction of the coffee it drinks; imports fill the gap. By the growers&rsquo; own estimates, half the crop is never picked for want of crews. The pride never left — coffee here is identity, and done right, the quality stands with Kona and Jamaica Blue Mountain.</div></div>
+    <div class="tl-item"><div class="tl-year">The rebuild</div><div class="tl-text"><strong>Crews to pick the coffee instead of leaving it on the trees.</strong> Pay at or above the government floor, with a second payment when the coffee sells for more. Money that stays in the mountain towns. And a brand that carries the harvest to the world — Puerto Rico on the world&rsquo;s shelves again.</div></div>
+  </div>
+</section>
+
 <section class="section" id="cordillera">
   <div class="divider"></div>
   <h2 class="section-title">The Cordillera</h2>
