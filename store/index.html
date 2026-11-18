@@ -112,6 +112,32 @@
   .hcard p{font-size:14px;color:var(--ink-soft);flex:1}
   .hcard .wait{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-top:20px;padding-top:18px;border-top:1px solid var(--cream-3)}
 
+  /* ── Taíno Collection ───────────────────── */
+  #taino{background:#0a0a0a;color:#f2ebdd;padding:0 32px}
+  .taino-stripe{height:3px;background:#1abc9c}
+  .taino-inner{max-width:1180px;margin:0 auto;padding:96px 0}
+  #taino .eyebrow{color:#1abc9c}
+  #taino .block-title{color:#f2ebdd}
+  #taino .block-intro{color:rgba(242,235,221,.66)}
+  .taino-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  @media(max-width:960px){.taino-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.taino-grid{grid-template-columns:1fr}}
+  .tcard{background:#111;border:1px solid rgba(26,188,156,.18);border-radius:2px;display:flex;flex-direction:column;overflow:hidden}
+  .tcard .spirit-stripe{height:3px}
+  .tcard .body{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1}
+  .tcard .roast-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .tcard h3{font-family:var(--serif);font-weight:600;font-size:24px;color:#f2ebdd;margin-bottom:4px}
+  .tcard .origin{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,235,221,.45);margin-bottom:12px}
+  .tcard .lore{font-family:var(--serif);font-style:italic;font-size:15px;color:rgba(242,235,221,.78);margin-bottom:10px}
+  .tcard p.cup{font-size:14px;color:rgba(242,235,221,.6);flex:1}
+  .tcard .price{font-family:var(--serif);font-size:24px;font-weight:500;color:#f2ebdd;margin:20px 0 18px}
+  .tcard .price small{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,235,221,.45);margin-left:8px}
+  .tbtn{display:inline-block;background:transparent;color:#f2ebdd;border:1px solid rgba(26,188,156,.55);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-align:center;padding:14px 24px;min-height:44px;line-height:1.3;border-radius:2px;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+  .tbtn:hover{background:#1abc9c;border-color:#1abc9c;color:#0a0a0a}
+  .taino-note{margin-top:44px;padding-top:24px;border-top:1px solid rgba(242,235,221,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:rgba(242,235,221,.45)}
+  .taino-note a{color:#1abc9c;text-decoration:none;border-bottom:1px solid rgba(26,188,156,.35)}
+  .taino-note a:hover{border-bottom-color:#1abc9c}
+
   /* ── Provenance band ────────────────────── */
   .provenance{background:var(--green-900);color:var(--cream);padding:96px 32px}
   .provenance .eyebrow{color:var(--gold-400)}
@@ -156,6 +182,7 @@
     <a class="brand" href="/"><img src="images/zafra-logo-final.jpg" alt="Zafra Trading Co. seal"><span>Zafra Trading Co.</span></a>
     <ul class="nav-links">
       <li><a href="#coffee">Coffee</a></li>
+      <li><a href="#taino">Taíno Collection</a></li>
       <li><a href="#harvests">The Harvests</a></li>
       <li><a href="#provenance">Provenance</a></li>
       <li><a href="#list">Harvest List</a></li>
@@ -171,7 +198,7 @@
     <img class="hero-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co. seal">
     <p class="hero-eyebrow">The Store · San Juan · Puerto Rico</p>
     <h1 class="hero-title">The harvest,<br><em>sealed and shipped.</em></h1>
-    <p class="hero-sub">Yauco single-origin coffee, numbered reserve lots, and the monthly harvest subscription — direct trade from the mountains of Puerto Rico, with its provenance in the box.</p>
+    <p class="hero-sub">Yauco single-origin coffee, the Taíno Collection in four roasts, numbered reserve lots, and the monthly harvest subscription — direct trade from the mountains of Puerto Rico, with its provenance in the box.</p>
     <a class="hero-cta" href="#coffee">Shop the Harvest</a>
     <p class="hero-house">Our house and our mission live at <a href="https://zafratrading.com" target="_blank" rel="noopener">zafratrading.com</a></p>
   </div>
@@ -239,6 +266,69 @@
         <p class="name">Café Prieto</p>
         <p>The old-world dark roast of the island — smoke and bittersweet chocolate, unapologetic.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="taino">
+  <div class="taino-stripe"></div>
+  <div class="taino-inner">
+    <p class="eyebrow">The Taíno Collection · A PR Coffee Co. Line</p>
+    <h2 class="block-title">Four roasts. Four spirits.</h2>
+    <p class="block-intro">Taíno Coffee honors the island's first people — single-origin Puerto Rican arabica, one Taíno spirit to each roast, every bag traceable to its mountain. One hundred percent island-grown. Three centuries in every cup.</p>
+    <div class="taino-grid">
+      <div class="tcard">
+        <div class="spirit-stripe" style="background:#e84118"></div>
+        <div class="body">
+          <p class="roast-label" style="color:#e84118">Dark Roast</p>
+          <h3>Guataubá</h3>
+          <p class="origin">Jayuya · 3,200 ft</p>
+          <p class="lore">The Mother Goddess, spirit of the mountain's deep earth.</p>
+          <p class="cup">The darkest cup of the four — smoke and bittersweet chocolate, heavy and unapologetic.</p>
+          <p class="price">$48 <small>12 oz · Whole Bean</small></p>
+          <a class="tbtn" href="mailto:info@zafratrading.com?subject=Reserve%20%E2%80%94%20Ta%C3%ADno%20Guataub%C3%A1%20Dark%20(12%20oz)">Reserve a Bag</a>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="spirit-stripe" style="background:#1abc9c"></div>
+        <div class="body">
+          <p class="roast-label" style="color:#1abc9c">Medium Roast</p>
+          <h3>Loquí</h3>
+          <p class="origin">Adjuntas · 2,800 ft</p>
+          <p class="lore">Night Spirit, guardian of the dark hours.</p>
+          <p class="cup">Balance is the whole point — rounded body, gentle sweetness, a quiet finish.</p>
+          <p class="price">$48 <small>12 oz · Whole Bean</small></p>
+          <a class="tbtn" href="mailto:info@zafratrading.com?subject=Reserve%20%E2%80%94%20Ta%C3%ADno%20Loqu%C3%AD%20Medium%20(12%20oz)">Reserve a Bag</a>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="spirit-stripe" style="background:#d4a853"></div>
+        <div class="body">
+          <p class="roast-label" style="color:#d4a853">Light Roast</p>
+          <h3>Turey</h3>
+          <p class="origin">Yauco · 2,600 ft</p>
+          <p class="lore">The Sun God — "Sky."</p>
+          <p class="cup">The brightest cup of the four — lifted fruit, clean sweetness, all light.</p>
+          <p class="price">$48 <small>12 oz · Whole Bean</small></p>
+          <a class="tbtn" href="mailto:info@zafratrading.com?subject=Reserve%20%E2%80%94%20Ta%C3%ADno%20Turey%20Light%20(12%20oz)">Reserve a Bag</a>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="spirit-stripe" style="background:#27ae60"></div>
+        <div class="body">
+          <p class="roast-label" style="color:#27ae60">Green · Unroasted</p>
+          <h3>Yúcahu</h3>
+          <p class="origin">Utuado · 2,500 ft</p>
+          <p class="lore">The supreme creator, the three-pointed stone.</p>
+          <p class="cup">Green coffee from the creator's own municipality — for the home roaster who finishes the harvest.</p>
+          <p class="price">$48 <small>12 oz · Green Bean</small></p>
+          <a class="tbtn" href="mailto:info@zafratrading.com?subject=Reserve%20%E2%80%94%20Ta%C3%ADno%20Y%C3%BAcahu%20Green%20(12%20oz)">Reserve a Bag</a>
+        </div>
+      </div>
+    </div>
+    <div class="taino-note">
+      <span>Taíno Coffee · Distributed by <a href="https://prcoffeeco.com" target="_blank" rel="noopener">PR Coffee Co.</a></span>
+      <span>One bag, one tree — every bag plants one.</span>
     </div>
   </div>
 </section>
@@ -338,6 +428,7 @@
     </div>
     <div class="foot-col">
       <p><a href="#coffee">Coffee</a></p>
+      <p><a href="#taino">Taíno Collection</a></p>
       <p><a href="#harvests">The Harvests</a></p>
       <p><a href="#provenance">Provenance</a></p>
       <p><a href="#list">Harvest List</a></p>
