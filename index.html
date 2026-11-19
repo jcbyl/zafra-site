@@ -31,7 +31,13 @@ a{color:var(--green-700);text-decoration:none}
 a:hover{color:var(--gold-600)}
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,243,.92);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;border-bottom:1px solid transparent;transition:background .35s,border-color .35s}
+.nav.solid{background:rgba(250,248,243,.94);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav .nav-brand,.nav .nav-links a{color:#fff;text-shadow:0 1px 8px rgba(20,40,20,.55);transition:color .35s}
+.nav .nav-brand span{color:rgba(255,255,255,.75)}
+.nav.solid .nav-brand{color:var(--green-800);text-shadow:none}
+.nav.solid .nav-brand span{color:var(--ink-mute)}
+.nav.solid .nav-links a{color:var(--ink-soft);text-shadow:none}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:12px;height:64px}
 .nav-logo{height:38px;width:38px;border-radius:50%;object-fit:cover;flex:none}
 .nav-brand{font-weight:600;letter-spacing:.08em;font-size:13px;color:var(--green-800);text-transform:uppercase}
@@ -384,5 +390,8 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible')),2500);
 </script>
 <script src="assets/agente-widget.js" defer></script>
+<script>
+(function(){var n=document.querySelector('.nav');function u(){n.classList.toggle('solid',window.scrollY>48)}window.addEventListener('scroll',u,{passive:true});u()})();
+</script>
 </body>
 </html>
