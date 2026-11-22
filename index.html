@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zafra Trading Co. — America's other great coffee.</title>
+<title>Zafra Trading Co. — Before Kona grew a single bean, Puerto Rico's mountains were covered in coffee.</title>
 <meta name="description" content="Hand-picked heirloom Arabica from named mountain farms in the Cordillera Central of Puerto Rico, with the farmer and the price we paid printed on every bag. First lots Spring 2027.">
 <link rel="icon" type="image/png" href="images/zafra-logo-shield.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@ a:hover{color:var(--gold-600)}
 
 /* HERO — split: text owns the left half, coffee cherries own the right */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('images/hero-cherries.jpg') right center/cover no-repeat}
+.hero-bg{position:absolute;inset:0;background:url('images/hero-cherries.jpg') center center/cover no-repeat}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,12,8,.95) 0%,rgba(6,12,8,.88) 26%,rgba(6,12,8,.58) 44%,rgba(6,12,8,.14) 62%,rgba(6,12,8,0) 75%)}
 .hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:150px 32px 110px;width:100%}
 .hero-copy{max-width:560px;text-align:left}
@@ -55,7 +55,7 @@ a:hover{color:var(--gold-600)}
 .hero-btns{display:flex;gap:14px;justify-content:flex-start;flex-wrap:wrap}
 @media(max-width:760px){
   .hero{align-items:flex-end;min-height:100svh}
-  .hero-bg{background-position:64% 42%}
+  .hero-bg{background-position:70% 42%}
   .hero-overlay{background:linear-gradient(180deg,rgba(6,12,8,.12) 0%,rgba(6,12,8,.24) 30%,rgba(6,12,8,.6) 48%,rgba(6,12,8,.94) 68%)}
   .hero-inner{padding:96px 24px 72px;max-width:none}
   .hero-copy{max-width:100%}
@@ -190,7 +190,7 @@ body{background:#0C130E}
 img{opacity:1}
 ::selection{background:#C9A96E;color:#0C130E}
 </style>
-<meta property="og:title" content="Zafra Trading Co. — America's other great coffee.">
+<meta property="og:title" content="Zafra Trading Co. — Before Kona grew a single bean, Puerto Rico's mountains were covered in coffee.">
 <meta property="og:description" content="Hand-picked heirloom Arabica from named mountain farms in the Cordillera Central of Puerto Rico, with the farmer and the price we paid printed on every bag. First lots Spring 2027.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zafratrading.com/">
@@ -198,7 +198,7 @@ img{opacity:1}
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Zafra Trading Co. — America's other great coffee.">
+<meta name="twitter:title" content="Zafra Trading Co. — Before Kona grew a single bean, Puerto Rico's mountains were covered in coffee.">
 <meta name="twitter:description" content="Hand-picked heirloom Arabica from named mountain farms in the Cordillera Central of Puerto Rico, with the farmer and the price we paid printed on every bag. First lots Spring 2027.">
 <meta name="twitter:image" content="https://zafratrading.com/images/og-card.jpg">
 </head>
@@ -228,8 +228,8 @@ img{opacity:1}
   <div class="hero-inner">
     <div class="hero-copy">
     <p class="hero-eyebrow">Shade-grown heirloom Arabica &middot; Cordillera Central, Puerto Rico</p>
-    <h1 class="hero-title">America&rsquo;s other great coffee.</h1>
-    <p class="hero-kicker">Older than Kona. Harder to find.</p>
+    <h1 class="hero-title">Before Kona grew a single bean, Puerto Rico&rsquo;s mountains were covered in coffee.</h1>
+    <p class="hero-kicker">Now it&rsquo;s finally leaving the island.</p>
     <p class="hero-sub">Hand-picked on named mountain farms, with the farmer and the price we paid printed on every bag. First lots Spring 2027.</p>
     <div class="hero-btns">
       <a class="hero-btn" href="#founding">Join the founding list</a>
@@ -312,7 +312,7 @@ img{opacity:1}
         <p class="door-label">For your home</p>
         <h3>The founding list</h3>
         <p>First in line when the harvest ships, the story of every lot before it does &mdash; and the subscription at launch.</p>
-        <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Founding list')+'&body='+encodeURIComponent('Add me to the founding list: '+e);this.querySelector('.signup-ok').style.display='block';return false;">
+        <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;var hv=window.zafraHero?window.zafraHero():'hero-na';window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Founding list ['+hv+']')+'&body='+encodeURIComponent('Add me to the founding list: '+e+' ['+hv+']');this.querySelector('.signup-ok').style.display='block';return false;">
           <input type="email" placeholder="Your email" required>
           <button class="signup-btn" type="submit">Join</button>
           <p class="signup-ok">Opening your email app &mdash; press send and you&rsquo;re on the list.</p>
@@ -323,7 +323,7 @@ img{opacity:1}
         <p class="door-label">For hotels, caf&eacute;s, restaurants</p>
         <h3>Wholesale</h3>
         <p>Our standard: roasted on the island, shipped direct. Tell us your volume and your program &mdash; we&rsquo;ll tell you plainly what we can supply and when.</p>
-        <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Wholesale inquiry')+'&body='+encodeURIComponent('From: '+e);this.querySelector('.signup-ok').style.display='block';return false;">
+        <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;var hv=window.zafraHero?window.zafraHero():'hero-na';window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Wholesale inquiry ['+hv+']')+'&body='+encodeURIComponent('From: '+e+' ['+hv+']');this.querySelector('.signup-ok').style.display='block';return false;">
           <input type="email" placeholder="Your email" required>
           <button class="signup-btn" type="submit">Inquire</button>
           <p class="signup-ok">Opening your email app &mdash; send us your volume and program.</p>
@@ -352,7 +352,7 @@ img{opacity:1}
   <div class="footer-tag">De la zafra al mundo &mdash; from the harvest, to the world</div>
   <div class="footer-signup">
     <p class="door-label">The founding list</p>
-    <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Founding list')+'&body='+encodeURIComponent('Add me to the founding list: '+e);this.querySelector('.signup-ok').style.display='block';return false;">
+    <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;var hv=window.zafraHero?window.zafraHero():'hero-na';window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Founding list ['+hv+']')+'&body='+encodeURIComponent('Add me to the founding list: '+e+' ['+hv+']');this.querySelector('.signup-ok').style.display='block';return false;">
       <input type="email" placeholder="Your email" required>
       <button class="signup-btn" type="submit">Join</button>
       <p class="signup-ok">Opening your email app &mdash; press send and you&rsquo;re on the list.</p>
@@ -369,6 +369,26 @@ document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',
 const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible')),2500);
+</script>
+<script>
+/* Rotating hero — one variant per visitor, random on first visit, sticky on return. ?hero=a|b|c previews without saving. */
+(function(){
+  var V={
+    a:{h:"Before Kona grew a single bean, Puerto Rico\u2019s mountains were covered in coffee.",g:"Now it\u2019s finally leaving the island."},
+    b:{h:"The coffee your favorite roaster can\u2019t get.",g:"The island doesn\u2019t share. So we bought a farm."},
+    c:{h:"The heirloom coffee that almost disappeared.",g:"Now we\u2019re bringing it back, one ripe cherry at a time."}
+  };
+  var q=(location.search.match(/[?&]hero=([abc])/i)||[])[1],k=null;
+  if(q){k=q.toLowerCase();}
+  else{
+    try{k=localStorage.getItem('zafra-hero')}catch(e){}
+    if(!V[k]){k='abc'[Math.floor(Math.random()*3)];try{localStorage.setItem('zafra-hero',k)}catch(e){}}
+  }
+  var t=document.querySelector('.hero-title'),g=document.querySelector('.hero-kicker');
+  if(t&&V[k]){t.textContent=V[k].h}
+  if(g&&V[k]){g.textContent=V[k].g}
+  window.zafraHero=function(){return 'hero-'+((k&&V[k])?k.toUpperCase():'na')};
+})();
 </script>
 <script src="assets/agente-widget.js" defer></script>
 </body>

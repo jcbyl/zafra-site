@@ -44,22 +44,26 @@ def tracked(xy, text, font, fill, track=5):
         x += d.textlength(ch, font=font) + track
     return x - track
 
-# headline (the site hero's own line)
-h1a, h1b = "America's other great", 'coffee. Older than Kona.'
+# headline (rotating hero variant A) + its gold line
+h1a, h1b, h1c = 'Before Kona grew a single bean,', "Puerto Rico\u2019s mountains", 'were covered in coffee.'
+gold_line = 'Now it\u2019s finally leaving the island.'
 f_head = None
-for size in (46, 42, 38, 34):
+for size in (44, 40, 36, 32):
     cand = serif_sb(size)
-    if all(d.textlength(line, font=cand) <= W - TX - 64 for line in (h1a, h1b)):
+    if all(d.textlength(line, font=cand) <= W - TX - 64 for line in (h1a, h1b, h1c)):
         f_head, h_size = cand, size
         break
 assert f_head, 'headline does not fit'
-hy = LY + 34
+hy = LY + 10
 d.text((TX, hy), h1a, font=f_head, fill=CREAM)
 d.text((TX, hy + round(h_size * 1.22)), h1b, font=f_head, fill=CREAM)
+d.text((TX, hy + round(h_size * 2.44)), h1c, font=f_head, fill=CREAM)
+gy = hy + round(h_size * 2.44) + round(h_size * 0.42)
+d.text((TX, gy), gold_line, font=serif_sb(round(h_size * 0.62)), fill=GOLD)
 
 # footer caps
 ft = 'ZAFRA TRADING CO. \u2022 SAN JUAN, PUERTO RICO'
-fw = tracked((TX, hy + round(h_size * 2.62) + 18), ft, sans_sb(15), GOLD, 5.5)
+fw = tracked((TX, gy + round(h_size * 0.85) + 14), ft, sans_sb(15), GOLD, 5.5)
 
 # --- thin gold frame, house style ---
 d.rectangle([18, 18, W - 19, H - 19], outline=GOLD, width=1)
@@ -69,7 +73,7 @@ img.save('/Users/santiago/repos/zafra-site/images/og-image.jpg', quality=92)
 
 # --- numeric QA (measured, not eyeballed) ---
 g = img.convert('L')
-band = g.crop((TX, hy, TX + int(d.textlength(h1a, font=f_head)), hy + round(h_size * 2.6)))
+band = g.crop((TX, hy, TX + int(d.textlength(h1a, font=f_head)), gy + round(h_size * 0.8)))
 m = ImageStat.Stat(band).mean[0]
 contrast = (242 + 0.05) / (m + 0.05)          # cream vs local bg
 print(f'headline size {h_size}px | footer right edge {int(fw)} (limit {W - 64}) | '
