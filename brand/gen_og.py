@@ -50,17 +50,17 @@ tracked(d, (LX, 100), eb, sans_sb(13), GOLD, 3.5)
 d.rectangle([LX, 132, LX + 64, 133], fill=GOLD)
 
 # headline
-h1a, h1b = 'The rarest coffee', 'grown on American soil.'
-f_head = serif_sb(58)
+h1a, h1b = 'Coffee. Honey.', 'Cacao. Vanilla.'
+f_head = serif_sb(72)
 for line in (h1a, h1b):
     assert d.textlength(line, font=f_head) <= 580, f'head too wide: {line}'
 d.text((LX, 168), h1a, font=f_head, fill=CREAM)
 d.text((LX, 252), h1b, font=f_head, fill=CREAM)
 
-# sub — pillars + printed price
-s1 = 'Premium shade-grown Arabica with canopy honey,'
-s2 = 'legacy cacao and heritage vanilla \u2014 bought at the farm,'
-s3 = 'the price paid to the farmer printed on every card.'
+# sub — four harvests + printed price
+s1 = 'Four harvests off one mountain, grown on'
+s2 = 'American soil \u2014 bought at the farm, the price'
+s3 = 'paid to the farmer printed on every card.'
 f_sub = sans_r(21)
 for line in (s1, s2, s3):
     assert d.textlength(line, font=f_sub) <= 580, f'sub too wide: {line}'
