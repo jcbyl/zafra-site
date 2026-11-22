@@ -52,14 +52,15 @@ d.rectangle([LX, 132, LX + 64, 133], fill=GOLD)
 # headline
 h1a, h1b = "Half of Puerto Rico's coffee", 'is never picked. We pick it.'
 f_head = None
-for size in (72, 66, 60, 54, 48):
+for size in (72, 66, 60, 54, 48, 44):
     cand = serif_sb(size)
     if all(d.textlength(line, font=cand) <= 505 for line in (h1a, h1b)):
         f_head = cand
+        h_size = size
         break
 assert f_head is not None, 'headline does not fit at any size'
 d.text((LX, 168), h1a, font=f_head, fill=CREAM)
-d.text((LX, 252), h1b, font=f_head, fill=CREAM)
+d.text((LX, 168 + int(h_size * 1.18)), h1b, font=f_head, fill=CREAM)
 
 # sub — four harvests + printed price
 s1 = 'Shade-grown coffee, canopy honey,'
