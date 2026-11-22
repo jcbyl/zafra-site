@@ -45,7 +45,7 @@ def tracked(xy, text, font, fill, track=5):
     return x - track
 
 # headline (the site hero's own line)
-h1a, h1b = "Half of Puerto Rico's coffee", 'is never picked. We pick it.'
+h1a, h1b = "America's other great", 'coffee. Older than Kona.'
 f_head = None
 for size in (46, 42, 38, 34):
     cand = serif_sb(size)
