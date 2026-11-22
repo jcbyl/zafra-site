@@ -50,20 +50,24 @@ tracked(d, (LX, 100), eb, sans_sb(13), GOLD, 3.5)
 d.rectangle([LX, 132, LX + 64, 133], fill=GOLD)
 
 # headline
-h1a, h1b = 'Coffee. Honey.', 'Cacao. Vanilla.'
-f_head = serif_sb(72)
-for line in (h1a, h1b):
-    assert d.textlength(line, font=f_head) <= 580, f'head too wide: {line}'
+h1a, h1b = 'The rarest harvest', 'grown on American soil.'
+f_head = None
+for size in (72, 66, 60, 54, 48):
+    cand = serif_sb(size)
+    if all(d.textlength(line, font=cand) <= 505 for line in (h1a, h1b)):
+        f_head = cand
+        break
+assert f_head is not None, 'headline does not fit at any size'
 d.text((LX, 168), h1a, font=f_head, fill=CREAM)
 d.text((LX, 252), h1b, font=f_head, fill=CREAM)
 
 # sub — four harvests + printed price
-s1 = 'Four harvests off one mountain, grown on'
-s2 = 'American soil \u2014 bought at the farm, the price'
-s3 = 'paid to the farmer printed on every card.'
+s1 = 'Shade-grown coffee, canopy honey,'
+s2 = 'legacy cacao, heritage vanilla \u2014 four'
+s3 = 'harvests off one mountain, farmer-priced.'
 f_sub = sans_r(21)
 for line in (s1, s2, s3):
-    assert d.textlength(line, font=f_sub) <= 580, f'sub too wide: {line}'
+    assert d.textlength(line, font=f_sub) <= 505, f'sub too wide: {line}'
 d.text((LX, 372), s1, font=f_sub, fill=MUTED)
 d.text((LX, 404), s2, font=f_sub, fill=MUTED)
 d.text((LX, 436), s3, font=f_sub, fill=MUTED)
