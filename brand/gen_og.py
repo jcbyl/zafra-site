@@ -50,7 +50,7 @@ tracked(d, (LX, 100), eb, sans_sb(13), GOLD, 3.5)
 d.rectangle([LX, 132, LX + 64, 133], fill=GOLD)
 
 # headline
-h1a, h1b = 'The rarest harvest', 'grown on American soil.'
+h1a, h1b = "Half of Puerto Rico's coffee", 'is never picked. We pick it.'
 f_head = None
 for size in (72, 66, 60, 54, 48):
     cand = serif_sb(size)
