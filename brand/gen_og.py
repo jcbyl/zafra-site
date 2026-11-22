@@ -20,16 +20,14 @@ d = ImageDraw.Draw(img)
 for inset, wd in [(26, 2), (36, 1)]:
     d.rectangle([inset, inset, W - inset, H - inset], outline=GOLD, width=wd)
 
-# --- crest logo, right side: key out pure-white ground ---
-seal = Image.open('/Users/santiago/repos/zafra-site/images/logos/zafra-logo-3-emblem-seal.png').convert('RGBA')
-seal = seal.resize((560, 560), Image.LANCZOS)
-px = seal.load()
-for y in range(560):
-    for x in range(560):
-        r, g, b, a = px[x, y]
-        if r > 238 and g > 238 and b > 238:
-            px[x, y] = (r, g, b, 0)
-img.paste(seal, (640, 46), seal)
+# --- house shield (nav/footer mark), right side — transparent PNG, no keying ---
+seal = Image.open('/Users/santiago/repos/zafra-site/images/zafra-logo-shield.png').convert('RGBA')
+SHIELD_W = 520
+SHIELD_H = round(SHIELD_W * seal.height / seal.width)   # 1112x898 -> 520x420
+seal = seal.resize((SHIELD_W, SHIELD_H), Image.Resampling.LANCZOS)
+# centered in the right panel (x 620..1174, y 46..606)
+CX, CY = (620 + 1174) // 2, (46 + 606) // 2
+img.paste(seal, (CX - SHIELD_W // 2, CY - SHIELD_H // 2), seal)
 
 # --- text block (left) ---
 LX = 92
