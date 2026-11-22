@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Zafra Trading Co. — The Store · Puerto Rican Coffee, Direct From the Harvest</title>
-<meta name="description" content="The online store of Zafra Trading Co. — estate single-variety lots, the washed blend, numbered reserve lots, the Taíno Collection, and the monthly harvest subscription. Premium Puerto Rican agriculture, direct trade, full provenance.">
+<meta name="description" content="100% Puerto Rican arabica from the central cordillera. Estate lots, numbered reserves, and the Taíno Collection — roasted on the island, provenance in every bag.">
 <meta property="og:title" content="Zafra Trading Co. — The Store">
 <meta property="og:description" content="Estate lots, the washed blend, reserve lots, and the monthly harvest subscription. From the mountains of Puerto Rico.">
 <meta property="og:type" content="website">
@@ -14,187 +14,191 @@
 <link rel="icon" type="image/jpeg" href="images/zafra-logo-final.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --green-900:#0f2818;--green-800:#1a3a24;--green-700:#245234;--green-600:#2d6b47;
-    --gold-600:#a8853a;--gold-500:#c4a04a;--gold-400:#dab85e;
-    --cream:#faf8f3;--cream-2:#f5f1e8;--cream-3:#e8e2d4;
-    --ink:#1a2a1e;--ink-soft:#4a5a4e;--ink-mute:#5a6a5e;--white:#ffffff;
-    --line:rgba(15,40,24,.06);
-    --shadow-sm:0 2px 8px rgba(15,40,24,.04);--shadow:0 8px 24px rgba(15,40,24,.06);
-    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    --serif:'Cormorant Garamond',Georgia,serif;
+    --bg:#0C130E;
+    --bg-2:#101A12;
+    --bg-3:#15221A;
+    --line:rgba(214,196,155,.16);
+    --cream:#F5F1E6;
+    --cream-dim:rgba(245,241,230,.7);
+    --cream-faint:rgba(245,241,230,.48);
+    --gold:#C9A96E;
+    --gold-bright:#DCC188;
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
+  *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;font-weight:400;overflow-x:hidden}
-  ::selection{background:var(--gold-400);color:var(--green-900)}
+  body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--gold);color:var(--bg)}
   img{display:block;max-width:100%}
+  a{color:var(--gold-bright)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 
-  /* ── Header ─────────────────────────────── */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav-inner{max-width:1180px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:1px solid rgba(196,160,74,.45)}
-  .brand span{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green-800)}
-  .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-  .nav-links a{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;transition:color .2s}
-  .nav-links a:hover{color:var(--green-800)}
-  .nav-links a.house{color:var(--gold-600)}
-  .cart-btn{display:inline-flex;align-items:center;gap:9px;background:var(--green-800);color:var(--cream);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;padding:12px 18px;min-height:44px;border-radius:2px;white-space:nowrap;transition:background .2s}
-  .cart-btn:hover{background:var(--green-700)}
-  .cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 5px;background:var(--gold-500);color:var(--green-900);border-radius:10px;font-size:12px;font-weight:600}
-  @media(max-width:860px){.nav-links{display:none}}
+  /* ── Header ── */
+  header{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(12,19,14,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--cream)}
+  .brand img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,169,110,.5)}
+  .brand span{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+  .nav-links{display:none;gap:26px;list-style:none;font-size:13px}
+  .nav-links a{color:var(--cream-dim);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+  .nav-links a:hover,.nav-links a:active{color:var(--gold-bright);border-bottom-color:var(--gold)}
+  .cart-btn{display:inline-flex;align-items:center;gap:9px;background:none;color:var(--cream);font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);cursor:pointer;padding:11px 16px;min-height:44px;border-radius:2px;white-space:nowrap}
+  .cart-btn:hover{border-color:var(--gold)}
+  .cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 5px;background:var(--gold);color:var(--bg);border-radius:10px;font-size:12px;font-weight:700}
+  @media(min-width:900px){.nav-links{display:flex}}
 
-  /* ── Store band (slim — the grid IS the fold) ── */
-  .store-band{background:var(--green-900);color:var(--cream);padding:52px 32px 46px}
-  .store-band .wrap{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
-  .store-band h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,5vw,52px);letter-spacing:-.01em;line-height:1.1}
-  .store-band h1 em{font-style:italic;color:var(--gold-400)}
-  .store-band .band-sub{font-size:16px;color:rgba(250,248,243,.78);max-width:460px}
-  .store-band .band-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:12px}
+  /* ── Hero ── */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 64px;background-image:linear-gradient(180deg,rgba(12,19,14,.5) 0%,rgba(12,19,14,.15) 40%,rgba(12,19,14,.92) 90%,var(--bg) 100%),url('images/grower-hero.jpg');background-size:cover;background-position:center 28%;background-color:var(--bg-2)}
+  .hero-inner{max-width:780px}
+  .hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:18px}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,11vw,80px);line-height:1.02;letter-spacing:-.01em;margin-bottom:22px;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+  .hero h1 em{font-style:italic;color:var(--gold-bright)}
+  .hero p{font-size:17px;color:var(--cream-dim);max-width:540px;margin-bottom:30px;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{display:inline-block;background:var(--gold);color:var(--bg);font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;text-align:center;border:none;cursor:pointer;padding:17px 30px;min-height:50px;line-height:1.3;border-radius:2px;transition:background .2s;white-space:nowrap}
+  .btn:hover{background:var(--gold-bright)}
+  .btn-ghost{display:inline-block;background:none;color:var(--cream);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;text-align:center;border:1px solid rgba(245,241,230,.4);padding:16px 26px;min-height:50px;line-height:1.3;border-radius:2px;white-space:nowrap}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
 
-  /* ── Section scaffolding ────────────────── */
-  section.block{padding:80px 32px}
-  .wrap{max-width:1180px;margin:0 auto}
-  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);margin-bottom:14px}
-  .block-title{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,40px);letter-spacing:-.01em;color:var(--green-800);line-height:1.15;margin-bottom:14px}
-  .block-intro{max-width:620px;color:var(--ink-soft);margin-bottom:48px}
+  /* ── Value bar ── */
+  .valuebar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
+  .valuebar .wrap{display:flex;flex-direction:column;gap:0;padding-top:6px;padding-bottom:6px}
+  .v{padding:16px 0;text-align:center;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .v+.v{border-top:1px solid var(--line)}
+  @media(min-width:760px){.valuebar .wrap{flex-direction:row}.v{flex:1;padding:20px 10px}.v+.v{border-top:none;border-left:1px solid var(--line)}}
 
-  /* ── Product grid ───────────────────────── */
-  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .product-grid .span-2{grid-column:span 2}
-  @media(max-width:960px){.product-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}.product-grid .span-2{grid-column:span 1}}
-  .pcard{background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
-  .pcard .img{height:220px;background:url('images/product-coffee-bag.jpg') center/cover no-repeat;border-bottom:1px solid var(--line)}
-  .pcard .body{padding:28px 26px 26px;display:flex;flex-direction:column;flex:1}
-  .pcard .origin{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600);margin-bottom:10px}
-  .pcard h3{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--green-800);margin-bottom:6px}
-  .pcard .variety{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:12px}
-  .pcard p.desc{font-size:15px;color:var(--ink-soft);flex:1}
-  .pcard .price{font-family:var(--serif);font-size:28px;font-weight:500;color:var(--green-800);margin:20px 0 2px}
-  .pcard .price small{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-left:8px}
-  .pcard .price-note{font-size:13px;color:var(--ink-mute);margin-bottom:18px}
-  .btn{display:inline-block;background:var(--green-800);color:var(--cream);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-align:center;padding:15px 26px;min-height:44px;line-height:1.3;border-radius:2px;white-space:nowrap;border:none;cursor:pointer;transition:background .2s}
-  .btn:hover{background:var(--green-700)}
-  .btn-dark{display:inline-block;background:var(--cream-3);color:var(--ink-mute);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-align:center;padding:15px 26px;min-height:44px;line-height:1.3;border-radius:2px;white-space:nowrap;cursor:not-allowed;opacity:.75}
-  .dark-note{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute);margin-top:10px}
+  /* ── Featured lot ── */
+  section.featured{padding:72px 0}
+  .feat-grid{display:grid;gap:36px;align-items:center}
+  @media(min-width:900px){.feat-grid{grid-template-columns:1.05fr 1fr;gap:60px}}
+  @media(max-width:899px){.hero{background-position:68% 24%}}
+  .feat-img{position:relative;border-radius:3px;overflow:hidden;aspect-ratio:4/3}
+  .feat-img img{width:100%;height:100%;object-fit:cover}
+  .feat-img .tag{position:absolute;top:14px;left:14px;background:rgba(12,19,14,.78);backdrop-filter:blur(6px);color:var(--gold-bright);font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 12px;border:1px solid var(--line);border-radius:2px}
+  .featured h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,7vw,48px);line-height:1.08;margin:14px 0 6px}
+  .featured .variety{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-faint);margin-bottom:18px}
+  .featured .desc{color:var(--cream-dim);max-width:480px;margin-bottom:22px}
+  .spec{border-top:1px solid var(--line);margin-bottom:24px}
+  .spec-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .spec-row .k{color:var(--cream-faint);font-weight:600;letter-spacing:.04em}
+  .spec-row .v{color:var(--cream-dim);text-align:right}
+  .price-line{display:flex;align-items:baseline;gap:12px;margin-bottom:22px}
+  .price-line .big{font-family:var(--serif);font-weight:500;font-size:44px;color:var(--gold-bright);line-height:1}
+  .price-line .unit{font-size:13px;color:var(--cream-faint);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  .feat-ctas{display:flex;flex-wrap:wrap;gap:14px}
+  .gives{font-size:13px;color:var(--cream-faint);margin-top:16px}
+  .gives strong{color:var(--gold);font-weight:700}
 
-  /* ── Provenance spec rows ───────────────── */
-  .spec{margin:18px 0 4px;border-top:1px solid var(--cream-3)}
-  .spec-row{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px solid var(--cream-3);font-size:13px}
-  .spec-row .k{font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute)}
-  .spec-row .v{color:var(--ink-soft);text-align:right}
-  .gives{margin-top:14px;font-size:13px;font-weight:600;color:var(--green-700)}
-  .gives::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold-500);margin-right:8px;vertical-align:1px}
+  /* ── Ladder cards ── */
+  section.ladder{padding:8px 0 72px}
+  .sec-head{margin-bottom:28px}
+  .sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,6vw,42px);line-height:1.1;margin-top:12px}
+  .sec-head p{color:var(--cream-dim);max-width:580px;margin-top:12px}
+  .ladder-grid{display:grid;gap:22px}
+  @media(min-width:760px){.ladder-grid{grid-template-columns:1fr 1fr}}
+  .lcard{position:relative;border-radius:3px;overflow:hidden;min-height:460px;display:flex;align-items:flex-end;background-size:cover;background-position:center;background-color:var(--bg-3)}
+  .lcard::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,19,14,.12) 0%,rgba(12,19,14,.5) 52%,rgba(12,19,14,.96) 100%)}
+  .lcard .body{position:relative;padding:26px 24px;width:100%}
+  .lcard .origin{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .lcard h3{font-family:var(--serif);font-weight:500;font-size:32px;line-height:1.05;margin-bottom:8px}
+  .lcard .desc{font-size:14.5px;color:var(--cream-dim);margin-bottom:14px;max-width:440px}
+  .lcard .price{font-family:var(--serif);font-weight:500;font-size:32px;color:var(--gold-bright);margin-bottom:16px}
+  .lcard .price small{font-family:var(--sans);font-size:12px;color:var(--cream-faint);letter-spacing:.08em;text-transform:uppercase;margin-left:8px;font-weight:600}
+  .lcard .btn{width:100%}
+  @media(min-width:760px){.lcard{min-height:540px}.lcard .body{padding:34px 32px}.lcard .btn{width:auto}}
 
-  /* ── Reserve card (inquiry) ─────────────── */
-  .pcard.reserve{background:var(--green-900);border-color:rgba(196,160,74,.25)}
-  .pcard.reserve .img{background:url('images/coffee-cherries.jpg') center/cover no-repeat;border-bottom:1px solid rgba(196,160,74,.2)}
-  .pcard.reserve .origin{color:var(--gold-400)}
-  .pcard.reserve h3{color:var(--cream)}
-  .pcard.reserve .variety{color:rgba(250,248,243,.55)}
-  .pcard.reserve p.desc{color:rgba(250,248,243,.72)}
-  .pcard.reserve .spec{border-color:rgba(250,248,243,.14)}
-  .pcard.reserve .spec-row{border-color:rgba(250,248,243,.14)}
-  .pcard.reserve .spec-row .k{color:rgba(250,248,243,.5)}
-  .pcard.reserve .spec-row .v{color:rgba(250,248,243,.78)}
-  .pcard.reserve .price{color:var(--cream);font-size:22px}
-  .pcard.reserve .price small{color:rgba(250,248,243,.5)}
-  .pcard.reserve .price-note{color:rgba(250,248,243,.5)}
-  .pcard.reserve .btn-dark{background:rgba(250,248,243,.08);color:rgba(250,248,243,.38);border:1px solid rgba(250,248,243,.14)}
-  .pcard.reserve .dark-note{color:rgba(250,248,243,.42)}
+  /* flat card (subscription / reserve) */
+  .fcard{background:var(--bg-2);border:1px solid var(--line);border-radius:3px;padding:28px 24px;display:flex;flex-direction:column;gap:10px}
+  .fcard h3{font-family:var(--serif);font-weight:500;font-size:28px;line-height:1.12}
+  .fcard .desc{font-size:14.5px;color:var(--cream-dim)}
+  .fcard .price{font-family:var(--serif);font-weight:500;font-size:30px;color:var(--gold-bright)}
+  .fcard .price small{font-family:var(--sans);font-size:12px;color:var(--cream-faint);letter-spacing:.08em;text-transform:uppercase;margin-left:8px;font-weight:600}
+  .fcard .btn,.fcard .btn-dark{width:100%;margin-top:8px}
+  .btn-dark{display:inline-block;background:none;color:var(--cream-faint);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;text-align:center;border:1px solid var(--line);padding:17px 26px;min-height:50px;line-height:1.3;border-radius:2px;cursor:default}
+  .dark-note{font-size:12.5px;color:var(--cream-faint);text-align:center;margin-top:6px}
 
-  /* ── Taíno Collection ───────────────────── */
-  #taino{background:#0a0a0a;color:#f2ebdd;padding:0 32px}
-  .taino-stripe{height:3px;background:#1abc9c}
-  .taino-inner{max-width:1180px;margin:0 auto;padding:80px 0}
-  #taino .eyebrow{color:#1abc9c}
-  #taino .block-title{color:#f2ebdd}
-  #taino .block-intro{color:rgba(242,235,221,.66)}
-  .taino-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-  @media(max-width:960px){.taino-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:600px){.taino-grid{grid-template-columns:1fr}}
-  .tcard{background:#111;border:1px solid rgba(26,188,156,.18);border-radius:2px;display:flex;flex-direction:column;overflow:hidden;scroll-margin-top:90px}
-  .tcard .spirit-stripe{height:3px}
-  .tcard .body{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1}
-  .tcard .roast-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
-  .tcard h3{font-family:var(--serif);font-weight:600;font-size:24px;color:#f2ebdd;margin-bottom:4px}
-  .tcard .origin{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,235,221,.45);margin-bottom:12px}
-  .tcard .lore{font-family:var(--serif);font-style:italic;font-size:15px;color:rgba(242,235,221,.78);margin-bottom:10px}
-  .tcard p.cup{font-size:14px;color:rgba(242,235,221,.6);flex:1}
-  .tcard .price{font-family:var(--serif);font-size:24px;font-weight:500;color:#f2ebdd;margin:20px 0 18px}
-  .tcard .price small{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,235,221,.45);margin-left:8px}
-  .tbtn{display:inline-block;background:transparent;color:#f2ebdd;border:1px solid rgba(26,188,156,.55);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-align:center;padding:14px 24px;min-height:44px;line-height:1.3;border-radius:2px;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
-  .tbtn:hover{background:#1abc9c;border-color:#1abc9c;color:#0a0a0a}
-  .taino-note{margin-top:44px;padding-top:24px;border-top:1px solid rgba(242,235,221,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:rgba(242,235,221,.45)}
-  .taino-note a{color:#1abc9c;text-decoration:none;border-bottom:1px solid rgba(26,188,156,.35)}
-  .taino-note a:hover{border-bottom-color:#1abc9c}
+  /* ── Taíno ── */
+  section#taino{padding:76px 0;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .taino-grid{display:grid;gap:18px;margin-top:30px}
+  @media(min-width:640px){.taino-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){.taino-grid{grid-template-columns:repeat(4,1fr)}}
+  .tcard{background:var(--bg-3);border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;scroll-margin-top:90px}
+  .spirit-stripe{height:4px}
+  .tcard .body{padding:22px 20px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .roast-label{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+  .tcard h3{font-family:var(--serif);font-weight:500;font-size:30px;line-height:1.02}
+  .tcard .origin{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cream-faint)}
+  .tcard .lore{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold)}
+  .tcard .cup{font-size:14px;color:var(--cream-dim)}
+  .tcard .price{font-family:var(--serif);font-weight:500;font-size:28px;color:var(--gold-bright);margin-top:auto;padding-top:12px}
+  .tcard .price small{font-family:var(--sans);font-size:11.5px;color:var(--cream-faint);letter-spacing:.08em;text-transform:uppercase;margin-left:8px;font-weight:600}
+  .tbtn{display:block;text-align:center;margin-top:10px;border:1px solid var(--gold);color:var(--gold-bright);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:14px 16px;min-height:46px;line-height:1.3;border-radius:2px}
+  .tbtn:hover{background:rgba(201,169,110,.12)}
+  .taino-note{margin-top:28px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--cream-faint);text-align:center}
+  .taino-note a{color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(201,169,110,.35)}
+  @media(min-width:700px){.taino-note{flex-direction:row;justify-content:center;gap:36px}}
 
-  /* ── Other harvests ─────────────────────── */
-  #harvests{background:var(--cream-2)}
-  .harvest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-  @media(max-width:960px){.harvest-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:600px){.harvest-grid{grid-template-columns:1fr}}
-  .hcard{background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
-  .hcard .img{height:200px;background-size:cover;background-position:center}
-  .hcard .body{padding:26px 24px 26px;display:flex;flex-direction:column;flex:1}
-  .hcard .origin{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600);margin-bottom:10px}
-  .hcard h3{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--green-800);margin-bottom:8px}
-  .hcard p{font-size:14px;color:var(--ink-soft);flex:1}
-  .hcard .wait{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-top:20px;padding-top:18px;border-top:1px solid var(--cream-3)}
+  /* ── Other harvests ── */
+  section#harvests{padding:76px 0}
+  .harvest-grid{display:grid;gap:18px;margin-top:30px}
+  @media(min-width:640px){.harvest-grid{grid-template-columns:1fr 1fr}}
+  .hcard{background:var(--bg-2);border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+  .hcard .img{aspect-ratio:16/9;background-size:cover;background-position:center;filter:saturate(.9)}
+  .hcard .body{padding:20px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .hcard .origin{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .hcard h3{font-family:var(--serif);font-weight:500;font-size:26px}
+  .hcard p:not(.origin){font-size:14px;color:var(--cream-dim)}
+  .hcard .wait{margin-top:auto;padding-top:12px;font-size:11.5px !important;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-faint) !important;font-weight:600}
 
-  /* ── Harvest list / contact ─────────────── */
-  .list-sec{text-align:center}
-  .list-sec .block-intro{margin-left:auto;margin-right:auto}
-  .list-sec .divider{width:40px;height:1px;background:var(--gold-500);margin:34px auto;opacity:.6}
-  .list-note{font-size:13px;color:var(--ink-mute);max-width:480px;margin:18px auto 0}
+  /* ── List CTA ── */
+  section#list{padding:76px 0;border-top:1px solid var(--line);background:var(--bg-2);text-align:center}
+  section#list h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,6vw,42px);margin-top:12px}
+  section#list p{color:var(--cream-dim);max-width:540px;margin:14px auto 30px}
+  .list-note{font-size:13px;color:var(--cream-faint);margin-top:26px}
+  .list-note a{color:var(--gold-bright)}
 
-  /* ── Cart drawer ────────────────────────── */
-  .cart-overlay{position:fixed;inset:0;background:rgba(15,40,24,.45);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
-  .cart-overlay.open{opacity:1;pointer-events:auto}
-  .cart{position:fixed;top:0;right:-420px;width:min(400px,100vw);height:100vh;background:var(--cream);z-index:95;box-shadow:-12px 0 40px rgba(15,40,24,.18);transition:right .3s ease;display:flex;flex-direction:column}
-  .cart.open{right:0}
-  .cart-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--cream-3)}
-  .cart-head h4{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--green-800)}
-  .cart-close{background:none;border:none;font-size:26px;line-height:1;color:var(--ink-mute);cursor:pointer;padding:6px}
-  .cart-body{flex:1;overflow-y:auto;padding:18px 24px}
-  .cart-item{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--cream-3)}
-  .cart-item .nm{font-size:14px;font-weight:600;color:var(--green-800)}
-  .cart-item .un{font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.05em}
-  .cart-item .qty{display:flex;align-items:center;gap:10px}
-  .cart-item .qty button{width:30px;height:30px;border:1px solid var(--cream-3);background:var(--white);color:var(--ink);font-size:16px;cursor:pointer;border-radius:2px}
-  .cart-item .qty span{font-size:14px;font-weight:600;min-width:16px;text-align:center}
-  .cart-item .pr{font-family:var(--serif);font-size:18px;color:var(--green-800);min-width:56px;text-align:right}
-  .cart-empty{padding:40px 0;text-align:center;font-size:14px;color:var(--ink-mute)}
-  .cart-foot{padding:20px 24px;border-top:1px solid var(--cream-3);background:var(--cream-2)}
-  .cart-subtotal{display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:var(--green-800);margin-bottom:14px}
-  .cart-subtotal .amt{font-family:var(--serif);font-size:24px}
-  .cart-foot .btn-dark{display:block;width:100%}
-  .cart-foot .note{font-size:12px;color:var(--ink-mute);text-align:center;margin-top:10px}
-
-  /* ── Footer (slim — the store carries no story) ── */
-  footer{background:var(--green-800);color:rgba(250,248,243,.7);padding:40px 32px}
-  .foot-inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+  /* ── Footer ── */
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:44px 0 36px}
+  .foot-inner{max-width:1180px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
   .foot-brand{display:flex;align-items:center;gap:14px}
-  .foot-brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid rgba(196,160,74,.45)}
-  .foot-brand span{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cream)}
-  .foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:13px}
-  .foot-links a{color:rgba(250,248,243,.7);text-decoration:none;border-bottom:1px solid rgba(196,160,74,.3)}
-  .foot-links a:hover{color:var(--gold-400)}
-  .foot-bottom{max-width:1180px;margin:26px auto 0;padding-top:18px;border-top:1px solid rgba(250,248,243,.12);font-size:13px;color:rgba(250,248,243,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  @media(max-width:400px){
-    section.block,.store-band{padding-left:20px;padding-right:20px}
-    .pcard .body{padding:24px 18px 22px}
-    .btn,.btn-dark{padding:14px 16px}
-    .btn,.btn-dark,.cart-btn{font-size:12px;letter-spacing:.05em}
-  }
+  .foot-brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,169,110,.45)}
+  .foot-brand span{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap;font-size:13px}
+  .foot-links a{color:var(--cream-dim);text-decoration:none;border-bottom:1px solid var(--line)}
+  .foot-links a:hover{color:var(--gold-bright);border-bottom-color:var(--gold)}
+  .foot-bottom{max-width:1180px;margin:26px auto 0;padding:18px 22px 0;border-top:1px solid var(--line);font-size:12.5px;color:var(--cream-faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  /* ── Cart drawer ── */
+  .cart-overlay{position:fixed;inset:0;background:rgba(5,9,6,.6);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+  .cart-overlay.open{opacity:1;pointer-events:auto}
+  .cart{position:fixed;top:0;right:-420px;width:min(400px,100vw);height:100vh;background:var(--bg-2);z-index:95;box-shadow:-12px 0 40px rgba(0,0,0,.5);transition:right .3s ease;display:flex;flex-direction:column}
+  .cart.open{right:0}
+  .cart-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--line)}
+  .cart-head h4{font-family:var(--serif);font-weight:500;font-size:26px;color:var(--cream)}
+  .cart-close{background:none;border:none;font-size:26px;line-height:1;color:var(--cream-dim);cursor:pointer;padding:6px}
+  .cart-body{flex:1;overflow-y:auto;padding:18px 24px}
+  .cart-item{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .cart-item .nm{font-size:14px;font-weight:600;color:var(--cream)}
+  .cart-item .un{font-size:12px;color:var(--cream-faint);text-transform:uppercase;letter-spacing:.05em}
+  .cart-item .qty{display:flex;align-items:center;gap:10px}
+  .cart-item .qty button{width:32px;height:32px;border:1px solid var(--line);background:none;color:var(--cream);font-size:16px;cursor:pointer;border-radius:2px}
+  .cart-item .qty span{font-size:14px;font-weight:600;min-width:16px;text-align:center}
+  .cart-item .pr{font-family:var(--serif);font-size:19px;color:var(--gold-bright);min-width:56px;text-align:right}
+  .cart-empty{padding:40px 0;text-align:center;font-size:14px;color:var(--cream-faint)}
+  .cart-foot{padding:20px 24px;border-top:1px solid var(--line);background:var(--bg-3)}
+  .cart-subtotal{display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:var(--cream);margin-bottom:14px}
+  .cart-subtotal .amt{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--gold-bright)}
+  .cart-foot .note{font-size:12px;color:var(--cream-faint);text-align:center;margin-top:10px}
 </style>
 </head>
 <body>
 
-<nav class="nav">
+<header>
   <div class="nav-inner">
     <a class="brand" href="/"><img src="images/zafra-logo-final.jpg" alt="Zafra Trading Co. seal"><span>Zafra Trading Co.</span></a>
     <ul class="nav-links">
@@ -202,141 +206,125 @@
       <li><a href="#taino">Taíno Collection</a></li>
       <li><a href="#harvests">The Harvests</a></li>
       <li><a href="#list">Harvest List</a></li>
-      <li><a class="house" href="https://zafratrading.com" target="_blank" rel="noopener">The House</a></li>
+      <li><a href="https://zafratrading.com" target="_blank" rel="noopener">The House</a></li>
     </ul>
     <button class="cart-btn" id="cart-open" aria-label="Open cart">Cart <span class="cart-count" id="cart-count">0</span></button>
   </div>
-</nav>
+</header>
 
-<!-- Slim band — the product grid IS the fold -->
-<div class="store-band">
+<!-- HERO — the island's rare harvest -->
+<div class="hero">
   <div class="wrap">
-    <div>
-      <p class="band-eyebrow">The Store · San Juan · Puerto Rico</p>
-      <h1>Shop <em>the harvest.</em></h1>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">A Rare Island Coffee · Puerto Rico</p>
+      <h1>Puerto Rico<br><em>exclusive.</em></h1>
+      <p>100% Puerto Rican arabica from the central cordillera — hand-picked, milled, and roasted on the island. Almost none of it ever leaves.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#coffee">Shop the Harvest</a>
+        <a class="btn-ghost" href="#taino">The Taíno Collection</a>
+      </div>
     </div>
-    <p class="band-sub">Estate lots, the washed blend, numbered reserve lots, and the monthly subscription — whole bean from the mountains of Puerto Rico, with its provenance in the box.</p>
   </div>
 </div>
 
-<section class="block" id="coffee">
+<!-- VALUE BAR -->
+<div class="valuebar">
   <div class="wrap">
-    <p class="eyebrow">The Coffee · Whole Bean · 8 oz</p>
-    <h2 class="block-title">The ladder, top to entry.</h2>
-    <p class="block-intro">Estate single-variety lots at the top, a washed blend at the door, and the reserve above them all. Every bag carries its provenance — region, farm, harvest, and what the farmer was paid.</p>
+    <div class="v">Roasted &amp; Sealed on the Island</div>
+    <div class="v">Provenance in Every Bag</div>
+    <div class="v">5% Back to the Harvest Crews</div>
+  </div>
+</div>
 
-    <div class="product-grid">
-
-      <!-- ESTATE — TOP -->
-      <div class="pcard">
-        <div class="img" role="img" aria-label="Zafra estate coffee bag"></div>
-        <div class="body">
-          <p class="origin">Estate · Top of the Ladder</p>
-          <h3>Estate Natural</h3>
-          <p class="variety">Single-Variety Natural · Catuaí Rojo Class</p>
-          <p class="desc">The top tier — a single-variety natural from the estate harvests, milled and roasted small.</p>
-          <div class="spec">
-            <div class="spec-row"><span class="k">Region</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Farm &amp; Co-op</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Harvest</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Farmer price</span><span class="v">Printed per lot at packing</span></div>
-          </div>
-          <p class="price">$35 <small>8 oz · Whole Bean</small></p>
-          <p class="price-note">$52.50 per 12 oz-equivalent</p>
-          <button class="btn" data-add="Estate Natural|35">Add to Cart</button>
-          <p class="gives">5% of every sale goes back to the harvest crews.</p>
-        </div>
+<!-- FEATURED LOT — Estate Natural -->
+<section class="featured" id="coffee">
+  <div class="wrap">
+    <div class="feat-grid">
+      <div class="feat-img">
+        <img src="images/cordillera.jpg" alt="The cordillera of Puerto Rico, coffee country">
+        <span class="tag">First Lots · Spring 2027</span>
       </div>
+      <div>
+        <p class="eyebrow">The First Estate Natural · Top of the Ladder</p>
+        <h2>Estate Natural</h2>
+        <p class="variety">Single-Variety Natural · Catuaí Rojo Class</p>
+        <p class="desc">The top tier — a single-variety natural from the estate harvests, dried in the fruit for depth, milled and roasted small on the island.</p>
+        <div class="spec">
+          <div class="spec-row"><span class="k">Region</span><span class="v">Per lot · filled at packing</span></div>
+          <div class="spec-row"><span class="k">Farm &amp; Co-op</span><span class="v">Per lot · filled at packing</span></div>
+          <div class="spec-row"><span class="k">Harvest</span><span class="v">Per lot · filled at packing</span></div>
+          <div class="spec-row"><span class="k">Farmer price</span><span class="v">Printed per lot at packing</span></div>
+        </div>
+        <div class="price-line"><span class="big">$35</span><span class="unit">8 oz · Whole Bean</span></div>
+        <div class="feat-ctas">
+          <button class="btn" data-add="Estate Natural|35">Add to Cart</button>
+          <a class="btn-ghost" href="mailto:info@zafratrading.com?subject=Harvest%20Subscription">Subscribe Monthly</a>
+        </div>
+        <p class="gives"><strong>5%</strong> of every sale goes back to the harvest crews.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- ESTATE — MID -->
-      <div class="pcard">
-        <div class="img" role="img" aria-label="Zafra estate coffee bag"></div>
+<!-- THE LADDER -->
+<section class="ladder">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The Coffee · Whole Bean · 8 oz</p>
+      <h2>The ladder, top to entry.</h2>
+      <p>Estate single-variety lots at the top, a washed blend at the door. Every bag carries its provenance — region, farm, harvest, and what the farmer was paid.</p>
+    </div>
+    <div class="ladder-grid">
+
+      <div class="lcard" style="background-image:url('images/coffee-tree.jpg')">
         <div class="body">
           <p class="origin">Estate · Mid Ladder</p>
           <h3>Estate Washed</h3>
-          <p class="variety">Single-Variety Washed · Marsellesa / Obatá Class</p>
-          <p class="desc">A single-variety washed coffee from the estate harvests — clean, bright, the cordillera at its most classic.</p>
-          <div class="spec">
-            <div class="spec-row"><span class="k">Region</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Farm &amp; Co-op</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Harvest</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Farmer price</span><span class="v">Printed per lot at packing</span></div>
-          </div>
+          <p class="desc">A single-variety washed coffee — clean, bright, the cordillera at its most classic. Marsellesa / Obatá class.</p>
           <p class="price">$30 <small>8 oz · Whole Bean</small></p>
-          <p class="price-note">$45.00 per 12 oz-equivalent</p>
           <button class="btn" data-add="Estate Washed|30">Add to Cart</button>
-          <p class="gives">5% of every sale goes back to the harvest crews.</p>
         </div>
       </div>
 
-      <!-- ENTRY — canon card. Name placeholder pending JC (Beano 261119). -->
-      <div class="pcard">
-        <div class="img" role="img" aria-label="Zafra washed blend coffee bag"></div>
+      <div class="lcard" style="background-image:url('images/harvest.jpg')">
         <div class="body">
-          <p class="origin">Entry · Harvest crews</p>
-          <h3>Washed Blend — Entry</h3>
-          <p class="variety">Washed Blend · Whole Bean · 8 oz</p>
+          <p class="origin">Entry · The Every-Day Door</p>
+          <h3>Washed Blend</h3>
           <p class="desc">The every-day door to the mountain — a washed blend, roasted and sealed on the island.</p>
-          <div class="spec">
-            <div class="spec-row"><span class="k">Region</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Farm &amp; Co-op</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Harvest</span><span class="v">Per lot · filled at packing</span></div>
-            <div class="spec-row"><span class="k">Farmer price</span><span class="v">Printed per lot at packing</span></div>
-          </div>
           <p class="price">$25 <small>8 oz · Whole Bean</small></p>
-          <p class="price-note">$37.50 per 12 oz-equivalent</p>
           <button class="btn" data-add="Washed Blend — Entry|25">Add to Cart</button>
-          <p class="gives">5% of every sale goes back to the harvest crews.</p>
         </div>
       </div>
 
-      <!-- SUBSCRIPTION — allocation + freshness framing only (JC ruling 8: savings language waits on Margot) -->
-      <div class="pcard">
-        <div class="img" role="img" aria-label="Zafra coffee bag"></div>
-        <div class="body">
-          <p class="origin">Monthly · The Club</p>
-          <h3>The Harvest Subscription</h3>
-          <p class="variety">A Standing Allocation · Every Month</p>
-          <p class="desc">A standing allocation from each harvest — your share roasted and shipped fresh, every month, before the general release.</p>
-          <p class="price">Under $85 <small>per month</small></p>
-          <p class="price-note">Cancel any time</p>
-          <a class="btn" href="mailto:info@zafratrading.com?subject=Harvest%20Subscription">Join the Subscription</a>
-          <p class="gives">5% of every sale goes back to the harvest crews.</p>
-        </div>
+      <div class="fcard">
+        <p class="eyebrow">Monthly · The Club</p>
+        <h3>The Harvest Subscription</h3>
+        <p class="desc">A standing allocation from each harvest — your share roasted and shipped fresh, every month, before the general release. Cancel any time.</p>
+        <p class="price">Under $85 <small>per month</small></p>
+        <a class="btn" href="mailto:info@zafratrading.com?subject=Harvest%20Subscription">Join the Subscription</a>
       </div>
 
-      <!-- RESERVE — inquiry card. Button DARK until Coffee + Margot signoff (JC ruling 7, 261119). -->
-      <div class="pcard reserve span-2">
-        <div class="img" role="img" aria-label="Coffee cherries at harvest"></div>
-        <div class="body">
-          <p class="origin">Reserve · Numbered Lots</p>
-          <h3>Reserve Lots</h3>
-          <p class="variety">Above the Ladder · Allocated by Inquiry</p>
-          <p class="desc">The season's best harvests, milled small and numbered lot by lot. Each lot publishes its region, farm, process, and farmer pay — and is allocated to buyers by inquiry before it ships.</p>
-          <div class="spec">
-            <div class="spec-row"><span class="k">Region</span><span class="v">Published per lot</span></div>
-            <div class="spec-row"><span class="k">Farm &amp; process</span><span class="v">Published per lot</span></div>
-            <div class="spec-row"><span class="k">Lot size</span><span class="v">Published per lot</span></div>
-            <div class="spec-row"><span class="k">Farmer pay</span><span class="v">Published per lot</span></div>
-          </div>
-          <p class="price">Priced per lot <small>above the estate naturals</small></p>
-          <p class="price-note">Numbered lots · announced on the Harvest List</p>
-          <span class="btn-dark" aria-disabled="true" title="Opens at the first lot release">Inquire on Lots</span>
-          <p class="dark-note">Opens with the first lot release</p>
-        </div>
+      <div class="fcard">
+        <p class="eyebrow">Reserve · Numbered Lots</p>
+        <h3>Reserve Lots</h3>
+        <p class="desc">The season's best harvests, milled small and numbered lot by lot. Each lot publishes its region, farm, process, and farmer pay — allocated by inquiry before it ships.</p>
+        <p class="price">Priced per lot <small>above the estate naturals</small></p>
+        <span class="btn-dark" aria-disabled="true" title="Opens at the first lot release">Inquire on Lots</span>
+        <p class="dark-note">Opens with the first lot release</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Taíno Collection — PR Coffee Co. line. Anchor ids are deep-link targets for prcoffeeco.com Order buttons (PR #5) — DO NOT REMOVE. -->
+<!-- Taíno Collection — anchor ids are deep-link targets for prcoffeeco.com Order buttons — DO NOT REMOVE. -->
 <section id="taino">
-  <div class="taino-stripe"></div>
-  <div class="taino-inner">
-    <p class="eyebrow">The Taíno Collection · A PR Coffee Co. Line</p>
-    <h2 class="block-title">Four roasts. Four spirits.</h2>
-    <p class="block-intro">Taíno Coffee honors the island's first people — single-origin Puerto Rican arabica, one Taíno spirit to each roast, every bag traceable to its mountain. One hundred percent island-grown. Three centuries in every cup.</p>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The Taíno Collection · A PR Coffee Co. Line</p>
+      <h2>Four roasts. Four spirits.</h2>
+      <p>Taíno Coffee honors the island's first people — single-origin Puerto Rican arabica, one Taíno spirit to each roast, every bag traceable to its mountain. One hundred percent island-grown. Three centuries in every cup.</p>
+    </div>
     <div class="taino-grid">
       <div class="tcard" id="guatauba">
         <div class="spirit-stripe" style="background:#e84118"></div>
@@ -394,11 +382,14 @@
   </div>
 </section>
 
-<section class="block" id="harvests">
+<!-- OTHER HARVESTS -->
+<section id="harvests">
   <div class="wrap">
-    <p class="eyebrow">The Other Harvests</p>
-    <h2 class="block-title">What the mountain gives next.</h2>
-    <p class="block-intro">Honey from the cordillera's apiaries, vanilla from the Castañer cooperative, cacao from the co-op farmers, and the gift boxes that carry all four harvests. They arrive with the season — the list hears first.</p>
+    <div class="sec-head">
+      <p class="eyebrow">The Other Harvests</p>
+      <h2>What the mountain gives next.</h2>
+      <p>Honey from the cordillera's apiaries, vanilla from the Castañer cooperative, cacao from the co-op farmers, and the gift boxes that carry all four harvests. They arrive with the season — the list hears first.</p>
+    </div>
     <div class="harvest-grid">
       <div class="hcard">
         <div class="img" style="background-image:url('images/product-honey-jar.jpg')"></div>
@@ -440,14 +431,14 @@
   </div>
 </section>
 
-<section class="block list-sec" id="list">
+<!-- HARVEST LIST -->
+<section id="list">
   <div class="wrap">
     <p class="eyebrow">The Harvest List</p>
-    <h2 class="block-title">Hear it first.</h2>
-    <p class="block-intro">Reserve lots, seasonal releases, and the launch of checkout — announced to the list before anyone else.</p>
+    <h2>Hear it first.</h2>
+    <p>Reserve lots, seasonal releases, and the launch of checkout — announced to the list before anyone else.</p>
     <a class="btn" href="mailto:info@zafratrading.com?subject=Join%20the%20Harvest%20List&body=Please%20add%20me%20to%20the%20Zafra%20Trading%20Co.%20Harvest%20List.">Join the Harvest List</a>
-    <div class="divider"></div>
-    <p class="list-note">Write to <a href="mailto:info@zafratrading.com" style="color:var(--gold-600)">info@zafratrading.com</a> · The mission lives at <a href="https://zafratrading.com" target="_blank" rel="noopener" style="color:var(--gold-600)">zafratrading.com</a></p>
+    <p class="list-note">Write to <a href="mailto:info@zafratrading.com">info@zafratrading.com</a> · The mission lives at <a href="https://zafratrading.com" target="_blank" rel="noopener">zafratrading.com</a></p>
   </div>
 </section>
 
@@ -466,7 +457,7 @@
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 Zafra Trading Co.</span>
+    <span>© 2026 Zafra Trading Co. · First lots — Spring 2027</span>
     <span>Direct trade · Full provenance · 5% of every sale</span>
   </div>
 </footer>
