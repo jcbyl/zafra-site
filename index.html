@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zafra Trading Co. — Puerto Rican coffee, honey, cacao &amp; vanilla from the Cordillera Central</title>
 <meta name="description" content="Coffee in the class of Kona and Blue Mountain, honey, cacao and vanilla, carried off the island by Zafra Trading Co. — bought direct from Cordillera Central farms, with the price paid to the farmer printed on every card.">
-<link rel="icon" type="image/jpeg" href="images/zafra-logo-final.jpg">
+<link rel="icon" type="image/png" href="images/zafra-logo-shield.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --green-900:#0f2818;--green-800:#1a3a24;--green-700:#245234;--green-600:#2d6b47;
-  --gold-600:#a8853a;--gold-500:#c4a04a;--gold-400:#dab85e;
-  --cream:#faf8f3;--cream-2:#f5f1e8;--cream-3:#e8e2d4;
-  --ink:#1a2a1e;--ink-soft:#4a5a4e;--ink-mute:#5a6a5e;
-  --white:#ffffff;
-  --line:rgba(15,40,24,.06);
-  --shadow-sm:0 2px 8px rgba(15,40,24,.04);
-  --shadow:0 8px 24px rgba(15,40,24,.06);
-  --shadow-lg:0 20px 50px rgba(15,40,24,.10);
+  --green-900:#0C130E;--green-800:#E9E4D4;--green-700:#C9A96E;--green-600:#A88754;
+  --gold-600:#A88754;--gold-500:#C9A96E;--gold-400:#DCC188;
+  --cream:#F5F1E6;--cream-2:#101A12;--cream-3:#15221A;
+  --ink:#F5F1E6;--ink-soft:#B7B1A0;--ink-mute:#87816F;
+  --white:#15221A;
+  --line:rgba(214,196,155,.16);
+  --shadow-sm:0 2px 8px rgba(0,0,0,.04);
+  --shadow:0 8px 24px rgba(0,0,0,.06);
+  --shadow-lg:0 20px 50px rgba(0,0,0,.10);
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   --serif:'Cormorant Garamond',Georgia,serif;
 }
@@ -33,7 +33,7 @@ a:hover{color:var(--gold-600)}
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,243,.92);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:12px;height:64px}
-.nav-logo{height:38px;width:38px;border-radius:50%;object-fit:cover;flex:none}
+.nav-logo{width:46px;height:37px;object-fit:contain;flex:none}
 .nav-brand{font-weight:600;letter-spacing:.08em;font-size:13px;color:var(--green-800);text-transform:uppercase}
 .nav-brand span{color:var(--ink-mute);font-weight:400;font-size:11px;margin-left:8px}
 .nav-links{display:flex;gap:4px;flex:1;justify-content:flex-end}
@@ -44,20 +44,20 @@ a:hover{color:var(--gold-600)}
 
 /* HERO — full-bleed */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('images/hero-zafra.jpg') center/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,40,24,.55) 0%,rgba(15,40,24,.65) 50%,rgba(15,40,24,.75) 100%)}
+.hero-bg{position:absolute;inset:0;background:url('images/grower-hero.jpg') center/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.65) 50%,rgba(0,0,0,.75) 100%)}
 .hero-inner{position:relative;z-index:2;max-width:1020px;margin:0 auto;padding:130px 32px 90px}
-.hero-seal{width:116px;height:116px;border-radius:50%;object-fit:cover;border:2px solid rgba(196,160,74,.4);box-shadow:0 0 0 6px rgba(15,40,24,.3),var(--shadow-lg);margin:0 auto 32px;display:block}
-.hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:20px;text-shadow:0 1px 8px rgba(15,40,24,.5)}
-.hero-title{font-family:var(--serif);font-size:clamp(38px,6.4vw,78px);font-weight:500;line-height:1.08;color:var(--cream);margin-bottom:26px;letter-spacing:-.01em;text-shadow:0 2px 18px rgba(15,40,24,.5)}
-.hero-sub{font-size:19px;color:rgba(250,248,243,.88);max-width:640px;margin:0 auto 34px;line-height:1.7;text-shadow:0 1px 10px rgba(15,40,24,.45)}
+.hero-seal{width:148px;height:119px;object-fit:contain;margin:0 auto 32px;display:block;filter:drop-shadow(0 12px 28px rgba(0,0,0,.5))}
+.hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:20px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero-title{font-family:var(--serif);font-size:clamp(38px,6.4vw,78px);font-weight:500;line-height:1.08;color:var(--cream);margin-bottom:26px;letter-spacing:-.01em;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+.hero-sub{font-size:19px;color:rgba(250,248,243,.88);max-width:640px;margin:0 auto 34px;line-height:1.7;text-shadow:0 1px 10px rgba(0,0,0,.45)}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .hero-btn{display:inline-block;background:var(--gold-500);color:var(--green-900);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 30px;border-radius:8px;transition:background .2s,color .2s}
 .hero-btn:hover{background:var(--gold-400);color:var(--green-900)}
 .hero-btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(250,248,243,.5)}
 .hero-btn.ghost:hover{background:rgba(250,248,243,.1);color:var(--cream)}
 
-.lex-entry{max-width:680px;margin:6px 0 38px;padding:28px 32px;border:1px solid var(--line);border-left:3px solid var(--gold-500);background:rgba(196,160,74,.04)}
+.lex-entry{max-width:680px;margin:6px 0 38px;padding:28px 32px;border:1px solid var(--line);border-left:3px solid var(--gold-500);background:rgba(201,169,110,.04)}
 .lex-word{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--green-800)}
 .lex-pos{display:block;font-size:13px;font-style:italic;color:var(--ink-mute);margin-top:2px}
 .lex-def{display:block;margin-top:12px;font-size:15px;line-height:1.7;color:var(--ink-soft)}
@@ -72,7 +72,7 @@ a:hover{color:var(--gold-600)}
 /* MANIFEST LIST */
 .manifest{border-top:1px solid var(--line)}
 .manifest-row{display:grid;grid-template-columns:88px 200px 1fr auto;gap:26px;align-items:center;padding:28px 8px;border-bottom:1px solid var(--line);transition:background .25s,padding .25s}
-.manifest-row:hover{background:rgba(196,160,74,.05);padding-left:16px;padding-right:0}
+.manifest-row:hover{background:rgba(201,169,110,.05);padding-left:16px;padding-right:0}
 .manifest-thumb{width:88px;height:88px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow);display:block}
 .manifest-name{font-family:var(--serif);font-size:clamp(28px,3.4vw,38px);font-weight:500;color:var(--green-800);line-height:1.05}
 .manifest-desc{font-size:15px;color:var(--ink-soft);line-height:1.65;max-width:560px}
@@ -97,7 +97,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-500);outline-o
 .section-body strong{color:var(--green-800);font-weight:600}
 
 /* BADGE — stage markers */
-.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-600);background:rgba(196,160,74,.12);border:1px solid rgba(196,160,74,.35);border-radius:999px;padding:3px 10px;margin-left:10px;vertical-align:middle;font-family:var(--sans)}
+.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-600);background:rgba(201,169,110,.12);border:1px solid rgba(201,169,110,.35);border-radius:999px;padding:3px 10px;margin-left:10px;vertical-align:middle;font-family:var(--sans)}
 .section-dark .badge{color:var(--gold-400);background:rgba(250,248,243,.06);border-color:rgba(250,248,243,.25)}
 .sub-note{font-size:13px;color:rgba(250,248,243,.55);margin-top:10px;line-height:1.55}
 
@@ -152,7 +152,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-500);outline-o
 
 /* FOOTER */
 footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 32px;text-align:center}
-.footer-seal{height:52px;width:52px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;opacity:.9}
+.footer-seal{width:62px;height:50px;object-fit:contain;margin:0 auto 16px;display:block;opacity:.95}
 .footer-brand{font-weight:600;font-size:14px;color:var(--cream);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
 .footer-tag{font-family:var(--serif);font-style:italic;color:var(--gold-400);margin-bottom:18px}
 .footer-contact{font-size:13px;margin-bottom:6px}
@@ -183,6 +183,19 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
   .section-dark{padding:60px 20px}
   .cta{margin:0 20px;padding:40px 24px}
 }
+
+/* ===== DARK THEME SYNC w/ SHOP ZAFRA (palette: #0C130E / #C9A96E / Cormorant+Inter) ===== */
+body{background:#0C130E}
+.nav{background:rgba(12,19,14,.92);border-bottom:1px solid rgba(214,196,155,.16)}
+.nav-links{background:#101A12}
+.nav-toggle svg{stroke:#F5F1E6}
+.cta{background:#15221A;border:1px solid rgba(214,196,155,.16)}
+.product-card{border:1px solid rgba(214,196,155,.14);box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.harvest{border:1px solid rgba(214,196,155,.14);box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.harvest-stat{border-left:2px solid #C9A96E}
+.hero-overlay{background:linear-gradient(180deg,rgba(5,10,7,.45) 0%,rgba(5,10,7,.62) 50%,rgba(12,19,14,.9) 100%)}
+img{opacity:1}
+::selection{background:#C9A96E;color:#0C130E}
 </style>
 </head>
 <body>
@@ -190,7 +203,7 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <img class="nav-logo" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co. seal">
+    <img class="nav-logo" src="images/zafra-logo-shield.png" alt="Zafra Trading Co. seal">
     <div class="nav-brand">Zafra Trading Co.<span>&middot; San Juan, PR</span></div>
     <div class="nav-links" id="navLinks">
       <a href="#story">The Story</a>
@@ -211,7 +224,7 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <img class="hero-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co.">
+    <img class="hero-seal" src="images/zafra-logo-shield.png" alt="Zafra Trading Co.">
     <p class="hero-eyebrow">From the Cordillera Central of Puerto Rico</p>
     <h1 class="hero-title">Puerto Rico grows coffee in the class of Kona and Blue Mountain &mdash; and almost none of it leaves the island.</h1>
     <p class="hero-sub">We carry what does: coffee, honey, cacao and vanilla, bought direct from Puerto Rican farms at prices we print on every card.</p>
@@ -360,7 +373,7 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
     <h2>Taste home.</h2>
     <p>The first lots land Spring 2027. Join the founding list &mdash; first in line when the harvest ships, and the story of every lot before it does.</p>
     <p style="font-size:15px;margin-top:10px;">Retailers, hotels and press: tell us what you&rsquo;re looking for. We&rsquo;ll tell you plainly what we can supply and when.</p>
-    <a class="cta-btn" href="mailto:info@zafratrading.com">info@zafratrading.com</a>
+    <a class="cta-btn" href="/cdn-cgi/l/email-protection#7a13141c153a001b1c081b0e081b1e13141d54191517"><span class="__cf_email__" data-cfemail="84edeae2ebc4fee5e2f6e5f0f6e5e0edeae3aae7ebe9">[email&#160;protected]</span></a>
     <p style="font-size:13px;margin-top:14px;">&mdash; or the chat on this page.</p>
   </div>
   <p style="text-align:center;font-size:13px;color:var(--ink-mute);margin-top:24px;">
@@ -370,14 +383,14 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
 
 <!-- FOOTER -->
 <footer>
-  <img class="footer-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co.">
+  <img class="footer-seal" src="images/zafra-logo-shield.png" alt="Zafra Trading Co.">
   <div class="footer-brand">Zafra Trading Co.</div>
   <div class="footer-tag">De la zafra al mundo &mdash; from the harvest, to the world</div>
   <div class="footer-contact">San Juan, Puerto Rico &middot; zafratrading.com</div>
   <div class="footer-legal">&copy; 2026 Zafra Trading Co. All rights reserved.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
