@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zafra Trading Co. — The rarest harvest grown on American soil: shade-grown coffee, canopy honey, legacy cacao &amp; heritage vanilla from the Cordillera Central</title>
-<meta name="description" content="Shade-grown heirloom Arabica from the high Cordillera Central of Puerto Rico — coffee with every right to stand with Kona and Blue Mountain — plus canopy honey, legacy cacao and heritage vanilla, carried off the island by Zafra Trading Co., with the price paid to the farmer printed on every card.">
+<title>Zafra Trading Co. — Half of Puerto Rico's coffee is never picked. We pick it.</title>
+<meta name="description" content="Hand-picked heirloom Arabica from the Cordillera Central of Puerto Rico, with the price paid to the farmer printed on every bag. First lots Spring 2027.">
 <link rel="icon" type="image/png" href="images/zafra-logo-shield.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,8 +46,7 @@ a:hover{color:var(--gold-600)}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:url('images/grower-hero.jpg') center/cover no-repeat}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.65) 50%,rgba(0,0,0,.75) 100%)}
-.hero-inner{position:relative;z-index:2;max-width:1020px;margin:0 auto;padding:130px 32px 90px}
-.hero-seal{width:148px;height:119px;object-fit:contain;margin:0 auto 32px;display:block;filter:drop-shadow(0 12px 28px rgba(0,0,0,.5))}
+.hero-inner{position:relative;z-index:2;max-width:1020px;margin:0 auto;padding:150px 32px 110px}
 .hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:20px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .hero-title{font-family:var(--serif);font-size:clamp(38px,6.4vw,78px);font-weight:500;line-height:1.08;color:var(--cream);margin-bottom:26px;letter-spacing:-.01em;text-shadow:0 2px 18px rgba(0,0,0,.5)}
 .hero-sub{font-size:19px;color:rgba(250,248,243,.88);max-width:640px;margin:0 auto 34px;line-height:1.7;text-shadow:0 1px 10px rgba(0,0,0,.45)}
@@ -56,6 +55,12 @@ a:hover{color:var(--gold-600)}
 .hero-btn:hover{background:var(--gold-400);color:var(--green-900)}
 .hero-btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(250,248,243,.5)}
 .hero-btn.ghost:hover{background:rgba(250,248,243,.1);color:var(--cream)}
+
+/* PROOF STRIP */
+.proof-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(201,169,110,.04)}
+.proof-inner{max-width:1020px;margin:0 auto;padding:26px 32px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.proof-item{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);display:flex;align-items:center;gap:10px}
+.proof-item:not(:last-child)::after{content:'·';color:var(--ink-mute);font-weight:400}
 
 .lex-entry{max-width:720px;margin:6px 0 38px;padding:28px 32px;border:1px solid var(--line);border-left:3px solid var(--gold-500);background:rgba(201,169,110,.04)}
 .lex-word{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--green-800)}
@@ -69,18 +74,17 @@ a:hover{color:var(--gold-600)}
 .tl-text{font-size:15px;line-height:1.7;color:var(--ink-soft)}
 .tl-text strong{color:var(--green-800)}
 @media (max-width:640px){.tl-item{flex-direction:column;gap:6px}.tl-year{min-width:0}}
-/* MANIFEST LIST */
-.manifest{border-top:1px solid var(--line)}
-.manifest-row{display:grid;grid-template-columns:88px 240px 1fr auto;gap:26px;align-items:center;padding:28px 8px;border-bottom:1px solid var(--line);transition:background .25s,padding .25s}
-.manifest-row:hover{background:rgba(201,169,110,.05);padding-left:16px;padding-right:0}
-.manifest-thumb{width:88px;height:88px;border-radius:14px;object-fit:cover;box-shadow:var(--shadow);display:block}
-.manifest-name{font-family:var(--serif);font-size:clamp(28px,3.4vw,38px);font-weight:500;color:var(--green-800);line-height:1.05}
-.manifest-desc{font-size:15px;color:var(--ink-soft);line-height:1.65;max-width:560px}
-.manifest-desc .origin{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);margin-bottom:6px;font-family:var(--sans)}
-.manifest-when{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);white-space:nowrap}
-@media(max-width:720px){.manifest-row{grid-template-columns:88px 1fr;gap:16px;align-items:start}.manifest-name{grid-column:2}.manifest-desc{grid-column:1 / -1}.manifest-when{grid-column:1 / -1;order:4}}
+/* TIER LIST */
+.tier-list{border-top:1px solid var(--line)}
+.tier-row{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:start;padding:34px 8px;border-bottom:1px solid var(--line);transition:background .25s}
+.tier-row:hover{background:rgba(201,169,110,.05)}
+.tier-name{font-family:var(--serif);font-size:clamp(26px,3vw,34px);font-weight:500;color:var(--green-800);line-height:1.1}
+.tier-name .origin{display:block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);margin-top:8px}
+.tier-desc{font-size:15px;color:var(--ink-soft);line-height:1.7;max-width:560px}
+.tier-note{font-size:13px;color:var(--ink-mute);margin-top:26px;letter-spacing:.02em}
+@media(max-width:720px){.tier-row{grid-template-columns:1fr;gap:12px}}
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold-500);outline-offset:3px;border-radius:4px}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.manifest-row{transition:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.tier-row{transition:none}}
 
 /* SECTIONS */
 .section{padding:100px 32px;max-width:920px;margin:0 auto}
@@ -96,34 +100,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-500);outline-o
 .section-body + .section-body{margin-top:16px}
 .section-body strong{color:var(--green-800);font-weight:600}
 
-/* BADGE — stage markers */
-.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-600);background:rgba(201,169,110,.12);border:1px solid rgba(201,169,110,.35);border-radius:999px;padding:3px 10px;margin-left:10px;vertical-align:middle;font-family:var(--sans)}
-.section-dark .badge{color:var(--gold-400);background:rgba(250,248,243,.06);border-color:rgba(250,248,243,.25)}
-.sub-note{font-size:13px;color:rgba(250,248,243,.55);margin-top:10px;line-height:1.55}
-
-/* PRODUCT GRID */
-.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.product-card{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
-.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.product-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
-.product-card-body{padding:22px 20px}
-.product-card h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--green-800);margin-bottom:6px}
-.product-card .origin{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600);margin-bottom:8px}
-.product-card p{font-size:13px;color:var(--ink-mute);line-height:1.5}
-
-/* HARVEST STORIES */
-.harvest{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden;margin-bottom:32px;box-shadow:var(--shadow);background:var(--white)}
-.harvest.reverse .harvest-img{order:2}
-.harvest.reverse .harvest-text{order:1}
-.harvest-img{min-height:440px;background-size:cover;background-position:center}
-.harvest-text{padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
-.harvest-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);margin-bottom:10px}
-.harvest-text h3{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--green-800);margin-bottom:16px}
-.harvest-text p{font-size:15px;color:var(--ink-soft);line-height:1.65;margin-bottom:12px}
-.harvest-text p strong{color:var(--green-800);font-weight:600}
-.harvest-stat{margin-top:14px;padding:14px 16px;background:var(--cream-2);border-radius:8px;border-left:2px solid var(--gold-500);font-size:14px;color:var(--ink-soft)}
-.harvest-stat strong{color:var(--green-700)}
-
 /* FLOW */
 .flow{display:flex;gap:20px;justify-content:center;align-items:stretch;margin:40px 0}
 .flow-step{flex:1;max-width:240px;background:rgba(250,248,243,.04);border:1px solid rgba(250,248,243,.08);border-radius:12px;padding:28px 24px;text-align:center}
@@ -132,29 +108,46 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold-500);outline-o
 .flow-step p{font-size:14px;color:rgba(250,248,243,.65);line-height:1.5}
 .flow-arrow{display:flex;align-items:center;color:var(--gold-500);font-size:20px}
 
-/* ECOSYSTEM */
-.eco-list{list-style:none;padding:0}
-.eco-list li{padding:20px 0;border-bottom:1px solid rgba(250,248,243,.08);font-size:15px;color:rgba(250,248,243,.7);line-height:1.6}
-.eco-list li:last-child{border-bottom:none}
-.eco-list li strong{color:var(--cream);font-weight:600}
-
 /* HIGHLIGHT */
 .highlight{background:rgba(250,248,243,.04);border:1px solid rgba(250,248,243,.08);border-radius:16px;padding:32px;margin:30px 0}
 .highlight p{font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--cream)}
 .highlight strong{color:var(--gold-400)}
+.sub-note{font-size:14px;color:rgba(250,248,243,.55);margin-top:14px;line-height:1.6}
 
-/* CTA */
-.cta{background:var(--green-800);border-radius:16px;padding:56px 40px;text-align:center;color:var(--cream);margin:0 32px}
-.cta h2{font-family:var(--serif);font-size:32px;font-weight:500;margin-bottom:14px}
-.cta p{font-size:16px;color:rgba(250,248,243,.75);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto}
-.cta-btn{display:inline-block;background:var(--gold-500);color:var(--green-900);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 32px;border-radius:8px;transition:background .2s}
-.cta-btn:hover{background:var(--gold-400);color:var(--green-900)}
+/* TWO DOORS */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.door{background:rgba(250,248,243,.04);border:1px solid rgba(250,248,243,.1);border-radius:16px;padding:40px 36px;display:flex;flex-direction:column}
+.door-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-400);margin-bottom:10px}
+.door h3{font-family:var(--serif);font-size:28px;font-weight:500;color:var(--cream);margin-bottom:14px}
+.door p{font-size:15px;color:rgba(250,248,243,.7);line-height:1.65;margin-bottom:22px}
+.door-crew{margin-top:auto;padding-top:18px;border-top:1px solid rgba(250,248,243,.1);font-size:13px;color:rgba(250,248,243,.55);line-height:1.6}
+.door-crew a{color:var(--gold-400);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:760px){.doors{grid-template-columns:1fr}}
+
+/* SIGNUP */
+.signup{display:flex;gap:10px;flex-wrap:wrap}
+.signup input{flex:1;min-width:200px;background:rgba(250,248,243,.06);border:1px solid rgba(250,248,243,.25);border-radius:8px;padding:13px 16px;font-family:var(--sans);font-size:14px;color:var(--cream)}
+.signup input::placeholder{color:rgba(250,248,243,.4)}
+.signup input:focus{outline:2px solid var(--gold-500);outline-offset:0;border-color:var(--gold-500)}
+.signup-btn{background:var(--gold-500);color:var(--green-900);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 28px;border-radius:8px;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s}
+.signup-btn:hover{background:var(--gold-400)}
+.signup-ok{font-size:13px;color:var(--gold-400);margin-top:10px;display:none}
+
+/* MOUNTAIN ROW */
+.mountain-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mtn-item{padding:30px 26px;border-left:1px solid var(--line)}
+.mtn-item:first-child{border-left:none;padding-left:0}
+.mtn-item h4{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--green-800);margin-bottom:8px}
+.mtn-item p{font-size:14px;color:var(--ink-soft);line-height:1.6}
+@media(max-width:720px){.mountain-row{grid-template-columns:1fr}.mtn-item{border-left:none;border-top:1px solid var(--line);padding-left:0}.mtn-item:first-child{border-top:none}}
 
 /* FOOTER */
-footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 32px;text-align:center}
+footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:64px 32px 32px;text-align:center}
 .footer-seal{width:62px;height:50px;object-fit:contain;margin:0 auto 16px;display:block;opacity:.95}
 .footer-brand{font-weight:600;font-size:14px;color:var(--cream);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-.footer-tag{font-family:var(--serif);font-style:italic;color:var(--gold-400);margin-bottom:18px}
+.footer-tag{font-family:var(--serif);font-style:italic;color:var(--gold-400);margin-bottom:22px}
+.footer-signup{max-width:460px;margin:0 auto 26px}
+.footer-signup .door-label{margin-bottom:12px}
 .footer-contact{font-size:13px;margin-bottom:6px}
 .footer-contact a{color:rgba(250,248,243,.7)}
 .footer-legal{margin-top:24px;padding-top:18px;border-top:1px solid rgba(250,248,243,.08);font-size:12px;color:rgba(250,248,243,.3)}
@@ -165,48 +158,36 @@ footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:56px 32px 
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .product-grid{grid-template-columns:repeat(2,1fr)}
-  .harvest{grid-template-columns:1fr}
-  .harvest.reverse .harvest-img{order:1}
-  .harvest.reverse .harvest-text{order:2}
-  .harvest-img{min-height:260px}
-  .harvest-text{padding:32px 24px}
   .flow{flex-direction:column}
   .flow-arrow{display:none}
 }
 @media(max-width:640px){
-  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--cream);padding:16px;gap:4px;border-bottom:1px solid var(--line);flex-direction:column}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#101A12;padding:16px;gap:4px;border-bottom:1px solid var(--line);flex-direction:column}
   .nav-links.open{display:flex}
   .nav-toggle{display:block}
-  .product-grid{grid-template-columns:1fr}
   .section{padding:60px 20px}
   .section-dark{padding:60px 20px}
-  .cta{margin:0 20px;padding:40px 24px}
+  .door{padding:32px 24px}
 }
 
 /* ===== DARK THEME SYNC w/ SHOP ZAFRA (palette: #0C130E / #C9A96E / Cormorant+Inter) ===== */
 body{background:#0C130E}
 .nav{background:rgba(12,19,14,.92);border-bottom:1px solid rgba(214,196,155,.16)}
-.nav-links{background:#101A12}
 .nav-toggle svg{stroke:#F5F1E6}
-.cta{background:#15221A;border:1px solid rgba(214,196,155,.16)}
-.product-card{border:1px solid rgba(214,196,155,.14);box-shadow:0 12px 32px rgba(0,0,0,.35)}
-.harvest{border:1px solid rgba(214,196,155,.14);box-shadow:0 12px 32px rgba(0,0,0,.35)}
-.harvest-stat{border-left:2px solid #C9A96E}
 .hero-overlay{background:linear-gradient(180deg,rgba(5,10,7,.45) 0%,rgba(5,10,7,.62) 50%,rgba(12,19,14,.9) 100%)}
 img{opacity:1}
 ::selection{background:#C9A96E;color:#0C130E}
 </style>
-<meta property="og:title" content="Zafra Trading Co. — The rarest harvest grown on American soil.">
-<meta property="og:description" content="Four harvests off one mountain in Puerto Rico, grown on American soil — bought at the farm, the price paid to the farmer printed on every card.">
+<meta property="og:title" content="Zafra Trading Co. — Half of Puerto Rico's coffee is never picked. We pick it.">
+<meta property="og:description" content="Hand-picked heirloom Arabica from the Cordillera Central, with the price paid to the farmer printed on every bag. First lots Spring 2027.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zafratrading.com/">
 <meta property="og:image" content="https://zafratrading.com/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Zafra Trading Co. — The rarest harvest grown on American soil.">
-<meta name="twitter:description" content="Four harvests off one mountain in Puerto Rico, grown on American soil — bought at the farm, the price paid to the farmer printed on every card.">
+<meta name="twitter:title" content="Zafra Trading Co. — Half of Puerto Rico's coffee is never picked. We pick it.">
+<meta name="twitter:description" content="Hand-picked heirloom Arabica from the Cordillera Central, with the price paid to the farmer printed on every bag. First lots Spring 2027.">
 <meta name="twitter:image" content="https://zafratrading.com/images/og-image.jpg">
 </head>
 <body>
@@ -217,12 +198,10 @@ img{opacity:1}
     <img class="nav-logo" src="images/zafra-logo-shield.png" alt="Zafra Trading Co. seal">
     <div class="nav-brand">Zafra Trading Co.<span>&middot; San Juan, PR</span></div>
     <div class="nav-links" id="navLinks">
-      <a href="#zafra">La Zafra</a>
-      <a href="#carry">What We Carry</a>
-      <a href="#story">The Story</a>
-      <a href="#money">The Money</a>
-      <a href="#built">Built to Last</a>
-      <a href="#buyer">Contact</a>
+      <a href="#coffee">Coffee</a>
+      <a href="#doors">Wholesale</a>
+      <a href="/story.html">Our Story</a>
+      <a href="#founding">Founding List</a>
     </div>
     <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -230,99 +209,50 @@ img{opacity:1}
   </div>
 </nav>
 
-<!-- HERO — locked, verbatim -->
+<!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <img class="hero-seal" src="images/zafra-logo-shield.png" alt="Zafra Trading Co.">
     <p class="hero-eyebrow">From the Cordillera Central of Puerto Rico</p>
-    <h1 class="hero-title">The rarest harvest grown on American soil.</h1>
-      <p class="hero-sub">Shade-grown coffee, canopy honey, legacy cacao, heritage vanilla &mdash; four harvests off one mountain. Zafra Trading Co. is the channel that carries them off the island &mdash; bought at the farm, the price paid to the farmer printed on every card.</p>
+    <h1 class="hero-title">Half of Puerto Rico&rsquo;s coffee is never picked.<br>We pick it.</h1>
+    <p class="hero-sub">Hand-picked heirloom Arabica from the Cordillera Central, with the price paid to the farmer printed on every bag.</p>
     <div class="hero-btns">
-      <a class="hero-btn" href="https://shopzafra.com" target="_blank" rel="noopener">Shop Zafra online</a>
-      <a class="hero-btn ghost" href="#buyer">Wholesale inquiries</a>
+      <a class="hero-btn" href="#founding">Join the founding list</a>
+      <a class="hero-btn ghost" href="#doors">Wholesale</a>
     </div>
   </div>
 </section>
 
-<!-- THE WORD -->
-<section class="section" id="zafra">
-  <div class="divider"></div>
-  <h2 class="section-title">La Zafra</h2>
-  <p class="lex-entry">
-    <span class="lex-word">za&middot;fra</span>
-    <span class="lex-pos">noun</span>
-    <span class="lex-def">In Spanish, <em>la zafra</em> &mdash; the harvest, the season a crop comes in.</span>
-    <span class="lex-def">From the Arabic <em>safra</em>, &ldquo;a journey&rdquo; &mdash; the one the crews make to the fields at harvest, and the one these products make to your home.</span>
-  </p>
-</section>
+<!-- PROOF STRIP -->
+<div class="proof-strip">
+  <div class="proof-inner">
+    <span class="proof-item">Farmer price on every bag</span>
+    <span class="proof-item">Hand-picked, single-day lots</span>
+    <span class="proof-item">Milled and roasted on the island</span>
+  </div>
+</div>
 
-<!-- WHAT WE CARRY -->
-<section class="section" id="carry">
+<!-- THE COFFEE -->
+<section class="section" id="coffee">
   <div class="divider"></div>
-  <h2 class="section-title">What We Carry</h2>
-  <p class="section-intro">Four harvests, one project &mdash; above-floor pay, crews that pick what would otherwise rot on the trees, and mountain farms that rarely get a channel off the island. The lots come first. The packaging follows the coffee.</p>
-  <div class="manifest">
-    <div class="manifest-row">
-      <img class="manifest-thumb" src="images/generic-coffee-beans.jpg" alt="Coffee">
-      <div class="manifest-name">Premium Shade-Grown Arabica</div>
-      <div class="manifest-desc"><span class="origin">Yauco &middot; Jayuya &middot; Adjuntas &middot; Maricao</span>Heirloom Arabica, 100% Puerto Rican, from a single day&rsquo;s picking &mdash; washed, honey and natural lots, cupped blind. Three tiers, up to farm-named estate micro-lots that cup 86 or better, with Finca Tanam&aacute; at the top.</div>
-      <div class="manifest-when">First lots &middot; Spring 2027</div>
+  <h2 class="section-title">The Coffee</h2>
+  <p class="section-intro">Three tiers, one mountain. Coffee leads; everything else follows it.</p>
+  <div class="tier-list">
+    <div class="tier-row">
+      <div class="tier-name">Zafra House Blend<span class="origin">The everyday door</span></div>
+      <div class="tier-desc">Heirloom, shade-grown Arabica from the Cordillera Central &mdash; the roast the island drinks: balanced, sweet, familiar.</div>
     </div>
-    <div class="manifest-row">
-      <img class="manifest-thumb" src="images/generic-honey.jpg" alt="Honey">
-      <div class="manifest-name">Canopy Honey</div>
-      <div class="manifest-desc"><span class="origin">Cordillera Central</span>Raw and unfiltered, wildflower and coffee-blossom, foraged under the shade canopy. The island&rsquo;s gentle African-lineage bees are mite-resistant without treatment &mdash; a claim no mainland hive can carry &mdash; which makes this honey organic-certifiable. The Manuka-grade story is unclaimed in Puerto Rico. We are claiming it. Organic certification: pursued, not yet held.</div>
-      <div class="manifest-when">Follows the coffee</div>
+    <div class="tier-row">
+      <div class="tier-name">Partner Farm Micro-Lots<span class="origin">Yauco &middot; Jayuya &middot; Adjuntas &middot; Maricao</span></div>
+      <div class="tier-desc">Named farms, single day&rsquo;s picking. A lot carries a farm&rsquo;s name only after it is cupped blind, its region &mdash; Yauco, Jayuya, Adjuntas, Maricao &mdash; on the label.</div>
     </div>
-    <div class="manifest-row">
-      <img class="manifest-thumb" src="images/generic-cacao.jpg" alt="Cacao">
-      <div class="manifest-name">Legacy Cacao</div>
-      <div class="manifest-desc"><span class="origin">Heritage Trinitario</span>Fine-flavor heritage type descended from Spanish colonial plantings, from trees isolated on the island for generations. The beans become single-origin chocolate. Sold as bars, never as bulk.</div>
-      <div class="manifest-when">Follows the coffee</div>
-    </div>
-    <div class="manifest-row">
-      <img class="manifest-thumb" src="images/generic-vanilla.jpg" alt="Vanilla">
-      <div class="manifest-name">Heritage Vanilla</div>
-      <div class="manifest-desc"><span class="origin">Casta&ntilde;er &middot; Since 1909</span>A crop the island has grown since 1909, when Puerto Rico ranked among the world&rsquo;s top producers. We buy directly from the Cooperativa de Vainilla de Puerto Rico, a farmer cooperative founded in 2023, and carry its pods and jars to market.</div>
-      <div class="manifest-when">Follows the coffee</div>
+    <div class="tier-row">
+      <div class="tier-name">Hacienda Tanam&aacute;<span class="origin">The estate</span></div>
+      <div class="tier-desc">The estate at the top. Farm-named micro-lots from a single hacienda in the highlands. A lot carries the Tanam&aacute; name only if it cups 86 or better.</div>
     </div>
   </div>
-</section>
-
-<!-- THE STORY -->
-<section class="section" id="story">
-  <div class="divider"></div>
-  <h2 class="section-title">The Story</h2>
-  <p class="section-body">Puerto Rico once grew coffee for the courts of Europe. Today the island grows about 36,000 quintales a year and drinks 200,000. By the growers&rsquo; own estimates, half the crop is never picked &mdash; not for want of land or trees. For want of crews.</p>
-  <p class="section-body">The farmers who stayed have the heirloom trees and the knowledge. What they lack is a way to the market &mdash; while nearly six million Puerto Ricans on the mainland pay a premium for the coffee they grew up with.</p>
-  <p class="section-body"><strong>Zafra is that way. The harvest of the mountain, taken whole.</strong> <em>Zafra</em> is the harvest; <em>Areito</em> is the gathering &mdash; one word for what the mountain produces, one for the people who produce it. Commerce under Zafra, community under Areito, one coffee between them.</p>
-  <p class="section-body">Three things were missing, so we built three things. Crews, so the crop comes off the trees. Mills, so cherry becomes lots worth paying for. A channel to the world, so the money comes home.</p>
-  <p class="section-body">The ask of the market is simple: a bag of coffee that tastes like home and pays the farmer like a partner. Coffee leads &mdash; heirloom, shade-grown, hand-picked. Canopy honey, legacy cacao and heritage vanilla follow &mdash; same brand, same box, same shelf.</p>
-</section>
-
-<!-- RISE, FALL, REBUILD -->
-<section class="section" id="history">
-  <div class="divider"></div>
-  <h2 class="section-title">Rise, Fall, Rebuild</h2>
-  <div class="timeline">
-    <div class="tl-item"><div class="tl-year">1736</div><div class="tl-text">Coffee reaches Puerto Rico from the French Antilles and climbs into the Cordillera.</div></div>
-    <div class="tl-item"><div class="tl-year">The golden age</div><div class="tl-text">By the end of the 19th century, Puerto Rican coffee is poured in the courts of Europe and at the Pope&rsquo;s table, shipped out from Ponce.</div></div>
-    <div class="tl-item"><div class="tl-year">1899</div><div class="tl-text">Hurricane San Ciriaco.</div></div>
-    <div class="tl-item"><div class="tl-year">The long decline</div><div class="tl-text">Sugar, war and industrialization pull the economy to the coast. The coffee highlands go quiet.</div></div>
-    <div class="tl-item"><div class="tl-year">2017</div><div class="tl-text">Hurricane Mar&iacute;a flattens a large share of the island&rsquo;s coffee trees. The farmers who stayed spend the years since replanting.</div></div>
-    <div class="tl-item"><div class="tl-year">Today</div><div class="tl-text">The heirloom genetics, the mountain craft and the pickers&rsquo; knowledge are still here. Coffee here is identity.</div></div>
-    <div class="tl-item"><div class="tl-year">The rebuild</div><div class="tl-text"><strong>Crews that pick, mills that cup, a price printed on every lot, and the money coming home.</strong> That is this company.</div></div>
-  </div>
-</section>
-
-<!-- THE CORDILLERA -->
-<section class="section" id="cordillera">
-  <div class="divider"></div>
-  <h2 class="section-title">The Cordillera</h2>
-  <p class="section-body">Running west to east through the island&rsquo;s heart, the Cordillera Central rises past 4,000 feet. It is the rainiest corner of Puerto Rico outside El Yunque, home to most of the island&rsquo;s endemic species and most of its protected forests. Shade coffee, canopy honey, legacy cacao and heritage vanilla all grow here, in mountain towns like Adjuntas, Jayuya, Utuado, Lares and Yauco.</p>
-  <p class="section-body"><em>The timeline tells what happened to this range. The lots tell what comes next.</em></p>
+  <p class="tier-note">First lots &middot; Spring 2027</p>
 </section>
 
 <!-- HOW THE MONEY COMES HOME -->
@@ -330,7 +260,8 @@ img{opacity:1}
   <div class="section-dark-inner">
     <div class="divider"></div>
     <h2 class="section-title">How the Money Comes Home</h2>
-    <p class="section-intro">We buy at the farm gate and pay at or above the government floor. Where a farmer cannot find pickers, the crew comes with the purchase &mdash; the farmer pays nothing for the harvest and keeps the full price.</p>
+    <p class="section-intro">Our standard: we buy at the farm gate, at or above the government floor. Where a farmer can&rsquo;t find pickers, we&rsquo;re building crews that come with the purchase &mdash; the farmer pays nothing for the harvest and keeps the full price.</p>
+    <p class="section-intro sub-note" style="margin-top:-34px;margin-bottom:48px;">The crews are funded by a share of every Zafra sale and by people who want to help bring the harvest in.</p>
     <div class="flow">
       <div class="flow-step">
         <div class="flow-num">1</div>
@@ -341,7 +272,7 @@ img{opacity:1}
       <div class="flow-step">
         <div class="flow-num">2</div>
         <strong>Mill, roast, pack</strong>
-        <p>To export standard &mdash; every stage logged.</p>
+        <p>To export standard, every stage logged.</p>
       </div>
       <div class="flow-arrow">&rarr;</div>
       <div class="flow-step">
@@ -351,53 +282,52 @@ img{opacity:1}
       </div>
     </div>
     <div class="highlight">
-      <p>The record: ripeness at intake. Fermentation logged. Optical sorting. QR lot codes from block to bag. Every bag carries a provenance card &mdash; region, farm, harvest date, process &mdash; and the price paid to the farmer, with the farm and the farmer on the front label.</p>
+      <p><strong>The standard every lot is held to:</strong> ripeness at intake. Fermentation logged. Optical sorting. QR lot codes from block to bag. Every bag carries a provenance card &mdash; region, farm, harvest date, process &mdash; and the price paid to the farmer, with the farm and the farmer on the front label.</p>
     </div>
   </div>
 </section>
 
-<!-- BUILT TO LAST -->
-<section class="section-dark" id="built">
+<!-- TWO DOORS -->
+<section class="section-dark" id="doors">
   <div class="section-dark-inner">
     <div class="divider"></div>
-    <h2 class="section-title">Built to Last</h2>
-    <p class="section-intro">The co-op grows it. The crews pick it. The foundation keeps it rooted. Zafra carries it to market.</p>
-    <ul class="eco-list">
-      <li><strong>The farmer co-op</strong><br>The growers&rsquo; own organization. Farmer-owned, setting the standard at the farm gate, with above-floor pay printed on every card that leaves the island.</li>
-      <li><strong>The crew program</strong><br>Harvest crews landed for the season, trained and paid, picking what would otherwise stay on the trees.</li>
-      <li><strong>Fundaci&oacute;n Areito de Puerto Rico</strong><br>The nonprofit foundation. Farmer training, education, and the cultural stewardship that keeps the harvest rooted in the community that grows it.</li>
-      <li><strong>Zafra Trading Co.</strong> <span class="badge">Open for business</span><br>The trading and brand house. Buys the harvest, holds the standard, runs the channel. Money crosses water under this name.</li>
-    </ul>
+    <h2 class="section-title">Two Doors</h2>
+    <div class="doors">
+      <div class="door" id="founding">
+        <p class="door-label">For your home</p>
+        <h3>The founding list</h3>
+        <p>First in line when the harvest ships, the story of every lot before it does &mdash; and the subscription at launch.</p>
+        <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Founding list')+'&body='+encodeURIComponent('Add me to the founding list: '+e);this.querySelector('.signup-ok').style.display='block';return false;">
+          <input type="email" placeholder="Your email" required>
+          <button class="signup-btn" type="submit">Join</button>
+          <p class="signup-ok">Opening your email app &mdash; press send and you&rsquo;re on the list.</p>
+        </form>
+        <p class="door-crew">Want to back the crews? <a href="mailto:info@zafratrading.com?subject=Crew%20supporter">Join the list &mdash; we&rsquo;ll tell you when the program opens to supporters.</a></p>
+      </div>
+      <div class="door">
+        <p class="door-label">For hotels, caf&eacute;s, restaurants</p>
+        <h3>Wholesale</h3>
+        <p>Our standard: roasted on the island, shipped direct. Tell us your volume and your program &mdash; we&rsquo;ll tell you plainly what we can supply and when.</p>
+        <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Wholesale inquiry')+'&body='+encodeURIComponent('From: '+e);this.querySelector('.signup-ok').style.display='block';return false;">
+          <input type="email" placeholder="Your email" required>
+          <button class="signup-btn" type="submit">Inquire</button>
+          <p class="signup-ok">Opening your email app &mdash; send us your volume and program.</p>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- WHO WE SELL TO -->
-<section class="section" id="buyers">
+<!-- COMING FROM THE SAME MOUNTAIN -->
+<section class="section" id="mountain">
   <div class="divider"></div>
-  <h2 class="section-title">Who We Sell To</h2>
-  <p class="section-body">Zafra roasts on the island and ships direct &mdash; subscriptions first, online retail beside them. On the island: the Zafra Mercantil caf&eacute;, hotel shops, and wholesale to caf&eacute;s, hotels and restaurants. Off the island: roasted wholesale, and green export for lots with a committed buyer. No commodity lane. Nothing in bulk, ever.</p>
-</section>
-
-<!-- WHY PUERTO RICO -->
-<section class="section" id="why">
-  <div class="divider"></div>
-  <h2 class="section-title">Why Puerto Rico</h2>
-  <p class="section-body">The island grows less than a fifth of the coffee it drinks. That is the point: every pound traceable to a named Puerto Rican farm is structurally unlike anything else on the shelf. Shade-grown heirloom Arabica, hand-picked ripe at altitude, milled and roasted on the island &mdash; coffee with every right to stand with Kona and Jamaica Blue Mountain. And today almost none of it can be bought off the island. Scarcity is the supply side. The brand is how it is honored.</p>
-</section>
-
-<!-- CLOSE -->
-<section class="section" id="buyer">
-  <div class="cta">
-    <p class="harvest-label">Become a buyer</p>
-    <h2>Taste home.</h2>
-    <p>The first lots land Spring 2027. Join the founding list &mdash; first in line when the harvest ships, and the story of every lot before it does.</p>
-    <p style="font-size:15px;margin-top:10px;">Retailers, hotels and press: tell us what you&rsquo;re looking for. We&rsquo;ll tell you plainly what we can supply and when.</p>
-    <a class="cta-btn" href="/cdn-cgi/l/email-protection#7a13141c153a001b1c081b0e081b1e13141d54191517"><span class="__cf_email__" data-cfemail="84edeae2ebc4fee5e2f6e5f0f6e5e0edeae3aae7ebe9">[email&#160;protected]</span></a>
-    <p style="font-size:13px;margin-top:14px;">&mdash; or the chat on this page.</p>
+  <h2 class="section-title">Coming from the Same Mountain</h2>
+  <p class="section-intro">Coffee leads. The rest of the mountain follows it.</p>
+  <div class="mountain-row">
+    <div class="mtn-item"><h4>Canopy Honey</h4><p>Raw and unfiltered, wildflower and coffee-blossom, foraged under the shade canopy.</p></div>
+    <div class="mtn-item"><h4>Legacy Cacao</h4><p>Fine-flavor heritage type from trees isolated on the island for generations &mdash; bars, never bulk.</p></div>
+    <div class="mtn-item"><h4>Heritage Vanilla</h4><p>Grown in the Lares highlands since the days the island ranked among the world&rsquo;s top producers.</p></div>
   </div>
-  <p style="text-align:center;font-size:13px;color:var(--ink-mute);margin-top:24px;">
-    San Juan, Puerto Rico &middot; zafratrading.com
-  </p>
 </section>
 
 <!-- FOOTER -->
@@ -405,6 +335,16 @@ img{opacity:1}
   <img class="footer-seal" src="images/zafra-logo-shield.png" alt="Zafra Trading Co.">
   <div class="footer-brand">Zafra Trading Co.</div>
   <div class="footer-tag">De la zafra al mundo &mdash; from the harvest, to the world</div>
+  <div class="footer-signup">
+    <p class="door-label">The founding list</p>
+    <form class="signup" onsubmit="event.preventDefault();var e=this.querySelector('input').value;window.location.href='mailto:info@zafratrading.com?subject='+encodeURIComponent('Founding list')+'&body='+encodeURIComponent('Add me to the founding list: '+e);this.querySelector('.signup-ok').style.display='block';return false;">
+      <input type="email" placeholder="Your email" required>
+      <button class="signup-btn" type="submit">Join</button>
+      <p class="signup-ok">Opening your email app &mdash; press send and you&rsquo;re on the list.</p>
+    </form>
+  </div>
+  <div class="footer-contact"><a href="mailto:info@zafratrading.com">info@zafratrading.com</a></div>
+  <div class="footer-contact">787-810-0749</div>
   <div class="footer-contact">San Juan, Puerto Rico &middot; zafratrading.com</div>
   <div class="footer-legal">&copy; 2026 Zafra Trading Co. All rights reserved.</div>
 </footer>

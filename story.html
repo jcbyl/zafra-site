@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story — Zafra Trading Co.</title>
+<meta name="description" content="La zafra — the harvest. From the Arabic safra, 'a journey'. The story of Puerto Rican coffee: the word, the long arc, the mountain, and why it matters.">
+<link rel="icon" type="image/png" href="images/zafra-logo-shield.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-900:#0C130E;--green-800:#E9E4D4;--green-700:#C9A96E;--green-600:#A88754;
+  --gold-600:#A88754;--gold-500:#C9A96E;--gold-400:#DCC188;
+  --cream:#F5F1E6;--cream-2:#101A12;--cream-3:#15221A;
+  --ink:#F5F1E6;--ink-soft:#B7B1A0;--ink-mute:#87816F;
+  --white:#15221A;
+  --line:rgba(214,196,155,.16);
+  --shadow-sm:0 2px 8px rgba(0,0,0,.04);
+  --shadow:0 8px 24px rgba(0,0,0,.06);
+  --shadow-lg:0 20px 50px rgba(0,0,0,.10);
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --serif:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:400}
+::selection{background:var(--gold-400);color:var(--green-900)}
+a{color:var(--green-700);text-decoration:none}
+a:hover{color:var(--gold-600)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(12,19,14,.92);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:12px;height:64px}
+.nav-logo{width:46px;height:37px;object-fit:contain;flex:none}
+.nav-brand{font-weight:600;letter-spacing:.08em;font-size:13px;color:var(--green-800);text-transform:uppercase}
+.nav-brand span{color:var(--ink-mute);font-weight:400;font-size:11px;margin-left:8px}
+.nav-links{display:flex;gap:4px;flex:1;justify-content:flex-end}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink-soft);padding:8px 12px;transition:color .2s}
+.nav-links a:hover{color:var(--green-700)}
+.nav-links a.active{color:var(--gold-400)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer}
+.nav-toggle svg{stroke:var(--ink);width:22px;height:22px}
+
+/* PAGE HEAD */
+.page-head{padding:150px 32px 60px;max-width:920px;margin:0 auto}
+.page-title{font-family:var(--serif);font-size:clamp(36px,5vw,56px);font-weight:500;color:var(--green-800);letter-spacing:-.01em}
+
+/* SECTIONS */
+.section{padding:70px 32px;max-width:920px;margin:0 auto}
+.divider{width:40px;height:2px;background:var(--gold-500);margin-bottom:20px}
+.section-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,44px);font-weight:500;color:var(--green-800);margin-bottom:14px;letter-spacing:-.01em}
+.section-body{font-size:17px;color:var(--ink-soft);line-height:1.7;max-width:720px}
+.section-body + .section-body{margin-top:16px}
+.section-body strong{color:var(--green-800);font-weight:600}
+
+/* LEX ENTRY */
+.lex-entry{max-width:720px;margin:6px 0 38px;padding:28px 32px;border:1px solid var(--line);border-left:3px solid var(--gold-500);background:rgba(201,169,110,.04)}
+.lex-word{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--green-800)}
+.lex-pos{display:block;font-size:13px;font-style:italic;color:var(--ink-mute);margin-top:2px}
+.lex-def{display:block;margin-top:12px;font-size:15px;line-height:1.7;color:var(--ink-soft)}
+
+/* TIMELINE */
+.timeline{max-width:720px;margin:8px 0 0}
+.tl-item{display:flex;gap:34px;padding:26px 0;border-top:1px solid var(--line)}
+.tl-item:last-child{border-bottom:1px solid var(--line)}
+.tl-year{font-family:var(--serif);font-size:21px;font-weight:500;color:var(--gold-500);min-width:132px;line-height:1.3;flex-shrink:0}
+.tl-text{font-size:15px;line-height:1.7;color:var(--ink-soft)}
+.tl-text strong{color:var(--green-800)}
+@media (max-width:640px){.tl-item{flex-direction:column;gap:6px}.tl-year{min-width:0}}
+
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-500);outline-offset:3px;border-radius:4px}
+
+/* CLOSE */
+.close-block{border-top:1px solid var(--line);margin-top:60px;padding-top:50px;text-align:center}
+.close-line{font-family:var(--serif);font-size:clamp(22px,3.4vw,30px);font-weight:500;color:var(--green-800);line-height:1.5;max-width:640px;margin:0 auto 30px}
+.close-line em{color:var(--gold-600)}
+.close-cta{display:inline-block;background:var(--gold-500);color:#0C130E;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 30px;border-radius:8px;transition:background .2s}
+.close-cta:hover{background:var(--gold-400)}
+
+/* FOOTER */
+footer{background:var(--green-900);color:rgba(250,248,243,.5);padding:64px 32px 32px;text-align:center;margin-top:40px}
+.footer-seal{width:62px;height:50px;object-fit:contain;margin:0 auto 16px;display:block;opacity:.95}
+.footer-brand{font-weight:600;font-size:14px;color:var(--cream);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.footer-tag{font-family:var(--serif);font-style:italic;color:var(--gold-400);margin-bottom:22px}
+.footer-contact{font-size:13px;margin-bottom:6px}
+.footer-contact a{color:rgba(250,248,243,.7)}
+.footer-legal{margin-top:24px;padding-top:18px;border-top:1px solid rgba(250,248,243,.08);font-size:12px;color:rgba(250,248,243,.3)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#101A12;padding:16px;gap:4px;border-bottom:1px solid var(--line);flex-direction:column}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block}
+  .section{padding:50px 20px}
+  .page-head{padding:120px 20px 40px}
+}
+
+/* ===== DARK THEME SYNC w/ SHOP ZAFRA (palette: #0C130E / #C9A96E / Cormorant+Inter) ===== */
+body{background:#0C130E}
+img{opacity:1}
+::selection{background:#C9A96E;color:#0C130E}
+</style>
+<meta property="og:title" content="Our Story — Zafra Trading Co.">
+<meta property="og:description" content="La zafra — the harvest. From the Arabic safra, 'a journey'. The story of Puerto Rican coffee: the word, the long arc, the mountain, and why it matters.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zafratrading.com/story.html">
+<meta property="og:image" content="https://zafratrading.com/images/og-image.jpg">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <img class="nav-logo" src="images/zafra-logo-shield.png" alt="Zafra Trading Co. seal">
+    <div class="nav-brand">Zafra Trading Co.<span>&middot; San Juan, PR</span></div>
+    <div class="nav-links" id="navLinks">
+      <a href="/">Coffee</a>
+      <a href="/#doors">Wholesale</a>
+      <a href="/story.html" class="active">Our Story</a>
+      <a href="/#founding">Founding List</a>
+    </div>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- OPENING: THE WORD -->
+<section class="page-head" id="top">
+  <div class="divider"></div>
+  <h1 class="page-title">Our Story</h1>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="lex-entry">
+    <span class="lex-word">za&middot;fra</span>
+    <span class="lex-pos">noun</span>
+    <span class="lex-def">In Spanish, <em>la zafra</em> &mdash; the harvest, the season a crop comes in.</span>
+    <span class="lex-def">From the Arabic <em>safra</em>, &ldquo;a journey&rdquo; &mdash; the one the crews make to the fields at harvest, and the one these products make to your home.</span>
+  </div>
+</section>
+
+<!-- THE LONG ARC -->
+<section class="section" style="padding-top:0">
+  <div class="divider"></div>
+  <h2 class="section-title">The Long Arc</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-year">1736</div>
+      <div class="tl-text">Coffee reaches Puerto Rico from the French Antilles and climbs into the Cordillera.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">The golden age</div>
+      <div class="tl-text">By the end of the 19th century, Puerto Rican coffee is poured in the courts of Europe and at the Pope&rsquo;s table, shipped out from Ponce.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">1899</div>
+      <div class="tl-text">Hurricane San Ciriaco.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">The long decline</div>
+      <div class="tl-text">Sugar, war and industrialization pull the economy to the coast. The coffee highlands go quiet.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2017</div>
+      <div class="tl-text">Hurricane Mar&iacute;a flattens a large share of the island&rsquo;s coffee trees. The farmers who stayed spend the years since replanting.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">Today</div>
+      <div class="tl-text">The heirloom genetics, the mountain craft and the pickers&rsquo; knowledge are still here. Coffee here is identity.</div>
+    </div>
+  </div>
+</section>
+
+<!-- THE MOUNTAIN -->
+<section class="section" style="padding-top:0">
+  <div class="divider"></div>
+  <h2 class="section-title">The Mountain</h2>
+  <p class="section-body">Running west to east through the island&rsquo;s heart, the Cordillera Central rises past 4,000 feet. It is the rainiest corner of Puerto Rico outside El Yunque, home to most of the island&rsquo;s endemic species and most of its protected forests. Shade coffee, canopy honey, legacy cacao and heritage vanilla all grow here, in mountain towns like Adjuntas, Jayuya, Utuado, Lares and Yauco.</p>
+</section>
+
+<!-- WHY PUERTO RICO -->
+<section class="section" style="padding-top:0">
+  <div class="divider"></div>
+  <h2 class="section-title">Why Puerto Rico</h2>
+  <p class="section-body">The island grows less than a fifth of the coffee it drinks. That is the point: every pound traceable to a named Puerto Rican farm is structurally unlike anything else on the shelf. Shade-grown heirloom Arabica, hand-picked ripe at altitude, milled and roasted on the island &mdash; coffee with every right to stand with Kona and Jamaica Blue Mountain. And today almost none of it can be bought off the island. Scarcity is the supply side. The brand is how it is honored.</p>
+  <div class="close-block">
+    <p class="close-line">Crews that pick, mills that cup, a price printed on every lot, and the money coming home. <em>That is what we&rsquo;re building.</em></p>
+    <a class="close-cta" href="/#founding">Join the founding list</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img class="footer-seal" src="images/zafra-logo-shield.png" alt="Zafra Trading Co.">
+  <div class="footer-brand">Zafra Trading Co.</div>
+  <div class="footer-tag">De la zafra al mundo &mdash; from the harvest, to the world</div>
+  <div class="footer-contact"><a href="mailto:info@zafratrading.com">info@zafratrading.com</a></div>
+  <div class="footer-contact">787-810-0749</div>
+  <div class="footer-contact">San Juan, Puerto Rico &middot; zafratrading.com</div>
+  <div class="footer-legal">&copy; 2026 Zafra Trading Co. All rights reserved.</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+<script src="assets/agente-widget.js" defer></script>
+</body>
+</html>
