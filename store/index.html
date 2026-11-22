@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zafra Trading Co. — The Store · Puerto Rican Coffee, Direct From the Harvest</title>
-<meta name="description" content="The online store of Zafra Trading Co. — Yauco single-origin whole bean coffee, numbered reserve lots, and the monthly harvest subscription. Premium Puerto Rican agriculture, direct trade, full provenance.">
+<meta name="description" content="The online store of Zafra Trading Co. — estate single-variety lots, the washed blend, numbered reserve lots, the Taíno Collection, and the monthly harvest subscription. Premium Puerto Rican agriculture, direct trade, full provenance.">
 <meta property="og:title" content="Zafra Trading Co. — The Store">
-<meta property="og:description" content="Yauco single-origin coffee, reserve lots, and the monthly harvest subscription. From the mountains of Puerto Rico.">
+<meta property="og:description" content="Estate lots, the washed blend, reserve lots, and the monthly harvest subscription. From the mountains of Puerto Rico.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shopzafra.com/">
 <meta property="og:image" content="https://shopzafra.com/images/og-image.jpg">
@@ -42,87 +42,81 @@
   .nav-links a{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;transition:color .2s}
   .nav-links a:hover{color:var(--green-800)}
   .nav-links a.house{color:var(--gold-600)}
+  .cart-btn{display:inline-flex;align-items:center;gap:9px;background:var(--green-800);color:var(--cream);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;padding:12px 18px;min-height:44px;border-radius:2px;white-space:nowrap;transition:background .2s}
+  .cart-btn:hover{background:var(--green-700)}
+  .cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 5px;background:var(--gold-500);color:var(--green-900);border-radius:10px;font-size:12px;font-weight:600}
   @media(max-width:860px){.nav-links{display:none}}
 
-  /* ── Hero ───────────────────────────────── */
-  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:var(--green-900)}
-  .hero-bg{position:absolute;inset:0;background:url('images/hero-mountains.jpg') center/cover no-repeat}
-  .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,40,24,.62) 0%,rgba(15,40,24,.74) 55%,rgba(15,40,24,.86) 100%)}
-  .hero-inner{position:relative;z-index:2;max-width:860px;margin:0 auto;padding:110px 32px 90px;text-align:center}
-  .hero-seal{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid rgba(196,160,74,.4);box-shadow:0 0 0 6px rgba(15,40,24,.3),0 20px 50px rgba(0,0,0,.12);margin:0 auto 30px}
-  .hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:22px}
-  .hero-title{font-family:var(--serif);font-weight:500;font-size:clamp(38px,6.4vw,78px);line-height:1.08;letter-spacing:-.01em;color:var(--cream);margin-bottom:26px}
-  .hero-title em{font-style:italic;color:var(--gold-400)}
-  .hero-sub{font-size:18px;color:rgba(250,248,243,.82);max-width:560px;margin:0 auto 38px}
-  .hero-cta{display:inline-block;background:var(--cream);color:var(--green-800);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:17px 44px;min-height:44px;border-radius:2px;white-space:nowrap;transition:background .2s,color .2s}
-  .hero-cta:hover{background:var(--gold-400);color:var(--green-900)}
-  .hero-house{display:block;margin-top:20px;font-size:13px;color:rgba(250,248,243,.55)}
-  .hero-house a{color:var(--gold-400);text-decoration:none;border-bottom:1px solid rgba(218,184,94,.35)}
-  .hero-house a:hover{border-bottom-color:var(--gold-400)}
+  /* ── Store band (slim — the grid IS the fold) ── */
+  .store-band{background:var(--green-900);color:var(--cream);padding:52px 32px 46px}
+  .store-band .wrap{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+  .store-band h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,5vw,52px);letter-spacing:-.01em;line-height:1.1}
+  .store-band h1 em{font-style:italic;color:var(--gold-400)}
+  .store-band .band-sub{font-size:16px;color:rgba(250,248,243,.78);max-width:460px}
+  .store-band .band-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin-bottom:12px}
 
   /* ── Section scaffolding ────────────────── */
-  section.block{padding:96px 32px}
+  section.block{padding:80px 32px}
   .wrap{max-width:1180px;margin:0 auto}
   .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);margin-bottom:14px}
-  .block-title{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.5vw,44px);letter-spacing:-.01em;color:var(--green-800);line-height:1.15;margin-bottom:18px}
-  .block-intro{max-width:620px;color:var(--ink-soft);margin-bottom:56px}
+  .block-title{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,40px);letter-spacing:-.01em;color:var(--green-800);line-height:1.15;margin-bottom:14px}
+  .block-intro{max-width:620px;color:var(--ink-soft);margin-bottom:48px}
 
-  /* ── Coffee cards ───────────────────────── */
-  .coffee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  .coffee-grid .span-all{grid-column:span 3}
-  @media(max-width:960px){.coffee-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}.hero-card{grid-column:span 1;grid-template-columns:1fr}.coffee-grid .span-all{grid-column:span 1}}
-  .card{background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--line);border-radius:2px;padding:34px 30px 30px;display:flex;flex-direction:column}
-  .card .origin{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600);margin-bottom:12px}
-  .card h3{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--green-800);margin-bottom:10px}
-  .card p{font-size:15px;color:var(--ink-soft);flex:1}
-  .card .price{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--green-800);margin:22px 0 4px}
-  .card .price-note{font-size:13px;color:var(--ink-mute);margin-bottom:22px}
-  .btn{display:inline-block;background:var(--green-800);color:var(--cream);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-align:center;padding:15px 30px;min-height:44px;line-height:1.3;border-radius:2px;white-space:nowrap;transition:background .2s}
+  /* ── Product grid ───────────────────────── */
+  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .product-grid .span-2{grid-column:span 2}
+  @media(max-width:960px){.product-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}.product-grid .span-2{grid-column:span 1}}
+  .pcard{background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
+  .pcard .img{height:220px;background:url('images/product-coffee-bag.jpg') center/cover no-repeat;border-bottom:1px solid var(--line)}
+  .pcard .body{padding:28px 26px 26px;display:flex;flex-direction:column;flex:1}
+  .pcard .origin{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600);margin-bottom:10px}
+  .pcard h3{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--green-800);margin-bottom:6px}
+  .pcard .variety{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:12px}
+  .pcard p.desc{font-size:15px;color:var(--ink-soft);flex:1}
+  .pcard .price{font-family:var(--serif);font-size:28px;font-weight:500;color:var(--green-800);margin:20px 0 2px}
+  .pcard .price small{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-left:8px}
+  .pcard .price-note{font-size:13px;color:var(--ink-mute);margin-bottom:18px}
+  .btn{display:inline-block;background:var(--green-800);color:var(--cream);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-align:center;padding:15px 26px;min-height:44px;line-height:1.3;border-radius:2px;white-space:nowrap;border:none;cursor:pointer;transition:background .2s}
   .btn:hover{background:var(--green-700)}
-  .hero-card{grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--line);border-radius:2px;overflow:hidden}
-  @media(max-width:960px){.hero-card{grid-column:span 1;grid-template-columns:1fr}}
-  .hero-card .img{background:url('images/product-coffee-bag.jpg') center/cover no-repeat;min-height:360px}
-  .hero-card .body{padding:46px 44px 40px;display:flex;flex-direction:column;justify-content:center}
-  .hero-card .body h3{font-family:var(--serif);font-weight:600;font-size:30px;color:var(--green-800);margin:12px 0 12px}
-  .hero-card .body p{font-size:15px;color:var(--ink-soft);max-width:420px}
-  .roast-row{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 6px}
-  .roast{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green-800);border:1px solid var(--cream-3);background:var(--cream);padding:11px 18px;min-height:44px;display:inline-flex;align-items:center;border-radius:2px}
-  .roast.active{border-color:var(--gold-500);color:var(--gold-600)}
-  .hero-card .price{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--green-800);margin:16px 0 20px}
-  .hero-card .price small{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-left:10px}
+  .btn-dark{display:inline-block;background:var(--cream-3);color:var(--ink-mute);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-align:center;padding:15px 26px;min-height:44px;line-height:1.3;border-radius:2px;white-space:nowrap;cursor:not-allowed;opacity:.75}
+  .dark-note{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute);margin-top:10px}
 
-  /* ── Roast guide ────────────────────────── */
-  .roast-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border-top:1px solid var(--cream-3)}
-  @media(max-width:960px){.roast-guide{grid-template-columns:1fr}}
-  .roast-guide div{padding:30px 26px 6px;border-bottom:1px solid var(--cream-3)}
-  .roast-guide .label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);margin-bottom:8px}
-  .roast-guide .name{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--green-800);margin-bottom:6px}
-  .roast-guide p{font-size:14px;color:var(--ink-soft)}
+  /* ── Provenance spec rows ───────────────── */
+  .spec{margin:18px 0 4px;border-top:1px solid var(--cream-3)}
+  .spec-row{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px solid var(--cream-3);font-size:13px}
+  .spec-row .k{font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute)}
+  .spec-row .v{color:var(--ink-soft);text-align:right}
+  .gives{margin-top:14px;font-size:13px;font-weight:600;color:var(--green-700)}
+  .gives::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold-500);margin-right:8px;vertical-align:1px}
 
-  /* ── Harvests ───────────────────────────── */
-  #harvests{background:var(--cream-2)}
-  .harvest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-  @media(max-width:960px){.harvest-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:600px){.harvest-grid{grid-template-columns:1fr}}
-  .hcard{background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
-  .hcard .img{height:200px;background-size:cover;background-position:center}
-  .hcard .body{padding:26px 24px 26px;display:flex;flex-direction:column;flex:1}
-  .hcard .origin{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600);margin-bottom:10px}
-  .hcard h3{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--green-800);margin-bottom:8px}
-  .hcard p{font-size:14px;color:var(--ink-soft);flex:1}
-  .hcard .wait{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-top:20px;padding-top:18px;border-top:1px solid var(--cream-3)}
+  /* ── Reserve card (inquiry) ─────────────── */
+  .pcard.reserve{background:var(--green-900);border-color:rgba(196,160,74,.25)}
+  .pcard.reserve .img{background:url('images/coffee-cherries.jpg') center/cover no-repeat;border-bottom:1px solid rgba(196,160,74,.2)}
+  .pcard.reserve .origin{color:var(--gold-400)}
+  .pcard.reserve h3{color:var(--cream)}
+  .pcard.reserve .variety{color:rgba(250,248,243,.55)}
+  .pcard.reserve p.desc{color:rgba(250,248,243,.72)}
+  .pcard.reserve .spec{border-color:rgba(250,248,243,.14)}
+  .pcard.reserve .spec-row{border-color:rgba(250,248,243,.14)}
+  .pcard.reserve .spec-row .k{color:rgba(250,248,243,.5)}
+  .pcard.reserve .spec-row .v{color:rgba(250,248,243,.78)}
+  .pcard.reserve .price{color:var(--cream);font-size:22px}
+  .pcard.reserve .price small{color:rgba(250,248,243,.5)}
+  .pcard.reserve .price-note{color:rgba(250,248,243,.5)}
+  .pcard.reserve .btn-dark{background:rgba(250,248,243,.08);color:rgba(250,248,243,.38);border:1px solid rgba(250,248,243,.14)}
+  .pcard.reserve .dark-note{color:rgba(250,248,243,.42)}
 
   /* ── Taíno Collection ───────────────────── */
   #taino{background:#0a0a0a;color:#f2ebdd;padding:0 32px}
   .taino-stripe{height:3px;background:#1abc9c}
-  .taino-inner{max-width:1180px;margin:0 auto;padding:96px 0}
+  .taino-inner{max-width:1180px;margin:0 auto;padding:80px 0}
   #taino .eyebrow{color:#1abc9c}
   #taino .block-title{color:#f2ebdd}
   #taino .block-intro{color:rgba(242,235,221,.66)}
   .taino-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   @media(max-width:960px){.taino-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:600px){.taino-grid{grid-template-columns:1fr}}
-  .tcard{background:#111;border:1px solid rgba(26,188,156,.18);border-radius:2px;display:flex;flex-direction:column;overflow:hidden}
+  .tcard{background:#111;border:1px solid rgba(26,188,156,.18);border-radius:2px;display:flex;flex-direction:column;overflow:hidden;scroll-margin-top:90px}
   .tcard .spirit-stripe{height:3px}
   .tcard .body{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1}
   .tcard .roast-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
@@ -138,17 +132,18 @@
   .taino-note a{color:#1abc9c;text-decoration:none;border-bottom:1px solid rgba(26,188,156,.35)}
   .taino-note a:hover{border-bottom-color:#1abc9c}
 
-  /* ── Provenance band ────────────────────── */
-  .provenance{background:var(--green-900);color:var(--cream);padding:96px 32px}
-  .provenance .eyebrow{color:var(--gold-400)}
-  .provenance h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.5vw,44px);letter-spacing:-.01em;line-height:1.15;color:var(--cream);margin-bottom:16px}
-  .provenance .lede{color:rgba(250,248,243,.7);max-width:600px;margin-bottom:56px}
-  .prov-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
-  @media(max-width:960px){.prov-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:600px){.prov-grid{grid-template-columns:1fr}}
-  .prov-grid .num{font-family:var(--serif);font-size:15px;font-style:italic;color:var(--gold-400);margin-bottom:8px}
-  .prov-grid h3{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--cream);margin-bottom:8px}
-  .prov-grid p{font-size:14px;color:rgba(250,248,243,.66)}
+  /* ── Other harvests ─────────────────────── */
+  #harvests{background:var(--cream-2)}
+  .harvest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  @media(max-width:960px){.harvest-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.harvest-grid{grid-template-columns:1fr}}
+  .hcard{background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
+  .hcard .img{height:200px;background-size:cover;background-position:center}
+  .hcard .body{padding:26px 24px 26px;display:flex;flex-direction:column;flex:1}
+  .hcard .origin{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-600);margin-bottom:10px}
+  .hcard h3{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--green-800);margin-bottom:8px}
+  .hcard p{font-size:14px;color:var(--ink-soft);flex:1}
+  .hcard .wait{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-top:20px;padding-top:18px;border-top:1px solid var(--cream-3)}
 
   /* ── Harvest list / contact ─────────────── */
   .list-sec{text-align:center}
@@ -156,22 +151,44 @@
   .list-sec .divider{width:40px;height:1px;background:var(--gold-500);margin:34px auto;opacity:.6}
   .list-note{font-size:13px;color:var(--ink-mute);max-width:480px;margin:18px auto 0}
 
-  /* ── Footer ─────────────────────────────── */
-  footer{background:var(--green-800);color:rgba(250,248,243,.7);padding:64px 32px 48px}
-  .foot-inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px;align-items:flex-start}
+  /* ── Cart drawer ────────────────────────── */
+  .cart-overlay{position:fixed;inset:0;background:rgba(15,40,24,.45);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+  .cart-overlay.open{opacity:1;pointer-events:auto}
+  .cart{position:fixed;top:0;right:-420px;width:min(400px,100vw);height:100vh;background:var(--cream);z-index:95;box-shadow:-12px 0 40px rgba(15,40,24,.18);transition:right .3s ease;display:flex;flex-direction:column}
+  .cart.open{right:0}
+  .cart-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--cream-3)}
+  .cart-head h4{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--green-800)}
+  .cart-close{background:none;border:none;font-size:26px;line-height:1;color:var(--ink-mute);cursor:pointer;padding:6px}
+  .cart-body{flex:1;overflow-y:auto;padding:18px 24px}
+  .cart-item{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--cream-3)}
+  .cart-item .nm{font-size:14px;font-weight:600;color:var(--green-800)}
+  .cart-item .un{font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.05em}
+  .cart-item .qty{display:flex;align-items:center;gap:10px}
+  .cart-item .qty button{width:30px;height:30px;border:1px solid var(--cream-3);background:var(--white);color:var(--ink);font-size:16px;cursor:pointer;border-radius:2px}
+  .cart-item .qty span{font-size:14px;font-weight:600;min-width:16px;text-align:center}
+  .cart-item .pr{font-family:var(--serif);font-size:18px;color:var(--green-800);min-width:56px;text-align:right}
+  .cart-empty{padding:40px 0;text-align:center;font-size:14px;color:var(--ink-mute)}
+  .cart-foot{padding:20px 24px;border-top:1px solid var(--cream-3);background:var(--cream-2)}
+  .cart-subtotal{display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:var(--green-800);margin-bottom:14px}
+  .cart-subtotal .amt{font-family:var(--serif);font-size:24px}
+  .cart-foot .btn-dark{display:block;width:100%}
+  .cart-foot .note{font-size:12px;color:var(--ink-mute);text-align:center;margin-top:10px}
+
+  /* ── Footer (slim — the store carries no story) ── */
+  footer{background:var(--green-800);color:rgba(250,248,243,.7);padding:40px 32px}
+  .foot-inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
   .foot-brand{display:flex;align-items:center;gap:14px}
-  .foot-brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid rgba(196,160,74,.45)}
+  .foot-brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid rgba(196,160,74,.45)}
   .foot-brand span{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cream)}
-  .foot-col p{font-size:14px;margin-bottom:10px}
-  .foot-col a{color:rgba(250,248,243,.7);text-decoration:none;border-bottom:1px solid rgba(196,160,74,.3)}
-  .foot-col a:hover{color:var(--gold-400)}
-  .foot-bottom{max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(250,248,243,.12);font-size:13px;color:rgba(250,248,243,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:13px}
+  .foot-links a{color:rgba(250,248,243,.7);text-decoration:none;border-bottom:1px solid rgba(196,160,74,.3)}
+  .foot-links a:hover{color:var(--gold-400)}
+  .foot-bottom{max-width:1180px;margin:26px auto 0;padding-top:18px;border-top:1px solid rgba(250,248,243,.12);font-size:13px;color:rgba(250,248,243,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   @media(max-width:400px){
-    section.block,.hero-inner{padding-left:20px;padding-right:20px}
-    .card{padding:28px 20px 24px}
-    .hero-card .body{padding:32px 20px 28px}
-    .btn{padding:14px 16px}
-    .btn,.roast{font-size:12px;letter-spacing:.05em}
+    section.block,.store-band{padding-left:20px;padding-right:20px}
+    .pcard .body{padding:24px 18px 22px}
+    .btn,.btn-dark{padding:14px 16px}
+    .btn,.btn-dark,.cart-btn{font-size:12px;letter-spacing:.05em}
   }
 </style>
 </head>
@@ -184,92 +201,136 @@
       <li><a href="#coffee">Coffee</a></li>
       <li><a href="#taino">Taíno Collection</a></li>
       <li><a href="#harvests">The Harvests</a></li>
-      <li><a href="#provenance">Provenance</a></li>
       <li><a href="#list">Harvest List</a></li>
       <li><a class="house" href="https://zafratrading.com" target="_blank" rel="noopener">The House</a></li>
     </ul>
+    <button class="cart-btn" id="cart-open" aria-label="Open cart">Cart <span class="cart-count" id="cart-count">0</span></button>
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-    <img class="hero-seal" src="images/zafra-logo-final.jpg" alt="Zafra Trading Co. seal">
-    <p class="hero-eyebrow">The Store · San Juan · Puerto Rico</p>
-    <h1 class="hero-title">The harvest,<br><em>sealed and shipped.</em></h1>
-    <p class="hero-sub">Yauco single-origin coffee, the Taíno Collection in four roasts, numbered reserve lots, and the monthly harvest subscription — direct trade from the mountains of Puerto Rico, with its provenance in the box.</p>
-    <a class="hero-cta" href="#coffee">Shop the Harvest</a>
-    <p class="hero-house">Our house and our mission live at <a href="https://zafratrading.com" target="_blank" rel="noopener">zafratrading.com</a></p>
+<!-- Slim band — the product grid IS the fold -->
+<div class="store-band">
+  <div class="wrap">
+    <div>
+      <p class="band-eyebrow">The Store · San Juan · Puerto Rico</p>
+      <h1>Shop <em>the harvest.</em></h1>
+    </div>
+    <p class="band-sub">Estate lots, the washed blend, numbered reserve lots, and the monthly subscription — whole bean from the mountains of Puerto Rico, with its provenance in the box.</p>
   </div>
-</section>
+</div>
 
 <section class="block" id="coffee">
   <div class="wrap">
-    <p class="eyebrow">The Coffee · Whole Bean</p>
-    <h2 class="block-title">Yauco, first.</h2>
-    <p class="block-intro">Coffee leads this house. Every bag is whole bean, milled from the western cordillera and toll-roasted on the island — priced the way the farmer was paid: with respect.</p>
+    <p class="eyebrow">The Coffee · Whole Bean · 8 oz</p>
+    <h2 class="block-title">The ladder, top to entry.</h2>
+    <p class="block-intro">Estate single-variety lots at the top, a washed blend at the door, and the reserve above them all. Every bag carries its provenance — region, farm, harvest, and what the farmer was paid.</p>
 
-    <div class="coffee-grid">
-      <div class="hero-card">
-        <div class="img" role="img" aria-label="Zafra green pouch, gold foil label"></div>
+    <div class="product-grid">
+
+      <!-- ESTATE — TOP -->
+      <div class="pcard">
+        <div class="img" role="img" aria-label="Zafra estate coffee bag"></div>
         <div class="body">
-          <p class="origin">Yauco · Puerto Rico · Hero Lot</p>
-          <h3>Yauco Single-Origin</h3>
-          <p>The flagship. Farm-direct from Yauco, toll-roasted on the island, sealed in the green pouch with the gold foil seal. Choose your roast below.</p>
-          <div class="roast-row" role="group" aria-label="Roast profile">
-            <span class="roast active">Medium</span>
-            <span class="roast">Medium-Dark</span>
-            <span class="roast">Café Prieto</span>
+          <p class="origin">Estate · Top of the Ladder</p>
+          <h3>Estate Natural</h3>
+          <p class="variety">Single-Variety Natural · Catuaí Rojo Class</p>
+          <p class="desc">The top tier — a single-variety natural from the estate harvests, milled and roasted small.</p>
+          <div class="spec">
+            <div class="spec-row"><span class="k">Region</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Farm &amp; Co-op</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Harvest</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Farmer price</span><span class="v">Printed per lot at packing</span></div>
           </div>
-          <p class="price">$48 <small>12 oz · Whole Bean</small></p>
-          <a class="btn" href="mailto:info@zafratrading.com?subject=Reserve%20%E2%80%94%20Yauco%20Single-Origin%20(12%20oz)">Reserve a Bag</a>
+          <p class="price">$35 <small>8 oz · Whole Bean</small></p>
+          <p class="price-note">$52.50 per 12 oz-equivalent</p>
+          <button class="btn" data-add="Estate Natural|35">Add to Cart</button>
+          <p class="gives">5% of every sale goes back to the harvest crews.</p>
         </div>
       </div>
 
-      <div class="card">
-        <p class="origin">Micro-Lots · Numbered</p>
-        <h3>Reserve Lots</h3>
-        <p>The season's best harvests, milled small and numbered lot by lot. Released as they are ready and announced first to the Harvest List.</p>
-        <p class="price">From $60</p>
-        <p class="price-note">Per lot · announced by release</p>
-        <a class="btn" href="mailto:info@zafratrading.com?subject=Reserve%20Lot%20Inquiry">Inquire on Lots</a>
+      <!-- ESTATE — MID -->
+      <div class="pcard">
+        <div class="img" role="img" aria-label="Zafra estate coffee bag"></div>
+        <div class="body">
+          <p class="origin">Estate · Mid Ladder</p>
+          <h3>Estate Washed</h3>
+          <p class="variety">Single-Variety Washed · Marsellesa / Obatá Class</p>
+          <p class="desc">A single-variety washed coffee from the estate harvests — clean, bright, the cordillera at its most classic.</p>
+          <div class="spec">
+            <div class="spec-row"><span class="k">Region</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Farm &amp; Co-op</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Harvest</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Farmer price</span><span class="v">Printed per lot at packing</span></div>
+          </div>
+          <p class="price">$30 <small>8 oz · Whole Bean</small></p>
+          <p class="price-note">$45.00 per 12 oz-equivalent</p>
+          <button class="btn" data-add="Estate Washed|30">Add to Cart</button>
+          <p class="gives">5% of every sale goes back to the harvest crews.</p>
+        </div>
       </div>
 
-      <div class="card">
-        <p class="origin">Monthly · 12 oz</p>
-        <h3>The Harvest Subscription</h3>
-        <p>A fresh-roasted 12 oz of the current harvest at your chosen roast, every month, shipped within 48 hours of the roast date.</p>
-        <p class="price">Under $85</p>
-        <p class="price-note">Per month · cancel any time</p>
-        <a class="btn" href="mailto:info@zafratrading.com?subject=Harvest%20Subscription">Join the Subscription</a>
+      <!-- ENTRY — canon card. Name placeholder pending JC (Beano 261119). -->
+      <div class="pcard">
+        <div class="img" role="img" aria-label="Zafra washed blend coffee bag"></div>
+        <div class="body">
+          <p class="origin">Entry · Harvest crews</p>
+          <h3>Washed Blend — Entry</h3>
+          <p class="variety">Washed Blend · Whole Bean · 8 oz</p>
+          <p class="desc">The every-day door to the mountain — a washed blend, roasted and sealed on the island.</p>
+          <div class="spec">
+            <div class="spec-row"><span class="k">Region</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Farm &amp; Co-op</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Harvest</span><span class="v">Per lot · filled at packing</span></div>
+            <div class="spec-row"><span class="k">Farmer price</span><span class="v">Printed per lot at packing</span></div>
+          </div>
+          <p class="price">$25 <small>8 oz · Whole Bean</small></p>
+          <p class="price-note">$37.50 per 12 oz-equivalent</p>
+          <button class="btn" data-add="Washed Blend — Entry|25">Add to Cart</button>
+          <p class="gives">5% of every sale goes back to the harvest crews.</p>
+        </div>
       </div>
 
-      <div class="card span-all" style="background:transparent;border:none;box-shadow:none;padding:0;text-align:center">
-        <p style="font-size:13px;color:var(--ink-mute)">Checkout activates at launch. Reservations open now — every request is answered personally.</p>
+      <!-- SUBSCRIPTION — allocation + freshness framing only (JC ruling 8: savings language waits on Margot) -->
+      <div class="pcard">
+        <div class="img" role="img" aria-label="Zafra coffee bag"></div>
+        <div class="body">
+          <p class="origin">Monthly · The Club</p>
+          <h3>The Harvest Subscription</h3>
+          <p class="variety">A Standing Allocation · Every Month</p>
+          <p class="desc">A standing allocation from each harvest — your share roasted and shipped fresh, every month, before the general release.</p>
+          <p class="price">Under $85 <small>per month</small></p>
+          <p class="price-note">Cancel any time</p>
+          <a class="btn" href="mailto:info@zafratrading.com?subject=Harvest%20Subscription">Join the Subscription</a>
+          <p class="gives">5% of every sale goes back to the harvest crews.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="roast-guide">
-      <div>
-        <p class="label">Roast I</p>
-        <p class="name">Medium</p>
-        <p>The cordillera at its brightest — lifted fruit, clean sweetness, a silky body.</p>
+      <!-- RESERVE — inquiry card. Button DARK until Coffee + Margot signoff (JC ruling 7, 261119). -->
+      <div class="pcard reserve span-2">
+        <div class="img" role="img" aria-label="Coffee cherries at harvest"></div>
+        <div class="body">
+          <p class="origin">Reserve · Numbered Lots</p>
+          <h3>Reserve Lots</h3>
+          <p class="variety">Above the Ladder · Allocated by Inquiry</p>
+          <p class="desc">The season's best harvests, milled small and numbered lot by lot. Each lot publishes its region, farm, process, and farmer pay — and is allocated to buyers by inquiry before it ships.</p>
+          <div class="spec">
+            <div class="spec-row"><span class="k">Region</span><span class="v">Published per lot</span></div>
+            <div class="spec-row"><span class="k">Farm &amp; process</span><span class="v">Published per lot</span></div>
+            <div class="spec-row"><span class="k">Lot size</span><span class="v">Published per lot</span></div>
+            <div class="spec-row"><span class="k">Farmer pay</span><span class="v">Published per lot</span></div>
+          </div>
+          <p class="price">Priced per lot <small>above the estate naturals</small></p>
+          <p class="price-note">Numbered lots · announced on the Harvest List</p>
+          <span class="btn-dark" aria-disabled="true" title="Opens at the first lot release">Inquire on Lots</span>
+          <p class="dark-note">Opens with the first lot release</p>
+        </div>
       </div>
-      <div>
-        <p class="label">Roast II</p>
-        <p class="name">Medium-Dark</p>
-        <p>Caramelized sugars round the cup — deeper body, gentle weight, a long finish.</p>
-      </div>
-      <div>
-        <p class="label">Roast III · Dark</p>
-        <p class="name">Café Prieto</p>
-        <p>The old-world dark roast of the island — smoke and bittersweet chocolate, unapologetic.</p>
-      </div>
+
     </div>
   </div>
 </section>
 
+<!-- Taíno Collection — PR Coffee Co. line. Anchor ids are deep-link targets for prcoffeeco.com Order buttons (PR #5) — DO NOT REMOVE. -->
 <section id="taino">
   <div class="taino-stripe"></div>
   <div class="taino-inner">
@@ -283,7 +344,7 @@
           <p class="roast-label" style="color:#e84118">Dark Roast</p>
           <h3>Guataubá</h3>
           <p class="origin">Jayuya · 3,200 ft</p>
-          <p class="lore">The Mother Goddess, spirit of the mountain's deep earth.</p>
+          <p class="lore">Spirit of Thunder — the storm's herald.</p>
           <p class="cup">The darkest cup of the four — smoke and bittersweet chocolate, heavy and unapologetic.</p>
           <p class="price">$48 <small>12 oz · Whole Bean</small></p>
           <a class="tbtn" href="mailto:info@zafratrading.com?subject=Reserve%20%E2%80%94%20Ta%C3%ADno%20Guataub%C3%A1%20Dark%20(12%20oz)">Reserve a Bag</a>
@@ -307,7 +368,7 @@
           <p class="roast-label" style="color:#d4a853">Light Roast</p>
           <h3>Turey</h3>
           <p class="origin">Yauco · 2,600 ft</p>
-          <p class="lore">The Sun God — "Sky."</p>
+          <p class="lore">Spirit of the Sky.</p>
           <p class="cup">The brightest cup of the four — lifted fruit, clean sweetness, all light.</p>
           <p class="price">$48 <small>12 oz · Whole Bean</small></p>
           <a class="tbtn" href="mailto:info@zafratrading.com?subject=Reserve%20%E2%80%94%20Ta%C3%ADno%20Turey%20Light%20(12%20oz)">Reserve a Bag</a>
@@ -379,36 +440,6 @@
   </div>
 </section>
 
-<section class="provenance" id="provenance">
-  <div class="wrap">
-    <p class="eyebrow">Provenance</p>
-    <h2>Every shipment carries its card.</h2>
-    <p class="lede">Not a story on a label — a record in the box. Each shipment from this house includes a provenance card stating exactly where your harvest came from and what the farmer was paid.</p>
-    <div class="prov-grid">
-      <div>
-        <p class="num">i.</p>
-        <h3>Region</h3>
-        <p>The municipality and mountain the harvest came from — Yauco, Maricao, the cordillera.</p>
-      </div>
-      <div>
-        <p class="num">ii.</p>
-        <h3>Farm &amp; Co-op</h3>
-        <p>The named farm or cooperative that grew it. No anonymous blends.</p>
-      </div>
-      <div>
-        <p class="num">iii.</p>
-        <h3>Harvest Date</h3>
-        <p>When it was picked, when it was milled, when it was roasted.</p>
-      </div>
-      <div>
-        <p class="num">iv.</p>
-        <h3>Farmer Price</h3>
-        <p>What the grower was paid, printed on the card. Direct trade, on the record.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="block list-sec" id="list">
   <div class="wrap">
     <p class="eyebrow">The Harvest List</p>
@@ -416,7 +447,7 @@
     <p class="block-intro">Reserve lots, seasonal releases, and the launch of checkout — announced to the list before anyone else.</p>
     <a class="btn" href="mailto:info@zafratrading.com?subject=Join%20the%20Harvest%20List&body=Please%20add%20me%20to%20the%20Zafra%20Trading%20Co.%20Harvest%20List.">Join the Harvest List</a>
     <div class="divider"></div>
-    <p class="list-note">Write to <a href="mailto:info@zafratrading.com" style="color:var(--gold-600)">info@zafratrading.com</a> · This store is the commerce of <a href="https://zafratrading.com" target="_blank" rel="noopener" style="color:var(--gold-600)">zafratrading.com</a>, the house and the mission.</p>
+    <p class="list-note">Write to <a href="mailto:info@zafratrading.com" style="color:var(--gold-600)">info@zafratrading.com</a> · The mission lives at <a href="https://zafratrading.com" target="_blank" rel="noopener" style="color:var(--gold-600)">zafratrading.com</a></p>
   </div>
 </section>
 
@@ -426,33 +457,81 @@
       <img src="images/zafra-logo-final.jpg" alt="Zafra Trading Co. seal">
       <span>Zafra Trading Co.</span>
     </div>
-    <div class="foot-col">
-      <p><a href="#coffee">Coffee</a></p>
-      <p><a href="#taino">Taíno Collection</a></p>
-      <p><a href="#harvests">The Harvests</a></p>
-      <p><a href="#provenance">Provenance</a></p>
-      <p><a href="#list">Harvest List</a></p>
-    </div>
-    <div class="foot-col">
-      <p><a href="https://zafratrading.com" target="_blank" rel="noopener">The House &amp; Mission — zafratrading.com</a></p>
-      <p><a href="mailto:info@zafratrading.com">info@zafratrading.com</a></p>
-      <p>San Juan · Puerto Rico</p>
+    <div class="foot-links">
+      <a href="#coffee">Coffee</a>
+      <a href="#taino">Taíno Collection</a>
+      <a href="#harvests">The Harvests</a>
+      <a href="#list">Harvest List</a>
+      <a href="https://zafratrading.com" target="_blank" rel="noopener">The Mission — zafratrading.com</a>
     </div>
   </div>
   <div class="foot-bottom">
     <span>© 2026 Zafra Trading Co.</span>
-    <span>Direct trade · Full provenance</span>
+    <span>Direct trade · Full provenance · 5% of every sale</span>
   </div>
 </footer>
 
+<!-- Cart drawer (front-end; Stripe Payment Links wire in at launch) -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart" id="cart" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h4>Cart</h4>
+    <button class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <p class="cart-empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-subtotal"><span>Subtotal</span><span class="amt" id="cart-subtotal">$0</span></div>
+    <span class="btn-dark" style="display:block;width:100%" aria-disabled="true" title="Checkout activates at launch">Checkout</span>
+    <p class="note">Checkout activates at launch — every reservation is answered personally.</p>
+  </div>
+</aside>
+
 <script>
-  document.querySelectorAll('.roast-row').forEach(function(row){
-    row.addEventListener('click', function(e){
-      var t = e.target.closest('.roast'); if(!t) return;
-      row.querySelectorAll('.roast').forEach(function(r){ r.classList.remove('active'); });
-      t.classList.add('active');
+  // Cart state (front-end only; Stripe Payment Links wire in at launch)
+  var cart = {};
+  var $ = function(id){ return document.getElementById(id); };
+
+  function render(){
+    var body = $('cart-body'), count = 0, subtotal = 0, html = '';
+    for (var k in cart){
+      var it = cart[k];
+      count += it.qty; subtotal += it.qty * it.price;
+      html += '<div class="cart-item"><div><div class="nm">' + it.name + '</div><div class="un">8 oz · Whole Bean — $' + it.price + '</div></div>'
+        + '<div class="qty"><button data-dec="' + k + '" aria-label="Decrease quantity">−</button><span>' + it.qty + '</span><button data-inc="' + k + '" aria-label="Increase quantity">+</button></div>'
+        + '<div class="pr">$' + (it.qty * it.price) + '</div></div>';
+    }
+    body.innerHTML = count ? html : '<p class="cart-empty">Your cart is empty.</p>';
+    $('cart-count').textContent = count;
+    $('cart-subtotal').textContent = '$' + subtotal;
+  }
+
+  document.querySelectorAll('[data-add]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var parts = btn.getAttribute('data-add').split('|');
+      var key = parts[0];
+      if (!cart[key]) cart[key] = { name: key, price: parseInt(parts[1], 10), qty: 0 };
+      cart[key].qty++;
+      render(); openCart();
     });
   });
+
+  $('cart-body').addEventListener('click', function(e){
+    var inc = e.target.getAttribute && e.target.getAttribute('data-inc');
+    var dec = e.target.getAttribute && e.target.getAttribute('data-dec');
+    if (inc && cart[inc]) cart[inc].qty++;
+    if (dec && cart[dec]) { cart[dec].qty--; if (cart[dec].qty <= 0) delete cart[dec]; }
+    if (inc || dec) render();
+  });
+
+  function openCart(){ $('cart').classList.add('open'); $('cart-overlay').classList.add('open'); }
+  function closeCart(){ $('cart').classList.remove('open'); $('cart-overlay').classList.remove('open'); }
+  $('cart-open').addEventListener('click', openCart);
+  $('cart-close').addEventListener('click', closeCart);
+  $('cart-overlay').addEventListener('click', closeCart);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeCart(); });
+  render();
 </script>
 <script src="assets/agente-widget.js" defer></script>
 
