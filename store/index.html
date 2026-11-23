@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Zafra Trading Co. — The Store · Puerto Rican Coffee, Direct From the Harvest</title>
-<meta name="description" content="100% Puerto Rican arabica from the central cordillera. Estate lots, numbered reserves, and the monthly harvest subscription — roasted on the island, provenance in every bag.">
+<title>Zafra Trading Co. — The Store · Puerto Rican Mountain Coffee</title>
+<meta name="description" content="Shade-grown heirloom Arabica from named partner farms in Puerto Rico's Cordillera Central. Estate lots, numbered reserves, and the monthly harvest subscription. First lots ship Spring 2027 — reserve now, no payment until launch.">
 <meta property="og:title" content="Zafra Trading Co. — The Store">
-<meta property="og:description" content="Estate lots, the washed blend, reserve lots, and the monthly harvest subscription. From the mountains of Puerto Rico.">
+<meta property="og:description" content="Estate lots, the house blend, reserve lots, and the monthly harvest subscription. First lots Spring 2027.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://shopzafra.com/store/">
+<meta property="og:url" content="https://shopzafra.com/">
 <meta property="og:image" content="https://shopzafra.com/store/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Zafra Trading Co. — single origin, small batch, handcrafted in Puerto Rico">
+<meta property="og:image:alt" content="Shade-grown heirloom Arabica from the mountains of Puerto Rico — first lots Spring 2027">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://shopzafra.com/store/images/og-image.jpg">
 <link rel="icon" type="image/png" href="images/zafra-logo-shield.png">
@@ -54,10 +54,11 @@
   .cart-btn{display:inline-flex;align-items:center;gap:9px;background:none;color:var(--cream);font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);cursor:pointer;padding:11px 16px;min-height:44px;border-radius:2px;white-space:nowrap}
   .cart-btn:hover{border-color:var(--gold)}
   .cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 5px;background:var(--gold);color:var(--bg);border-radius:10px;font-size:12px;font-weight:700}
+  .prelaunch{background:var(--gold);color:var(--bg);text-align:center;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;line-height:1.5}
   @media(min-width:900px){.nav-links{display:flex}}
 
   /* ── Hero ── */
-  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 64px;background-image:linear-gradient(180deg,rgba(12,19,14,.5) 0%,rgba(12,19,14,.15) 40%,rgba(12,19,14,.92) 90%,var(--bg) 100%),url('images/grower-hero.jpg');background-size:cover;background-position:center 28%;background-color:var(--bg-2)}
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:170px 0 64px;background-image:linear-gradient(180deg,rgba(12,19,14,.5) 0%,rgba(12,19,14,.15) 40%,rgba(12,19,14,.92) 90%,var(--bg) 100%),url('images/hero-cherries.jpg');background-size:cover;background-position:center 28%;background-color:var(--bg-2)}
   .hero-inner{max-width:780px}
   .hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:18px}
   .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,11vw,80px);line-height:1.02;letter-spacing:-.01em;margin-bottom:22px;text-shadow:0 2px 24px rgba(0,0,0,.45)}
@@ -87,10 +88,7 @@
   .featured h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,7vw,48px);line-height:1.08;margin:14px 0 6px}
   .featured .variety{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-faint);margin-bottom:18px}
   .featured .desc{color:var(--cream-dim);max-width:480px;margin-bottom:22px}
-  .spec{border-top:1px solid var(--line);margin-bottom:24px}
-  .spec-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
-  .spec-row .k{color:var(--cream-faint);font-weight:600;letter-spacing:.04em}
-  .spec-row .v{color:var(--cream-dim);text-align:right}
+  .bag-line{font-size:13px;color:var(--cream-dim);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:24px;letter-spacing:.02em}
   .price-line{display:flex;align-items:baseline;gap:12px;margin-bottom:22px}
   .price-line .big{font-family:var(--serif);font-weight:500;font-size:44px;color:var(--gold-bright);line-height:1}
   .price-line .unit{font-size:13px;color:var(--cream-faint);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
@@ -190,19 +188,19 @@
       <li><a href="#list">Harvest List</a></li>
       <li><a href="https://zafratrading.com" target="_blank" rel="noopener">The House</a></li>
     </ul>
-    <button class="cart-btn" id="cart-open" aria-label="Open cart">Cart <span class="cart-count" id="cart-count">0</span></button>
   </div>
+  <div class="prelaunch">First lots ship Spring 2027 &middot; Reserve now &mdash; no payment until launch</div>
 </header>
 
 <!-- HERO — the island's rare harvest -->
 <div class="hero">
   <div class="wrap">
     <div class="hero-inner">
-      <p class="hero-eyebrow">A Rare Island Coffee · Puerto Rico</p>
-      <h1>Puerto Rico<br><em>exclusive.</em></h1>
-      <p>100% Puerto Rican arabica from the central cordillera — hand-picked, milled, and roasted on the island. Almost none of it ever leaves.</p>
+      <p class="hero-eyebrow">Shade-Grown Heirloom Arabica &middot; Puerto Rico</p>
+      <h1>The coffee your favorite<br>roaster <em>can&rsquo;t get.</em></h1>
+      <p>Shade-grown heirloom Arabica from named partner farms in Puerto Rico&rsquo;s Cordillera Central. First lots Spring 2027.</p>
       <div class="hero-cta">
-        <a class="btn" href="#coffee">Shop the Harvest</a>
+        <a class="btn" href="#coffee">Reserve your bag</a>
       </div>
     </div>
   </div>
@@ -211,9 +209,9 @@
 <!-- VALUE BAR -->
 <div class="valuebar">
   <div class="wrap">
-    <div class="v">Roasted &amp; Sealed on the Island</div>
+    <div class="v">Will Be Roasted &amp; Sealed on the Island</div>
     <div class="v">Provenance in Every Bag</div>
-    <div class="v">5% Back to the Harvest Crews</div>
+    <div class="v">$1 From Every Bag to the Harvest Crews</div>
   </div>
 </div>
 
@@ -228,20 +226,15 @@
       <div>
         <p class="eyebrow">The First Estate Natural · Top of the Harvest</p>
         <h2>Estate Natural</h2>
-        <p class="variety">Single-Variety Natural · Catuaí Rojo Class</p>
-        <p class="desc">The top of the harvest — a single-variety natural from the estate lots, dried in the fruit for depth, milled and roasted small on the island.</p>
-        <div class="spec">
-          <div class="spec-row"><span class="k">Region</span><span class="v">Per lot · filled at packing</span></div>
-          <div class="spec-row"><span class="k">Farm &amp; Co-op</span><span class="v">Per lot · filled at packing</span></div>
-          <div class="spec-row"><span class="k">Harvest</span><span class="v">Per lot · filled at packing</span></div>
-          <div class="spec-row"><span class="k">Farmer price</span><span class="v">Printed per lot at packing</span></div>
-        </div>
-        <div class="price-line"><span class="big">$35</span><span class="unit">8 oz · Whole Bean</span></div>
+        <p class="variety">Single-Variety Natural</p>
+        <p class="desc">The top of the harvest — a single-variety natural from the estate lots, dried in the fruit for depth.</p>
+        <p class="bag-line">Region, farm, harvest date and farmer price printed on every bag.</p>
+        <div class="price-line"><span class="big">Price TBC</span><span class="unit">8 oz · Whole Bean</span></div>
         <div class="feat-ctas">
-          <button class="btn" data-add="Estate Natural|35">Add to Cart</button>
+          <a class="btn" href="mailto:info@zafratrading.com?subject=Bag%20reservation%20%E2%80%94%20Estate%20Natural&amp;body=Please%20reserve%20my%20bag%20of%20Estate%20Natural%20from%20the%20first%20Spring%202027%20lots.">Reserve your bag</a>
           <a class="btn-ghost" href="mailto:info@zafratrading.com?subject=Harvest%20Subscription">Subscribe Monthly</a>
         </div>
-        <p class="gives"><strong>5%</strong> of every sale goes back to the harvest crews.</p>
+        <p class="gives"><strong>$1</strong> from every bag goes to the harvest crews.</p>
       </div>
     </div>
   </div>
@@ -253,7 +246,7 @@
     <div class="sec-head">
       <p class="eyebrow">The Coffee · Whole Bean · 8 oz</p>
       <h2>From the estate lots down to the everyday cup.</h2>
-      <p>Estate single-variety lots, a washed house blend, reserves, and the monthly subscription. Every bag carries its provenance — region, farm, harvest, and what the farmer was paid.</p>
+      <p>Estate single-variety lots, a washed house blend, reserves, and the monthly subscription. Every bag will carry its provenance — region, farm, harvest, and what the farmer was paid.</p>
     </div>
     <div class="ladder-grid">
 
@@ -261,9 +254,9 @@
         <div class="body">
           <p class="origin">Estate · Single Variety</p>
           <h3>Estate Natural</h3>
-          <p class="desc">A single-variety natural — dried in the fruit for depth and sweetness. Catuaí Rojo class.</p>
-          <p class="price">$35 <small>8 oz · Whole Bean</small></p>
-          <button class="btn" data-add="Estate Natural|35">Add to Cart</button>
+          <p class="desc">A single-variety natural — dried in the fruit for depth and sweetness.</p>
+          <p class="price">Price TBC <small>8 oz · Whole Bean</small></p>
+          <a class="btn" href="mailto:info@zafratrading.com?subject=Bag%20reservation%20%E2%80%94%20Estate%20Natural&amp;body=Please%20reserve%20my%20bag%20of%20Estate%20Natural%20from%20the%20first%20Spring%202027%20lots.">Reserve your bag</a>
         </div>
       </div>
 
@@ -271,9 +264,9 @@
         <div class="body">
           <p class="origin">Estate · Single Variety</p>
           <h3>Estate Honey</h3>
-          <p class="desc">A single-variety honey-processed coffee — dried in its mucilage for body and sweetness. Marsellesa / Obatá class.</p>
-          <p class="price">$30 <small>8 oz · Whole Bean</small></p>
-          <button class="btn" data-add="Estate Honey|30">Add to Cart</button>
+          <p class="desc">A single-variety honey-processed coffee — dried in its mucilage for body and sweetness.</p>
+          <p class="price">Price TBC <small>8 oz · Whole Bean</small></p>
+          <a class="btn" href="mailto:info@zafratrading.com?subject=Bag%20reservation%20%E2%80%94%20Estate%20Honey&amp;body=Please%20reserve%20my%20bag%20of%20Estate%20Honey%20from%20the%20first%20Spring%202027%20lots.">Reserve your bag</a>
         </div>
       </div>
 
@@ -281,24 +274,24 @@
         <div class="body">
           <p class="origin">The House Blend</p>
           <h3>Washed Blend</h3>
-          <p class="desc">The everyday cup of the mountain — a washed house blend, roasted and sealed on the island.</p>
-          <p class="price">$25 <small>8 oz · Whole Bean</small></p>
-          <button class="btn" data-add="Washed Blend|25">Add to Cart</button>
+          <p class="desc">A blend of our best shade-grown heirloom Arabica from small partner farms across the Cordillera Central. Balanced, sweet and smooth, made for every day.</p>
+          <p class="price">Price TBC <small>8 oz · Whole Bean</small></p>
+          <a class="btn" href="mailto:info@zafratrading.com?subject=Bag%20reservation%20%E2%80%94%20Washed%20Blend&amp;body=Please%20reserve%20my%20bag%20of%20Washed%20Blend%20from%20the%20first%20Spring%202027%20lots.">Reserve your bag</a>
         </div>
       </div>
 
       <div class="fcard">
         <p class="eyebrow">Monthly · The Club</p>
         <h3>The Harvest Subscription</h3>
-        <p class="desc">A standing allocation from each harvest — your share roasted and shipped fresh, every month, before the general release. Cancel any time.</p>
-        <p class="price">Under $85 <small>per month</small></p>
+        <p class="desc">A standing allocation from each harvest — your share, roasted and shipped fresh every month before the general release. Cancel any time.</p>
+        <p class="price">Price TBC <small>per month</small></p>
         <a class="btn" href="mailto:info@zafratrading.com?subject=Harvest%20Subscription">Join the Subscription</a>
       </div>
 
       <div class="fcard">
         <p class="eyebrow">Reserve · Numbered Lots</p>
         <h3>Reserve Lots</h3>
-        <p class="desc">The season's best harvests, milled small and numbered lot by lot. Each lot publishes its region, farm, process, and farmer pay — allocated by inquiry before it ships.</p>
+        <p class="desc">The season's best harvests, milled small and numbered lot by lot. Each lot will publish its region, farm, process, and farmer pay — allocated by inquiry before it ships.</p>
         <p class="price">Priced per lot <small>above the estate naturals</small></p>
         <span class="btn-dark" aria-disabled="true" title="Opens at the first lot release">Inquire on Lots</span>
         <p class="dark-note">Opens with the first lot release</p>
@@ -314,7 +307,7 @@
     <div class="sec-head">
       <p class="eyebrow">The Other Harvests</p>
       <h2>What the mountain gives next.</h2>
-      <p>Honey from the cordillera's apiaries, vanilla from the Castañer cooperative, cacao from the co-op farmers, and the gift boxes that carry all four harvests. They arrive with the season — the list hears first.</p>
+      <p>Honey, heritage vanilla and cacao from the Cordillera — coming after the coffee. The list hears first.</p>
     </div>
     <div class="harvest-grid">
       <div class="hcard">
@@ -322,35 +315,26 @@
         <div class="body">
           <p class="origin">Cordillera Central</p>
           <h3>Canopy Honey</h3>
-          <p>Raw and unfiltered wildflower and coffee-blossom honey, foraged under the shade canopy.</p>
-          <p class="wait">Next harvest · list first</p>
+          <p>Wildflower and coffee-blossom honey from under the shade canopy.</p>
+          <p class="wait">Coming after the coffee</p>
         </div>
       </div>
       <div class="hcard">
         <div class="img" style="background-image:url('images/vanilla-orchid.jpg')"></div>
         <div class="body">
-          <p class="origin">Castañer · Cooperative</p>
+          <p class="origin">The Cordillera</p>
           <h3>Heritage Vanilla</h3>
-          <p>Hand-pollinated vines in the Lares highlands, cured slow in mountain air — Grade A beans and pure extract.</p>
-          <p class="wait">Next harvest · list first</p>
+          <p>Heritage vanilla from the Cordillera.</p>
+          <p class="wait">Coming after the coffee</p>
         </div>
       </div>
       <div class="hcard">
         <div class="img" style="background-image:url('images/cacao-pods.jpg')"></div>
         <div class="body">
-          <p class="origin">Co-op Farmers</p>
+          <p class="origin">The Cordillera</p>
           <h3>Legacy Cacao</h3>
-          <p>Fine-flavor heritage Trinitario — fermented single-origin beans, nibs, and a 70% dark bar.</p>
-          <p class="wait">Next harvest · list first</p>
-        </div>
-      </div>
-      <div class="hcard">
-        <div class="img" style="background-image:url('images/coffee-cherries.jpg')"></div>
-        <div class="body">
-          <p class="origin">All Four Harvests</p>
-          <h3>Gift Boxes</h3>
-          <p>The Terroir Box and its kin — shade-grown coffee, canopy honey, heritage vanilla and legacy cacao under one seal.</p>
-          <p class="wait">Next harvest · list first</p>
+          <p>Fine-flavor heritage cacao from the Cordillera.</p>
+          <p class="wait">Coming after the coffee</p>
         </div>
       </div>
     </div>
@@ -383,72 +367,12 @@
   </div>
   <div class="foot-bottom">
     <span>© 2026 Zafra Trading Co. · First lots — Spring 2027</span>
-    <span>Direct trade · Full provenance · 5% of every sale</span>
+    <span>Bought at the farm gate · Full provenance · $1 from every bag</span>
   </div>
 </footer>
 
-<!-- Cart drawer (front-end; Stripe Payment Links wire in at launch) -->
-<div class="cart-overlay" id="cart-overlay"></div>
-<aside class="cart" id="cart" aria-label="Shopping cart">
-  <div class="cart-head">
-    <h4>Cart</h4>
-    <button class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
-  </div>
-  <div class="cart-body" id="cart-body">
-    <p class="cart-empty">Your cart is empty.</p>
-  </div>
-  <div class="cart-foot">
-    <div class="cart-subtotal"><span>Subtotal</span><span class="amt" id="cart-subtotal">$0</span></div>
-    <span class="btn-dark" style="display:block;width:100%" aria-disabled="true" title="Checkout activates at launch">Checkout</span>
-    <p class="note">Checkout activates at launch — every reservation is answered personally.</p>
-  </div>
-</aside>
+<!-- Cart drawer + checkout return at launch (front-end cart lives in git history) -->
 
-<script>
-  // Cart state (front-end only; Stripe Payment Links wire in at launch)
-  var cart = {};
-  var $ = function(id){ return document.getElementById(id); };
-
-  function render(){
-    var body = $('cart-body'), count = 0, subtotal = 0, html = '';
-    for (var k in cart){
-      var it = cart[k];
-      count += it.qty; subtotal += it.qty * it.price;
-      html += '<div class="cart-item"><div><div class="nm">' + it.name + '</div><div class="un">8 oz · Whole Bean — $' + it.price + '</div></div>'
-        + '<div class="qty"><button data-dec="' + k + '" aria-label="Decrease quantity">−</button><span>' + it.qty + '</span><button data-inc="' + k + '" aria-label="Increase quantity">+</button></div>'
-        + '<div class="pr">$' + (it.qty * it.price) + '</div></div>';
-    }
-    body.innerHTML = count ? html : '<p class="cart-empty">Your cart is empty.</p>';
-    $('cart-count').textContent = count;
-    $('cart-subtotal').textContent = '$' + subtotal;
-  }
-
-  document.querySelectorAll('[data-add]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var parts = btn.getAttribute('data-add').split('|');
-      var key = parts[0];
-      if (!cart[key]) cart[key] = { name: key, price: parseInt(parts[1], 10), qty: 0 };
-      cart[key].qty++;
-      render(); openCart();
-    });
-  });
-
-  $('cart-body').addEventListener('click', function(e){
-    var inc = e.target.getAttribute && e.target.getAttribute('data-inc');
-    var dec = e.target.getAttribute && e.target.getAttribute('data-dec');
-    if (inc && cart[inc]) cart[inc].qty++;
-    if (dec && cart[dec]) { cart[dec].qty--; if (cart[dec].qty <= 0) delete cart[dec]; }
-    if (inc || dec) render();
-  });
-
-  function openCart(){ $('cart').classList.add('open'); $('cart-overlay').classList.add('open'); }
-  function closeCart(){ $('cart').classList.remove('open'); $('cart-overlay').classList.remove('open'); }
-  $('cart-open').addEventListener('click', openCart);
-  $('cart-close').addEventListener('click', closeCart);
-  $('cart-overlay').addEventListener('click', closeCart);
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeCart(); });
-  render();
-</script>
 <script src="assets/agente-widget.js" defer></script>
 
 </body>
